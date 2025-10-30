@@ -3,13 +3,15 @@ layout: page
 title: "Publications"
 ---
 
-# Selected Publications & Projects
+# Publications & Projects
 
 ### 🧠 Robustness of Neurosymbolic Reasoners on First-Order Logic Problems
-*RMIT University Honours Project (2025)*  
-Investigates how neurosymbolic systems handle malformed predicates, ambiguous logical forms, and counterfactual reasoning tasks.  
+*🌟 Best paper at the Annual Workshop of the Australasian Language Technology Association* 
+*Co-authors: Hannah Bansal, Lea Frermann, Kemal Kurniawan*  
+*[Paper link](https://arxiv.org/pdf/2509.17377)*
 
-[Read Blog →](/blog/neurosymbolic-robustness)  
+In this paper we explore whether neurosymbolic reasoners are more robust to counterfactual pertubations when compared to pure LLMs such as naive and chain of thought prompting. 
+[Read Blog →](/blog/neurosymbolic2025) TBD
 
 <!-- ---
 
