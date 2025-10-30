@@ -9,4 +9,6 @@ Here I write about research updates, experiments, and reflections on AI reasonin
 
 ---
 
-- [Robustness of Neurosymbolic Reasoners on First-Order Logic Problems](_posts/neurosymbolic2025.md)
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url | relative_url }}) — {{ post.date | date: "%B %d, %Y" }}
+{% endfor %}
