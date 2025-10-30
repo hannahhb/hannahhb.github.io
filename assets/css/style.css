@@ -1,0 +1,21 @@
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #222;
+  margin: 2em auto;
+  max-width: 800px;
+}
+
+h1, h2, h3 {
+  color: #003366;
+}
+
+a {
+  color: #0055cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

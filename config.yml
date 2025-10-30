@@ -1,0 +1,18 @@
+title: "Hannah Bansal"
+description: "AI Researcher | Neurosymbolic Reasoning | Biomedical NLP"
+theme: minima
+author: Hannah Bansal
+github_username: hannahbansal
+email: hannah.bansal@rmit.edu.au
+url: "https://hannahbansal.github.io"
+baseurl: ""
+
+# Add navigation
+header_pages:
+  - about.md
+  - publications.md
+  - blog/index.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
