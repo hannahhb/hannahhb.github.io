@@ -11,7 +11,7 @@ Investigates how neurosymbolic systems handle malformed predicates, ambiguous lo
 
 [Read Blog →](/blog/neurosymbolic-robustness)  
 
----
+<!-- ---
 
 ### 🧬 Tool-Augmented Medical LLMs
 *CSIRO Health & Biosecurity – 2025*  
@@ -21,4 +21,4 @@ Developing an evaluation framework for clinical reasoning models using fact-base
 
 ### 📘 Multi-Agent Debate for Logical Decision-Making
 *University of Melbourne, 2024*  
-A framework using multi-agent LLMs for cooperative reasoning tasks under uncertainty.
+A framework using multi-agent LLMs for cooperative reasoning tasks under uncertainty. -->

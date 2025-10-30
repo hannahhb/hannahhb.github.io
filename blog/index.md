@@ -9,4 +9,4 @@ Here I write about research updates, experiments, and reflections on AI reasonin
 
 ---
 
-- [Robustness of Neurosymbolic Reasoners on First-Order Logic Problems](2025-10-30-neurosymbolic-robustness)
+- [Robustness of Neurosymbolic Reasoners on First-Order Logic Problems](_posts/neurosymbolic2025.md)
