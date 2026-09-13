@@ -192,6 +192,25 @@ h2.psub{font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.0
 .fopt{font-size:11.3px;padding:3px 9px;border-radius:999px;border:1px solid var(--hairline);background:var(--surface-2);color:var(--muted);cursor:pointer}
 .fopt[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink);font-weight:500}
 
+.railback{display:flex;align-items:center;gap:7px;width:100%;padding:8px 14px;background:none;border:0;border-bottom:1px solid var(--hairline-2);cursor:pointer;color:var(--link);font-size:11.8px;text-align:left}
+.railback:hover{background:var(--surface-2)}
+.ctxhead{padding:11px 14px 9px;border-bottom:1px solid var(--hairline-2)}
+.ctxhead .lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:4px}
+.ctxhead .ht{font-size:12.6px;font-weight:600;line-height:1.3}
+.ctxhead .hm{font-size:11.4px;color:var(--muted);margin-top:3px;line-height:1.4}
+.ctxsec{padding:11px 0 4px}
+.ctxsec>.eyebrow{display:flex;align-items:baseline;gap:6px;padding:0 14px 6px}
+.ctxsec>.eyebrow b{font-weight:400;color:var(--ink-2);text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:11px}
+.ctxrow{display:flex;gap:8px;width:100%;padding:7px 12px 7px 14px;background:none;border:0;text-align:left;cursor:pointer;color:inherit;border-top:1px solid var(--hairline-2)}
+.ctxrow:hover{background:var(--surface-2)}
+.ctxrow .cx{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.ctxrow .ct{font-size:11.9px;font-weight:500;line-height:1.32;color:var(--ink)}
+.ctxrow .cm{font-size:10.8px;color:var(--muted);line-height:1.35;overflow-wrap:anywhere}
+.ctxrow .cp{font-size:10.8px;line-height:1.4;color:var(--ink-2)}
+.ctxrow .cp i{font-style:normal;font-family:var(--mono);font-size:9px;color:var(--faint);letter-spacing:.05em;text-transform:uppercase;margin-right:4px}
+.ctxempty{padding:2px 14px 10px;font-size:11.4px;color:var(--faint);line-height:1.45}
+.subbtns{display:flex;flex-direction:column;gap:6px}
+.subbtns .go.alt{background:var(--surface);color:var(--ink);border-color:var(--hairline)}
 .node .halo{fill:none;stroke:var(--c);stroke-opacity:0;stroke-width:1.6;pointer-events:none}
 .node.peopled .halo{stroke-opacity:.75}
 .pcount{font-family:var(--mono);font-size:8.5px;fill:var(--ink);fill-opacity:0;text-anchor:middle;pointer-events:none;paint-order:stroke;stroke:var(--ground);stroke-width:2.6px}
@@ -271,6 +290,7 @@ h2.psub{font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.0
   <aside class="rail" id="rail">
     <div class="rail-h"><span class="eyebrow">15 themes &middot; 56 clusters</span><button id="clearSel">Reset</button></div>
     <div id="filters" class="filters" hidden></div>
+    <div id="ctx" hidden></div>
     <div id="tree"></div>
     <div class="rail-note">
       <div class="keyrow"><svg width="34" height="14" aria-hidden="true"><circle cx="6" cy="7" r="4" fill="currentColor" opacity=".45"></circle><circle cx="24" cy="7" r="7.5" fill="currentColor" opacity=".45"></circle></svg><span>Circle size = hours/week (3&ndash;40)</span></div>
@@ -320,6 +340,20 @@ var adj = {};
 nodes.forEach(function(n){ adj[n.i] = []; });
 RAW.edges.forEach(function(e){ adj[e.s].push([e.t,e.w]); adj[e.t].push([e.s,e.w]); });
 Object.keys(adj).forEach(function(k){ adj[k].sort(function(a,b){ return b[1]-a[1]; }); });
+
+/* ---- mentors: split "Name (Org), Name (Org)" into names ---- */
+function mentorNames(s){
+  if(!s) return [];
+  var out = [], re = /([^,()]+?)\s*\(([^)]*)\)/g, m, found = false;
+  while((m = re.exec(s))){ out.push(m[1].trim()); found = true; }
+  if(!found) out = String(s).split(',').map(function(x){ return x.trim(); });
+  return out.filter(Boolean);
+}
+var mentorIndex = {};
+nodes.forEach(function(n){
+  n.mnames = mentorNames(n.mentors);
+  n.mnames.forEach(function(m){ (mentorIndex[m] = mentorIndex[m] || []).push(n); });
+});
 
 /* ---- group anchors: a ring in hue order ---- */
 var anchor = {};
@@ -647,6 +681,7 @@ document.getElementById('qClear').addEventListener('click', function(){ qEl.valu
 var panelBody = document.getElementById('panelBody');
 function intro(){
   sel = null; panelMode = 'intro';
+  if(typeof railThemes === 'function') railThemes();
   var top = GORDER.slice(0,3).map(function(g){ return '<span class="chip area c-' + g + '">' + esc(GROUPS[g].split(' — ')[0]) + ' ' + byGroup[g].length + '</span>'; }).join('');
   panelBody.innerHTML =
     '<div class="p-eyebrow"><span class="lbl">How to read this</span></div>' +
@@ -690,6 +725,7 @@ function select(d){
     '<h2 class="psub">Nearest neighbours</h2><div class="near">' + (neigh || '<div class="empty">No close matches.</div>') + '</div>' +
     '<h2 class="psub">Also in “' + esc(d.sname) + '”</h2><div class="near">' + (mates || '<div class="empty">Alone in its cluster.</div>') + '</div>';
   wirePeople(d);
+  railContext(d);
   var sb = document.getElementById('starOne');
   if(sb) sb.addEventListener('click', function(){
     if(stars.has(d.id)) stars.delete(d.id); else stars.add(d.id);
@@ -750,6 +786,67 @@ document.addEventListener('keydown', function(ev){
   if(ev.key === '/' && document.activeElement !== qEl){ ev.preventDefault(); qEl.focus(); }
 });
 
+/* ---- left rail: what else is relevant to the selected project ---- */
+var ctxEl = document.getElementById('ctx'), treeEl = document.getElementById('tree');
+var railNote = document.querySelector('.rail-note');
+
+function peopleLine(n){
+  var list = roster[n.id] || [];
+  if(!list.length) return '';
+  return '<span class="cp"><i>here</i>' + list.map(function(e){ return esc(clip(e.name, 60)); }).join(' &middot; ') + '</span>';
+}
+function ctxRow(n){
+  return '<button class="ctxrow c-' + n.group + '" data-go="' + n.i + '">' +
+    '<span class="tick"></span><span class="cx">' +
+      '<span class="ct">' + esc(n.title) + '</span>' +
+      '<span class="cm">' + esc(n.mentors) + '</span>' +
+      peopleLine(n) +
+    '</span></button>';
+}
+function ctxSection(label, hint, list, empty){
+  if(!list.length && !empty) return '';
+  return '<div class="ctxsec"><span class="eyebrow">' + label +
+    (hint ? ' <b>' + hint + '</b>' : '') + '</span>' +
+    (list.length ? list.map(ctxRow).join('') : '<div class="ctxempty">' + empty + '</div>') + '</div>';
+}
+function railContext(d){
+  var mates = bySub[d.sub].filter(function(n){ return n !== d; });
+  var seen = {}; mates.forEach(function(n){ seen[n.i] = 1; }); seen[d.i] = 1;
+  var neigh = [];
+  adj[d.i].forEach(function(pr){
+    var n = nodes[pr[0]];
+    if(!seen[n.i]){ seen[n.i] = 1; neigh.push(n); }
+  });
+  neigh = neigh.slice(0, 6);
+  var shared = [];
+  d.mnames.forEach(function(m){
+    (mentorIndex[m] || []).forEach(function(n){ if(n !== d && shared.indexOf(n) === -1) shared.push(n); });
+  });
+  ctxEl.innerHTML =
+    '<button class="railback" id="railBack">&larr; All themes</button>' +
+    '<div class="ctxhead c-' + d.group + '"><span class="lbl">Selected</span>' +
+      '<div class="ht">' + esc(d.title) + '</div>' +
+      '<div class="hm">' + esc(d.mentors) + '</div>' +
+      (peopleLine(d) ? '<div class="hm">' + peopleLine(d) + '</div>' : '') +
+    '</div>' +
+    ctxSection('Same cluster', esc(d.sname), mates, 'Alone in its cluster.') +
+    ctxSection('Closest by topic', '', neigh, '') +
+    ctxSection('Same mentor', '', shared, '');
+  ctxEl.hidden = false;
+  treeEl.hidden = true;
+  if(railNote) railNote.hidden = true;
+  document.getElementById('railBack').addEventListener('click', railThemes);
+  ctxEl.querySelectorAll('[data-go]').forEach(function(b){
+    b.addEventListener('click', function(){ var n = nodes[+b.dataset.go]; select(n); centreOn(n); });
+  });
+  ctxEl.scrollTop = 0;
+}
+function railThemes(){
+  ctxEl.hidden = true; ctxEl.innerHTML = '';
+  treeEl.hidden = false;
+  if(railNote) railNote.hidden = false;
+}
+
 /* ---- who's here: a shared roster of people on each project ---- */
 var roster = {}, rosterMode = 'none', rosterDb = null, rosterCount = 0;
 var ROLES = ['Mentee','Mentor','Also interested'];
@@ -808,6 +905,27 @@ function initRoster(){
 }
 
 var GH_REPO = 'hannahhb/hannahbb.github.io';
+/* Google Form "Spar Atlas Sign Up". Field ids come from the form's
+   pre-filled link (⋮ → Get pre-filled link). Add a key here to carry a
+   new question through; drop one and that field stops being sent. */
+var GFORM = {
+  base: 'https://docs.google.com/forms/d/15baGmkFSmcKcHd6oYEKDjMqEF-dW8sgXdv90WF8rR2U/viewform',
+  fields: {
+    name:    'entry.1431031113',
+    linkedin:'entry.1808384973',
+    email:   'entry.1911476711',
+    project: 'entry.1196920667'
+  }
+};
+function formUrl(d, e){
+  if(!GFORM.base) return null;
+  var q = ['usp=pp_url'], f = GFORM.fields;
+  var vals = { name:e.name, linkedin:e.linkedin, email:e.email, project:d.title, role:e.role, note:e.note, link:e.link };
+  Object.keys(f).forEach(function(k){
+    if(f[k] && vals[k]) q.push(f[k] + '=' + encodeURIComponent(vals[k]));
+  });
+  return GFORM.base + '?' + q.join('&');
+}
 function ghIssue(d, e){
   var slug = GH_REPO.split('/'), owner = slug[0], repo = slug[1];
   if(!owner || !repo) return null;
@@ -841,22 +959,22 @@ function peopleSection(d){
     : '<div class="person"><div class="pnote">Nobody has added themselves yet. Be first.</div></div>';
   var note = rosterMode === 'db'
     ? 'Saved live for everyone who can open this page.'
-    : 'Submitting opens a pre-filled GitHub issue. Hannah merges it into the public directory, usually within a day.';
+    : 'Opens the sign-up form with your details already filled in \u2014 one click to finish. Hannah adds you to the map, usually within a day.';
   return '<h2 class="psub">Who&rsquo;s here <span style="color:var(--faint);font-weight:400">' + list.length + '</span></h2>' +
     '<div class="ppl" id="pplList">' + rows + '</div>' +
     '<div class="acts"><button id="joinBtn">+ Add yourself</button></div>' +
     '<form class="joinform" id="joinForm" data-open="0">' +
       '<label>Name<input id="jName" maxlength="60" required autocomplete="name" placeholder="How you want to be listed"></label>' +
-      '<div class="row">' +
-        '<label>Role<select id="jRole">' + ROLES.map(function(r){ return '<option>' + r + '</option>'; }).join('') + '</select></label>' +
-        '<label>LinkedIn<input id="jLi" maxlength="300" inputmode="url" placeholder="linkedin.com/in/&hellip;"></label>' +
+      '<label>LinkedIn<input id="jLi" maxlength="300" inputmode="url" autocomplete="url" placeholder="linkedin.com/in/&hellip;"></label>' +
+      '<label>Email<input id="jMail" type="email" maxlength="120" autocomplete="email" placeholder="So Hannah can reach you"></label>' +
+      '<div class="subbtns">' +
+        '<button type="submit" class="go" id="jGo">Continue &rarr; one click to finish</button>' +
       '</div>' +
-      '<label>Another link <span style="text-transform:none;letter-spacing:0">(optional)</span><input id="jLink" maxlength="300" inputmode="url" placeholder="GitHub, site, Scholar&hellip;"></label>' +
-      '<label>One line <span style="text-transform:none;letter-spacing:0">(optional)</span><input id="jNote" maxlength="140" placeholder="What you are working on, or want to talk about"></label>' +
-      '<button type="submit" class="go" id="jGo">Add me to this project</button>' +
-      '<p class="privacy">Anything you enter here is visible to everyone who can open this page. Add only what you are happy to publish.</p>' +
+      '<p class="privacy"><b>Name and LinkedIn appear on this page publicly.</b> Your email is not published &mdash; it only goes to Hannah on the sign-up form.</p>' +
     '</form>' +
-    '<p class="srcnote">' + note + '</p>';
+    '<p class="srcnote">' + note +
+      (ghIssue(d, {}) ? ' <a href="' + esc(ghIssue(d, {})) + '" target="_blank" rel="noopener">Prefer GitHub? File an issue instead.</a>' : '') +
+    '</p>';
 }
 
 function wirePeople(d){
@@ -871,10 +989,8 @@ function wirePeople(d){
     var entry = {
       projectId: d.id,
       name: clip(document.getElementById('jName').value, 60),
-      role: clip(document.getElementById('jRole').value, 24),
       linkedin: clip(document.getElementById('jLi').value, 300),
-      link: clip(document.getElementById('jLink').value, 300),
-      note: clip(document.getElementById('jNote').value, 140),
+      email: clip(document.getElementById('jMail').value, 120),
       token: myToken,
       createdAt: Date.now()
     };
@@ -893,9 +1009,9 @@ function wirePeople(d){
       });
       return;
     }
-    var url = ghIssue(d, entry);
-    if(url){ window.open(url, '_blank', 'noopener'); toast('Opened a pre-filled GitHub issue'); }
-    else toast('Could not open the submission form');
+    var url = formUrl(d, entry) || ghIssue(d, entry);
+    if(url){ window.open(url, '_blank', 'noopener'); toast('Form opened with your details filled in \u2014 just hit Submit'); }
+    else toast('Could not open the sign-up form');
   });
   var list = document.getElementById('pplList');
   if(list) list.addEventListener('click', function(ev){
@@ -908,7 +1024,7 @@ function wirePeople(d){
 
 /* ---- directory: everyone, grouped by theme ---- */
 function directory(){
-  panelMode = 'dir'; sel = null;
+  panelMode = 'dir'; sel = null; railThemes();
   var html = '<div class="p-eyebrow"><span class="lbl">Directory</span></div>' +
     '<h1 class="ptitle">Who&rsquo;s here, by theme</h1>';
   if(!rosterCount){

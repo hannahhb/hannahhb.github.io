@@ -23,11 +23,30 @@ involvement and team size; the shortlist (★) is stored in your own browser onl
 
 ## Adding yourself to the directory
 
-Open any project, hit **+ Add yourself**, fill in the form. It opens a pre-filled GitHub
-issue — nothing is published until that issue is merged into `data/people.json` by hand.
+Open any project, hit **+ Add yourself**, type your name, LinkedIn and email. That opens the
+[Spar Atlas Sign Up](https://docs.google.com/forms/d/15baGmkFSmcKcHd6oYEKDjMqEF-dW8sgXdv90WF8rR2U/viewform)
+form with every field — including which project — already filled in. One click to submit.
+No GitHub account needed.
 
-Only put in what you're happy to have publicly readable: the file is in a public repo and
-the page renders it to anyone who opens it. To be removed, open an issue saying so.
+**Your name and LinkedIn are published; your email is not.** It stays in the responses sheet.
+
+### Merging the responses
+
+Responses land in the linked Google Sheet. To publish them:
+
+```bash
+# Sheet: File -> Download -> Comma-separated values
+cd scripts
+python3 merge_signups.py ~/Downloads/responses.csv --dry-run   # check first
+python3 merge_signups.py ~/Downloads/responses.csv
+git add ../data/people.json && git commit -m "Directory: new sign-ups" && git push
+```
+
+It matches each free-text project name back to a SPAR project id (exact, then fuzzy), skips
+anyone already listed, and never writes the email column. Unmatched rows are printed so you
+can fix them by hand.
+
+To remove someone, delete their object from `data/people.json` and push.
 
 ## How the clustering works
 
