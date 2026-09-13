@@ -1,0 +1,4 @@
+{
+  "_README": "Public directory for the SPAR Project Atlas. One object per person per project. Added via GitHub issue (label: directory) and merged by hand. Fields: projectId (SPAR rec... id, required), name (required, <=60 chars), role (Mentee | Mentor | Also interested), linkedin (url), link (url), note (<=140 chars), createdAt (epoch ms).",
+  "entries": []
+}

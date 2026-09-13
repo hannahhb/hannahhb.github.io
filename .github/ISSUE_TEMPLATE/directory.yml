@@ -1,0 +1,55 @@
+name: SPAR Atlas directory entry
+description: Add yourself to the public directory on the SPAR Project Atlas
+title: "Directory: <your name> — <project title>"
+labels: ["directory"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Adds you to the directory at https://hannahhb.github.io/spar-atlas/ so other people
+        on nearby projects can find you.
+
+        **This is public.** Everything below is committed to a public repo and rendered to
+        anyone who opens the page. Only fill in what you are happy to publish.
+        Easiest path: open the atlas, find your project, and use **+ Add yourself** — it
+        pre-fills this form for you.
+  - type: input
+    id: projectId
+    attributes:
+      label: SPAR project id
+      description: The `rec...` id — the atlas pre-fills this, or take it from the project URL.
+      placeholder: rec06PdLADTzLArsZ
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: How you want to be listed. Max 60 characters.
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options:
+        - Mentee
+        - Mentor
+        - Also interested
+    validations:
+      required: true
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn
+      placeholder: linkedin.com/in/...
+  - type: input
+    id: link
+    attributes:
+      label: Another link
+      description: GitHub, personal site, Google Scholar — optional.
+  - type: input
+    id: note
+    attributes:
+      label: One line
+      description: What you are working on, or what you would like to talk about. Max 140 characters.
