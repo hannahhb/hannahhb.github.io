@@ -30,9 +30,30 @@ No GitHub account needed.
 
 **Your name and LinkedIn are published; your email is not.** It stays in the responses sheet.
 
-### Merging the responses
+### Publishing responses live
 
-Responses land in the linked Google Sheet. To publish them:
+Set `SHEET_CSV` near the top of the page script to a published CSV URL and the directory
+updates itself — a new sign-up shows up on the next page load, with no commit.
+
+**Publish a filtered tab, never the responses sheet.** The raw sheet has everyone's email in
+column D; publishing it would put those addresses on the open web permanently.
+
+1. In the responses sheet, add a tab called `Public` with one formula in `A1`:
+   `=QUERY('Form Responses 1'!A:E, "select B, C, E where B is not null", 1)`
+   That is Full Name, LinkedIn, Project Name — no email, no timestamp.
+2. **File → Share → Publish to web** → pick the `Public` tab → **Comma-separated values (.csv)** → Publish.
+3. Paste the URL into `SHEET_CSV` in `index.html`, commit, push.
+
+The page ignores any column whose header mentions *email* or *timestamp* regardless, so a
+mis-published tab still cannot put addresses on the page. Rows whose project name matches no
+SPAR project are skipped. If the sheet is unreachable the committed `people.json` still renders.
+
+Live means unmoderated: whatever someone types appears. To take an entry down, delete the row
+in the sheet.
+
+### Merging responses by hand
+
+If you would rather curate, leave `SHEET_CSV` empty and merge from a CSV export instead:
 
 ```bash
 # Sheet: File -> Download -> Comma-separated values
@@ -43,8 +64,7 @@ git add ../data/people.json && git commit -m "Directory: new sign-ups" && git pu
 ```
 
 It matches each free-text project name back to a SPAR project id (exact, then fuzzy), skips
-anyone already listed, and never writes the email column. Unmatched rows are printed so you
-can fix them by hand.
+anyone already listed, and never writes the email column.
 
 To remove someone, delete their object from `data/people.json` and push.
 

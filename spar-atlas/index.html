@@ -884,13 +884,95 @@ function setEntries(list){
   else if(panelMode === 'dir') directory();
 }
 
+/* The published Google Sheet tab, as CSV. Publish ONLY a tab that has no
+   email column (File -> Share -> Publish to web -> that tab -> CSV).
+   Empty string = fall back to data/people.json alone. */
+var SHEET_CSV = '';
+
+function parseCSV(text){
+  var rows = [], row = [], cur = '', q = false, i = 0;
+  while(i < text.length){
+    var c = text.charAt(i);
+    if(q){
+      if(c === '"'){ if(text.charAt(i+1) === '"'){ cur += '"'; i++; } else q = false; }
+      else cur += c;
+    } else if(c === '"'){ q = true; }
+    else if(c === ','){ row.push(cur); cur = ''; }
+    else if(c === '\n'){ row.push(cur); rows.push(row); row = []; cur = ''; }
+    else if(c !== '\r'){ cur += c; }
+    i++;
+  }
+  if(cur.length || row.length){ row.push(cur); rows.push(row); }
+  return rows.filter(function(r){ return r.some(function(v){ return v.trim(); }); });
+}
+
+var normTitle = function(v){ return String(v || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); };
+var titleIndex = {};
+nodes.forEach(function(nd){ titleIndex[normTitle(nd.title)] = nd.id; });
+function matchProject(text){
+  var k = normTitle(text);
+  if(!k) return null;
+  if(titleIndex[k]) return titleIndex[k];
+  var keys = Object.keys(titleIndex), hit = null;
+  for(var i = 0; i < keys.length; i++){
+    if(keys[i].indexOf(k) === 0 || k.indexOf(keys[i]) === 0){ hit = titleIndex[keys[i]]; break; }
+  }
+  return hit;
+}
+
+/* Header -> field. Anything mentioning email is dropped outright, so a
+   wrongly published tab still cannot put addresses on the page. */
+function csvEntries(text){
+  var rows = parseCSV(text);
+  if(rows.length < 2) return [];
+  var map = rows[0].map(function(h){
+    var k = normTitle(h);
+    if(k.indexOf('email') > -1 || k.indexOf('timestamp') > -1) return null;
+    if(k.indexOf('linkedin') > -1) return 'linkedin';
+    if(k.indexOf('project') > -1) return 'project';
+    if(k.indexOf('name') > -1) return 'name';
+    if(k.indexOf('role') > -1) return 'role';
+    if(k.indexOf('line') > -1 || k.indexOf('note') > -1) return 'note';
+    if(k.indexOf('link') > -1) return 'link';
+    return null;
+  });
+  var out = [];
+  rows.slice(1).forEach(function(r){
+    var rec = {};
+    map.forEach(function(field, i){ if(field && r[i] && r[i].trim()) rec[field] = r[i].trim(); });
+    var pid = matchProject(rec.project);
+    if(!pid || !rec.name) return;
+    delete rec.project;
+    rec.projectId = pid;
+    rec.createdAt = 0;
+    out.push(rec);
+  });
+  return out;
+}
+
+var rosterFile = [], rosterSheet = [];
+function mergeSources(){
+  var seen = {}, all = [];
+  rosterFile.concat(rosterSheet).forEach(function(e){
+    var k = e.projectId + '|' + normTitle(e.name);
+    if(seen[k]) return;
+    seen[k] = 1; all.push(e);
+  });
+  if(all.length || rosterMode === 'none') rosterMode = 'static';
+  setEntries(all);
+}
+
 function initRoster(){
   fetch('data/people.json', { cache:'no-store' })
     .then(function(r){ return r.ok ? r.json() : null; })
-    .then(function(j){
-      if(j && Array.isArray(j.entries) && rosterMode === 'none'){ rosterMode = 'static'; setEntries(j.entries); }
-    })
+    .then(function(j){ if(j && Array.isArray(j.entries)){ rosterFile = j.entries; mergeSources(); } })
     .catch(function(){});
+  if(SHEET_CSV){
+    fetch(SHEET_CSV, { cache:'no-store' })
+      .then(function(r){ return r.ok ? r.text() : null; })
+      .then(function(t){ if(t){ rosterSheet = csvEntries(t); mergeSources(); } })
+      .catch(function(){ /* sheet unreachable: the committed file still renders */ });
+  }
   if(window.claude && typeof window.claude.use === 'function'){
     window.claude.use('db').then(function(db){
       if(!db) return;
@@ -959,7 +1041,9 @@ function peopleSection(d){
     : '<div class="person"><div class="pnote">Nobody has added themselves yet. Be first.</div></div>';
   var note = rosterMode === 'db'
     ? 'Saved live for everyone who can open this page.'
-    : 'Opens the sign-up form with your details already filled in \u2014 one click to finish. Hannah adds you to the map, usually within a day.';
+    : SHEET_CSV
+      ? 'Opens the sign-up form with your details already filled in \u2014 one click to finish. You appear here as soon as you reload.'
+      : 'Opens the sign-up form with your details already filled in \u2014 one click to finish. Hannah adds you to the map, usually within a day.';
   return '<h2 class="psub">Who&rsquo;s here <span style="color:var(--faint);font-weight:400">' + list.length + '</span></h2>' +
     '<div class="ppl" id="pplList">' + rows + '</div>' +
     '<div class="acts"><button id="joinBtn">+ Add yourself</button></div>' +
