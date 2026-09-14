@@ -431,6 +431,7 @@ nodeSel.append('title').text(function(d){ return d.title; });
 
 /* ---- zoom ---- */
 /* ---- globe ---- */
+var globeTouched = false;
 var gGlobe = view.append('g').attr('class','globe').style('display','none');
 var gSphere = gGlobe.append('path').attr('class','sphere');
 var gGrat   = gGlobe.append('path').attr('class','grat');
@@ -487,11 +488,28 @@ gGlobe.call(d3.drag()
   })
   .on('end', function(){ gGlobe.classed('spinning', false); }));
 
+/* Open facing wherever people actually are, weighted by headcount, so the
+   globe never presents an empty hemisphere. Averaged as 3-D vectors, which
+   handles the antimeridian that a plain mean of longitudes does not. */
+function homeRotation(){
+  var list = Object.keys(places).map(function(k){ return places[k]; });
+  if(!list.length) return [0, -18];
+  var x = 0, y = 0, z = 0;
+  list.forEach(function(pl){
+    var w = pl.people.length, la = pl.lat * Math.PI/180, lo = pl.lon * Math.PI/180;
+    x += Math.cos(la) * Math.cos(lo) * w;
+    y += Math.cos(la) * Math.sin(lo) * w;
+    z += Math.sin(la) * w;
+  });
+  if(!x && !y && !z) return [0, -18];
+  return [ -Math.atan2(y, x) * 180/Math.PI,
+           -Math.atan2(z, Math.hypot(x, y)) * 180/Math.PI ];
+}
 function globeZoom(f){
   proj.scale(Math.max(150, Math.min(1400, proj.scale() * f)));
   drawGlobe();
 }
-function globeReset(){ proj.scale(390).rotate([0, -18]); drawGlobe(); }
+function globeReset(){ proj.scale(390).rotate(homeRotation()); drawGlobe(); }
 
 var zoom = d3.zoom().scaleExtent([0.35, 7]).on('zoom', function(ev){ view.attr('transform', ev.transform); });
 svg.call(zoom);
@@ -594,6 +612,7 @@ function setMode(m){
     gGlobe.style('display', null);
     svg.on('.zoom', null);
     view.attr('transform', null);
+    if(!globeTouched){ proj.rotate(homeRotation()); globeTouched = true; }
     drawGlobe();
     if(panelMode !== 'project') globePanel();
     return;
@@ -1104,13 +1123,22 @@ function csvEntries(text){
 }
 
 var rosterFile = [], rosterSheet = [];
+/* One person on one project may submit more than once - to add a location,
+   to fix a link. Later non-empty values win, so a resubmission tops up the
+   entry instead of being thrown away. */
 function mergeSources(){
-  var seen = {}, all = [];
+  var byKey = {}, order = [], all = [];
   rosterFile.concat(rosterSheet).forEach(function(e){
+    if(!e || !e.projectId || !e.name) return;
     var k = e.projectId + '|' + normTitle(e.name);
-    if(seen[k]) return;
-    seen[k] = 1; all.push(e);
+    if(!byKey[k]){ byKey[k] = {}; order.push(k); }
+    var into = byKey[k];
+    Object.keys(e).forEach(function(field){
+      var v = e[field];
+      if(v !== undefined && v !== null && String(v).trim() !== '') into[field] = v;
+    });
   });
+  order.forEach(function(k){ all.push(byKey[k]); });
   if(all.length || rosterMode === 'none') rosterMode = 'static';
   setEntries(all);
 }

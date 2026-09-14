@@ -42,7 +42,13 @@ city, and a country on its own gets an approximate pin at the country's centre, 
 such. Nothing is sent to a geocoding service. World outlines come from
 [world-atlas](https://github.com/topojson/world-atlas) at 110m, decoded to plain GeoJSON.
 
-Unmatched locations are counted and reported rather than silently dropped.
+Unmatched locations are counted and reported rather than silently dropped. The globe opens
+facing wherever people actually are — a headcount-weighted average of the pins — so it never
+presents an empty hemisphere.
+
+Someone who submits the form more than once (to add a location, to fix a link) gets one entry
+per project, with later non-empty answers overriding earlier ones. Resubmitting is the
+supported way to correct yourself.
 
 The form's Location question feeds this. Responses submitted before that question existed
 have no location and simply do not appear on the globe — type one into their row in the sheet
