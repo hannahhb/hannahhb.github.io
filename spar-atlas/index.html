@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="An interactive map of all 230 SPAR Fall 2026 AI-safety research projects, clustered into 15 themes and 56 sub-clusters of 3-5 by topic similarity, with a directory of who is working on what.">
+<meta name="description" content="An interactive map of all 230 SPAR Fall 2026 AI-safety research projects, clustered into 15 themes and 56 sub-clusters of 3-5 by topic similarity, with a live directory of who is working on what.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:title" content="SPAR Project Atlas">
@@ -887,7 +887,7 @@ function setEntries(list){
 /* The published Google Sheet tab, as CSV. Publish ONLY a tab that has no
    email column (File -> Share -> Publish to web -> that tab -> CSV).
    Empty string = fall back to data/people.json alone. */
-var SHEET_CSV = '';
+var SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQXhFTbxiuvh7eZT5loX89r8FvdSg6jr2zziLNC-LYFf-UrbqggdJU8Ruucta_EmS88Swts3-ZQegmP/pub?gid=852687721&single=true&output=csv';
 
 function parseCSV(text){
   var rows = [], row = [], cur = '', q = false, i = 0;
@@ -1050,11 +1050,11 @@ function peopleSection(d){
     '<form class="joinform" id="joinForm" data-open="0">' +
       '<label>Name<input id="jName" maxlength="60" required autocomplete="name" placeholder="How you want to be listed"></label>' +
       '<label>LinkedIn<input id="jLi" maxlength="300" inputmode="url" autocomplete="url" placeholder="linkedin.com/in/&hellip;"></label>' +
-      '<label>Email<input id="jMail" type="email" maxlength="120" autocomplete="email" placeholder="So Hannah can reach you"></label>' +
+      '<label>Email <span style="text-transform:none;letter-spacing:0">(optional, public)</span><input id="jMail" type="email" maxlength="120" autocomplete="email" placeholder="Only if you want it shared"></label>' +
       '<div class="subbtns">' +
         '<button type="submit" class="go" id="jGo">Continue &rarr; one click to finish</button>' +
       '</div>' +
-      '<p class="privacy"><b>Name and LinkedIn appear on this page publicly.</b> Your email is not published &mdash; it only goes to Hannah on the sign-up form.</p>' +
+      '<p class="privacy"><b>This is all public.</b> Your name and LinkedIn appear on this page, and the sign-up sheet behind it is published openly &mdash; so treat your email as public too. Give one you are happy to share, or leave it blank.</p>' +
     '</form>' +
     '<p class="srcnote">' + note +
       (ghIssue(d, {}) ? ' <a href="' + esc(ghIssue(d, {})) + '" target="_blank" rel="noopener">Prefer GitHub? File an issue instead.</a>' : '') +

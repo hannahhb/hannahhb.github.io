@@ -30,26 +30,23 @@ No GitHub account needed.
 
 **Your name and LinkedIn are published; your email is not.** It stays in the responses sheet.
 
-### Publishing responses live
+### The live feed
 
-Set `SHEET_CSV` near the top of the page script to a published CSV URL and the directory
-updates itself — a new sign-up shows up on the next page load, with no commit.
+`SHEET_CSV` in `index.html` points at the published responses sheet, so a sign-up appears on
+the site the moment anyone reloads — no commit, no script.
 
-**Publish a filtered tab, never the responses sheet.** The raw sheet has everyone's email in
-column D; publishing it would put those addresses on the open web permanently.
+The responses sheet is **published openly**, which means the email column is fetchable by
+anyone who has that CSV URL, and the URL is in this page's source. The sign-up form says so
+in as many words. The page itself drops any column whose header mentions *email* or
+*timestamp* before parsing, so addresses never render on the map — but that is presentation,
+not privacy.
 
-1. In the responses sheet, add a tab called `Public` with one formula in `A1`:
-   `=QUERY('Form Responses 1'!A:E, "select B, C, E where B is not null", 1)`
-   That is Full Name, LinkedIn, Project Name — no email, no timestamp.
-2. **File → Share → Publish to web** → pick the `Public` tab → **Comma-separated values (.csv)** → Publish.
-3. Paste the URL into `SHEET_CSV` in `index.html`, commit, push.
+To narrow it later: stop publishing, add a `Public` tab holding
+`=QUERY('Form Responses 1'!A:E, "select B, C, E where B is not null", 1)`, publish only that
+tab as CSV, and swap the URL in `SHEET_CSV`.
 
-The page ignores any column whose header mentions *email* or *timestamp* regardless, so a
-mis-published tab still cannot put addresses on the page. Rows whose project name matches no
-SPAR project are skipped. If the sheet is unreachable the committed `people.json` still renders.
-
-Live means unmoderated: whatever someone types appears. To take an entry down, delete the row
-in the sheet.
+Rows naming no known project are skipped. If the sheet is ever unreachable, the committed
+`people.json` still renders. Live means unmoderated — to take someone down, delete their row.
 
 ### Merging responses by hand
 
