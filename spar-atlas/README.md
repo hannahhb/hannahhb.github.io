@@ -30,6 +30,25 @@ No GitHub account needed.
 
 **Your name and LinkedIn are published; your email is not.** It stays in the responses sheet.
 
+### The globe
+
+**Globe** places anyone who gave a location on an orthographic world map — drag to spin,
+click a pin for who is there and what they work on.
+
+Geocoding is entirely local: free text is matched against a bundled gazetteer of 2,585 cities
+and 244 countries built from [GeoNames](https://www.geonames.org/) (CC BY 4.0), so
+"Melbourne", "Melbourne, Australia" and "AU" all resolve, ambiguous names go to the larger
+city, and a country on its own gets an approximate pin at the country's centre, labelled as
+such. Nothing is sent to a geocoding service. World outlines come from
+[world-atlas](https://github.com/topojson/world-atlas) at 110m, decoded to plain GeoJSON.
+
+Unmatched locations are counted and reported rather than silently dropped.
+
+**The form needs a Location question for any of this to fill up.** Add one, then paste its
+`entry.` id into `GFORM.fields.location` in `index.html`. Until that id is set the sign-up
+form does not ask for a location, and the globe stays empty. The CSV reader picks up any
+column headed *location*, *city*, *country* or *where* automatically.
+
 ### The live feed
 
 `SHEET_CSV` in `index.html` points at the published responses sheet, so a sign-up appears on
