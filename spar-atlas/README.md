@@ -35,11 +35,11 @@ No GitHub account needed.
 **Globe** places anyone who gave a location on an orthographic world map — drag to spin,
 click a pin for who is there and what they work on.
 
-Geocoding is entirely local: free text is matched against a bundled gazetteer of 2,585 cities
+Without a Geoapify key, geocoding is local: free text is matched against a bundled gazetteer of 2,585 cities
 and 244 countries built from [GeoNames](https://www.geonames.org/) (CC BY 4.0), so
 "Melbourne", "Melbourne, Australia" and "AU" all resolve, ambiguous names go to the larger
 city, and a country on its own gets an approximate pin at the country's centre, labelled as
-such. Nothing is sent to a geocoding service. World outlines come from
+such. In offline mode, nothing is sent to a geocoding service. World outlines come from
 [world-atlas](https://github.com/topojson/world-atlas) at 110m, decoded to plain GeoJSON.
 
 Unmatched locations are counted and reported rather than silently dropped. The globe opens
@@ -57,8 +57,8 @@ to place them. The CSV reader picks up any column headed *location*, *city*, *co
 
 ### The live feed
 
-`SHEET_CSV` in `index.html` points at the published responses sheet, so a sign-up appears on
-the site the moment anyone reloads — no commit, no script.
+`SHEET_CSV` in `index.html` points at the published responses sheet, so a sign-up appears after
+submission and a page reload, once Google refreshes the published CSV — no commit, no script.
 
 The responses sheet is **published openly**, which means the email column is fetchable by
 anyone who has that CSV URL, and the URL is in this page's source. The sign-up form says so
@@ -128,3 +128,84 @@ scripts/subcluster_names.json   the 56 cluster labels
 ```
 
 Project descriptions and mentor names belong to SPAR and the individual mentors.
+
+## Testing sign-ups safely
+
+Run the offline regression tests with Node.js (no dependencies or network requests):
+
+```sh
+node --test tests/*.test.cjs
+```
+
+For browser review, run from this directory:
+
+```sh
+python3 scripts/preview_local.py --seed
+```
+
+Open http://127.0.0.1:8765 and select **Globe**, then **Lenoir, United States**.
+The seed is a synthetic participant on the topology project. Open that project and use
+**Add yourself** with a test name and `lenoir, nc`; the location preview should say
+**Globe location: Lenoir, United States**. Continue opens a local mock form. Click
+**Submit locally**, return to the atlas, reload, and select Globe to see the new entry.
+
+The preview replaces the live spreadsheet, Google Form, committed roster and database
+integration. It stores sign-ups only in server memory, which disappears when stopped.
+The page still loads public rendering assets (D3/fonts); roster requests and form
+submissions are restricted to the local server. Omit `--seed` for an empty roster.
+
+The Lenoir regression previously resolved to New Caledonia because `NC` was interpreted
+as an ISO country code and Lenoir was absent from the gazetteer. The supplemental city
+centroid comes from [GeoNames 4475640](https://www.geonames.org/4475640/), CC BY 4.0,
+verified in the GeoNames cities15000 export. City/state pairs now interpret US state
+suffixes before country codes; a country code on its own remains a country lookup.
+For an explicit non-US country, use its full name or a city/state/country address.
+Unlisted cities with a recognized country receive an approximate country pin; the form
+now shows that result before submission. State-level disambiguation between cities
+with identical names remains outside the bundled gazetteer's capabilities.
+
+## Optional Geoapify city search
+
+1. Create a free project at https://myprojects.geoapify.com/ and copy its API key.
+2. Set `apiKey` in `geocoding-config.js`. This is a browser-visible key; restrict its
+   allowed origins/referrers to your deployment in the Geoapify dashboard. For local
+   testing, allow the localhost origin you use as well.
+3. Deploy `geocoder.js` and `geocoding-config.js` alongside `index.html`.
+
+With a key, **Find city** searches Geoapify for city-level results. The user chooses
+one; its city/state/country label is sent through the existing Google Form Location
+field. No spreadsheet columns or form question IDs need to change. The atlas also
+resolves existing public roster locations, so older free-text sign-ups benefit.
+Country-only entries retain approximate offline pins. Equally ranked or low-confidence
+city matches remain unplaced instead of choosing a result arbitrarily.
+
+Only location text is sent to Geoapify, not participant names, emails or projects.
+Lookups are serialized, coalesced for duplicate strings, and cached in the visitor's
+browser for 30 days (up to 500 locations). Failures trigger a short cooldown and retain
+the offline gazetteer as fallback. Different visitors have separate caches, so this
+reduces usage but is not a site-wide quota guarantee. The free plan currently includes
+3,000 credits/day; check current [pricing](https://www.geoapify.com/pricing/).
+Provider and OpenStreetMap attribution is displayed in the interface.
+
+### Isolated and live-provider testing
+
+The mock preview runs the same client against a local Geoapify-shaped response for
+Lenoir, with no real account or API requests:
+
+```sh
+python3 scripts/preview_local.py --seed --mock-geocoder --port 8766
+```
+
+For an actual API test, save a test key in a local file outside this repository and run:
+
+```sh
+python3 scripts/preview_local.py --seed --geoapify-key-file /absolute/path/to/key --port 8767
+```
+
+The latter contacts Geoapify for city lookups but still uses synthetic roster data and
+local form submissions. It never reads or writes the production signup sheet. The test
+key is injected by the local server; it does not modify the deployable configuration.
+Hannah can set her own key in `geocoding-config.js` before publishing.
+
+Validation completed: offline regression tests and browser testing with the mocked
+provider, including selecting Lenoir's full label. A live-provider test requires a key.
