@@ -44,10 +44,10 @@ such. Nothing is sent to a geocoding service. World outlines come from
 
 Unmatched locations are counted and reported rather than silently dropped.
 
-**The form needs a Location question for any of this to fill up.** Add one, then paste its
-`entry.` id into `GFORM.fields.location` in `index.html`. Until that id is set the sign-up
-form does not ask for a location, and the globe stays empty. The CSV reader picks up any
-column headed *location*, *city*, *country* or *where* automatically.
+The form's Location question feeds this. Responses submitted before that question existed
+have no location and simply do not appear on the globe — type one into their row in the sheet
+to place them. The CSV reader picks up any column headed *location*, *city*, *country* or
+*where*, so renaming the question will not break it.
 
 ### The live feed
 
