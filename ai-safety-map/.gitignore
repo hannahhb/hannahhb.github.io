@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+scripts/.cache/
+scripts/index.txt
+logs/
+ai-safety-map/data/abstracts.json

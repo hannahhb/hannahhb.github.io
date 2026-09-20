@@ -1,0 +1,3930 @@
+{
+ "areas": {
+  "Interpretability": {
+   "blurb": "Reading and reverse-engineering what happens inside models",
+   "works": 400,
+   "people": 423,
+   "primary_people": 192,
+   "subs": {
+    "Circuits & attribution": {
+     "works": 200,
+     "people": 136,
+     "top_works": [
+      {
+       "person": "Eric J. Michaud",
+       "title": "Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models",
+       "url": "https://arxiv.org/abs/2403.19647v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 446
+      },
+      {
+       "person": "David Bau",
+       "title": "Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models",
+       "url": "https://arxiv.org/abs/2403.19647v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 446
+      },
+      {
+       "person": "Yonatan Belinkov",
+       "title": "Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models",
+       "url": "https://arxiv.org/abs/2403.19647v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 446
+      },
+      {
+       "person": "Aaron Mueller",
+       "title": "Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models",
+       "url": "https://arxiv.org/abs/2403.19647v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 446
+      },
+      {
+       "person": "Can Rager",
+       "title": "Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models",
+       "url": "https://arxiv.org/abs/2403.19647v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 446
+      },
+      {
+       "person": "Dan Hendrycks",
+       "title": "Improving Alignment and Robustness with Circuit Breakers",
+       "url": "https://arxiv.org/abs/2406.04313v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 342
+      },
+      {
+       "person": "Long Phan",
+       "title": "Improving Alignment and Robustness with Circuit Breakers",
+       "url": "https://arxiv.org/abs/2406.04313v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 342
+      },
+      {
+       "person": "Matt Fredrikson",
+       "title": "Improving Alignment and Robustness with Circuit Breakers",
+       "url": "https://arxiv.org/abs/2406.04313v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 342
+      }
+     ]
+    },
+    "Sparse autoencoders & features": {
+     "works": 200,
+     "people": 102,
+     "top_works": [
+      {
+       "person": "Neel Nanda",
+       "title": "Refusal in Language Models Is Mediated by a Single Direction",
+       "url": "https://arxiv.org/abs/2406.11717v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1059
+      },
+      {
+       "person": "Daniel Paleka",
+       "title": "Refusal in Language Models Is Mediated by a Single Direction",
+       "url": "https://arxiv.org/abs/2406.11717v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1059
+      },
+      {
+       "person": "Nina Panickssery",
+       "title": "Refusal in Language Models Is Mediated by a Single Direction",
+       "url": "https://arxiv.org/abs/2406.11717v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1059
+      },
+      {
+       "person": "Wes Gurnee",
+       "title": "Refusal in Language Models Is Mediated by a Single Direction",
+       "url": "https://arxiv.org/abs/2406.11717v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1059
+      },
+      {
+       "person": "Adam Jermyn",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Tom Henighan",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Andy Jones",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Esin Durmus",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      }
+     ]
+    },
+    "Probing & representation reading": {
+     "works": 162,
+     "people": 140,
+     "top_works": [
+      {
+       "person": "Yarin Gal",
+       "title": "Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs",
+       "url": "https://arxiv.org/abs/2406.15927v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 267
+      },
+      {
+       "person": "Atticus Geiger",
+       "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+       "url": "https://arxiv.org/abs/2501.17148v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 224
+      },
+      {
+       "person": "Aryaman Arora",
+       "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+       "url": "https://arxiv.org/abs/2501.17148v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 224
+      },
+      {
+       "person": "Christopher D. Manning",
+       "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+       "url": "https://arxiv.org/abs/2501.17148v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 224
+      },
+      {
+       "person": "Dan Jurafsky",
+       "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+       "url": "https://arxiv.org/abs/2501.17148v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 224
+      },
+      {
+       "person": "Christopher Potts",
+       "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+       "url": "https://arxiv.org/abs/2501.17148v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 224
+      },
+      {
+       "person": "Zhengxuan Wu",
+       "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+       "url": "https://arxiv.org/abs/2501.17148v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 224
+      },
+      {
+       "person": "Neel Nanda",
+       "title": "Learning Multi-Level Features with Matryoshka Sparse Autoencoders",
+       "url": "https://arxiv.org/abs/2503.17547v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 140
+      }
+     ]
+    },
+    "Steering & model editing": {
+     "works": 200,
+     "people": 163,
+     "top_works": [
+      {
+       "person": "Dan Hendrycks",
+       "title": "Improving Alignment and Robustness with Circuit Breakers",
+       "url": "https://arxiv.org/abs/2406.04313v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 342
+      },
+      {
+       "person": "Long Phan",
+       "title": "Improving Alignment and Robustness with Circuit Breakers",
+       "url": "https://arxiv.org/abs/2406.04313v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 342
+      },
+      {
+       "person": "Matt Fredrikson",
+       "title": "Improving Alignment and Robustness with Circuit Breakers",
+       "url": "https://arxiv.org/abs/2406.04313v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 342
+      },
+      {
+       "person": "Maksym Andriushchenko",
+       "title": "Improving Alignment and Robustness with Circuit Breakers",
+       "url": "https://arxiv.org/abs/2406.04313v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 342
+      },
+      {
+       "person": "Andy Zou",
+       "title": "Improving Alignment and Robustness with Circuit Breakers",
+       "url": "https://arxiv.org/abs/2406.04313v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 342
+      },
+      {
+       "person": "Baolin Peng",
+       "title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+       "url": "https://arxiv.org/abs/2504.20571v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 302
+      },
+      {
+       "person": "Atticus Geiger",
+       "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+       "url": "https://arxiv.org/abs/2501.17148v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 224
+      },
+      {
+       "person": "Aryaman Arora",
+       "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+       "url": "https://arxiv.org/abs/2501.17148v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 224
+      }
+     ]
+    }
+   }
+  },
+  "Chain of Thought & Reasoning": {
+   "blurb": "Whether stated reasoning reflects actual computation",
+   "works": 400,
+   "people": 672,
+   "primary_people": 241,
+   "subs": {
+    "CoT faithfulness": {
+     "works": 200,
+     "people": 99,
+     "top_works": [
+      {
+       "person": "Percy Liang",
+       "title": "s1: Simple test-time scaling",
+       "url": "https://arxiv.org/abs/2501.19393v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 1455
+      },
+      {
+       "person": "Tatsunori Hashimoto",
+       "title": "s1: Simple test-time scaling",
+       "url": "https://arxiv.org/abs/2501.19393v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 1455
+      },
+      {
+       "person": "Xuehai Pan",
+       "title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+       "url": "https://arxiv.org/abs/2501.12599v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 1075
+      },
+      {
+       "person": "Ryan Greenblatt",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Samuel R. Bowman",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Jared Kaplan",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Amanda Askell",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Shauna Kravec",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      }
+     ]
+    },
+    "CoT monitorability": {
+     "works": 200,
+     "people": 144,
+     "top_works": [
+      {
+       "person": "Jonas Geiping",
+       "title": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
+       "url": "https://arxiv.org/abs/2502.05171v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 368
+      },
+      {
+       "person": "Tom Goldstein",
+       "title": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
+       "url": "https://arxiv.org/abs/2502.05171v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 368
+      },
+      {
+       "person": "John Kirchenbauer",
+       "title": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
+       "url": "https://arxiv.org/abs/2502.05171v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 368
+      },
+      {
+       "person": "Bhavya Kailkhura",
+       "title": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
+       "url": "https://arxiv.org/abs/2502.05171v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 368
+      },
+      {
+       "person": "Leo Gao",
+       "title": "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation",
+       "url": "https://arxiv.org/abs/2503.11926v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 330
+      },
+      {
+       "person": "Bowen Baker",
+       "title": "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation",
+       "url": "https://arxiv.org/abs/2503.11926v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 330
+      },
+      {
+       "person": "David Farhi",
+       "title": "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation",
+       "url": "https://arxiv.org/abs/2503.11926v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 330
+      },
+      {
+       "person": "Aleksander Mądry",
+       "title": "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation",
+       "url": "https://arxiv.org/abs/2503.11926v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 330
+      }
+     ]
+    },
+    "Introspection & verbalisation": {
+     "works": 95,
+     "people": 86,
+     "top_works": [
+      {
+       "person": "Percy Liang",
+       "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+       "url": "https://arxiv.org/abs/2411.10109v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 312
+      },
+      {
+       "person": "Meredith Ringel Morris",
+       "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+       "url": "https://arxiv.org/abs/2411.10109v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 312
+      },
+      {
+       "person": "Owain Evans",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Ethan Perez",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Tomek Korbak",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "James Chua",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Henry Sleight",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Miles Turpin",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      }
+     ]
+    }
+   }
+  },
+  "AI Control": {
+   "blurb": "Getting useful work from models assumed to be scheming",
+   "works": 400,
+   "people": 182,
+   "primary_people": 50,
+   "subs": {
+    "Control protocols": {
+     "works": 77,
+     "people": 50,
+     "top_works": [
+      {
+       "person": "Geoffrey Irving",
+       "title": "A sketch of an AI control safety case",
+       "url": "https://arxiv.org/abs/2501.17315v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 35
+      },
+      {
+       "person": "Tomek Korbak",
+       "title": "A sketch of an AI control safety case",
+       "url": "https://arxiv.org/abs/2501.17315v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 35
+      },
+      {
+       "person": "Buck Shlegeris",
+       "title": "A sketch of an AI control safety case",
+       "url": "https://arxiv.org/abs/2501.17315v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 35
+      },
+      {
+       "person": "Benjamin Hilton",
+       "title": "A sketch of an AI control safety case",
+       "url": "https://arxiv.org/abs/2501.17315v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 35
+      },
+      {
+       "person": "Tyler Tracy",
+       "title": "Ctrl-Z: Controlling AI Agents via Resampling",
+       "url": "https://arxiv.org/abs/2504.10374v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 34
+      },
+      {
+       "person": "Buck Shlegeris",
+       "title": "Ctrl-Z: Controlling AI Agents via Resampling",
+       "url": "https://arxiv.org/abs/2504.10374v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 34
+      },
+      {
+       "person": "David Matolcsi",
+       "title": "Ctrl-Z: Controlling AI Agents via Resampling",
+       "url": "https://arxiv.org/abs/2504.10374v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 34
+      },
+      {
+       "person": "Adam Kaufman ",
+       "title": "Ctrl-Z: Controlling AI Agents via Resampling",
+       "url": "https://arxiv.org/abs/2504.10374v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 34
+      }
+     ]
+    },
+    "Sabotage & collusion": {
+     "works": 118,
+     "people": 97,
+     "top_works": [
+      {
+       "person": "Jan_Kulveit",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      },
+      {
+       "person": "Iason Gabriel",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      },
+      {
+       "person": "Esben Kran",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      },
+      {
+       "person": "Tomáš Gavenčiak",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      },
+      {
+       "person": "Matija Franklin",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      },
+      {
+       "person": "Atoosa Kasirzadeh",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      },
+      {
+       "person": "Lewis Hammond",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      },
+      {
+       "person": "Akbir Khan",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      }
+     ]
+    },
+    "Monitoring & escalation": {
+     "works": 200,
+     "people": 135,
+     "top_works": [
+      {
+       "person": "Fabien Roger",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Samuel R. Bowman",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Jared Kaplan",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Vlad Mikulik",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Joe Benton",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Ethan Perez",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Jan Leike",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Jonathan Uesato",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      }
+     ]
+    }
+   }
+  },
+  "Scalable Oversight": {
+   "blurb": "Supervising systems more capable than their supervisors",
+   "works": 400,
+   "people": 381,
+   "primary_people": 96,
+   "subs": {
+    "Debate & decomposition": {
+     "works": 89,
+     "people": 68,
+     "top_works": [
+      {
+       "person": "Yuxuan Liu",
+       "title": "DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition",
+       "url": "https://arxiv.org/abs/2504.21801v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 292
+      },
+      {
+       "person": "Cho-Jui Hsieh",
+       "title": "DrAttack: Prompt Decomposition and Reconstruction Makes Powerful LLM Jailbreakers",
+       "url": "https://arxiv.org/abs/2402.16914v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 129
+      },
+      {
+       "person": "Ethan Chern",
+       "title": "Can Large Language Models be Trusted for Evaluation? Scalable Meta-Evaluation of LLMs as Evaluators via Agent Debate",
+       "url": "https://arxiv.org/abs/2401.16788v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 50
+      },
+      {
+       "person": "Yichang Zhang",
+       "title": "Confidence v.s. Critique: A Decomposition of Self-Correction Capability for LLMs",
+       "url": "https://arxiv.org/abs/2412.19513v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 30
+      },
+      {
+       "person": "Junyang Lin",
+       "title": "Confidence v.s. Critique: A Decomposition of Self-Correction Capability for LLMs",
+       "url": "https://arxiv.org/abs/2412.19513v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 30
+      },
+      {
+       "person": "Lee Sharkey",
+       "title": "Interpretability in Parameter Space: Minimizing Mechanistic Description Length with Attribution-based Parameter Decomposition",
+       "url": "https://arxiv.org/abs/2501.14926v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 24
+      },
+      {
+       "person": "Lucius Bushnaq",
+       "title": "Interpretability in Parameter Space: Minimizing Mechanistic Description Length with Attribution-based Parameter Decomposition",
+       "url": "https://arxiv.org/abs/2501.14926v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 24
+      },
+      {
+       "person": "Dan Braun",
+       "title": "Interpretability in Parameter Space: Minimizing Mechanistic Description Length with Attribution-based Parameter Decomposition",
+       "url": "https://arxiv.org/abs/2501.14926v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 24
+      }
+     ]
+    },
+    "Weak-to-strong generalisation": {
+     "works": 42,
+     "people": 41,
+     "top_works": [
+      {
+       "person": "Xianjun Yang",
+       "title": "Weak-to-Strong Jailbreaking on Large Language Models",
+       "url": "https://arxiv.org/abs/2401.17256v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 125
+      },
+      {
+       "person": "Xuandong Zhao",
+       "title": "Weak-to-Strong Jailbreaking on Large Language Models",
+       "url": "https://arxiv.org/abs/2401.17256v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 125
+      },
+      {
+       "person": "Tianyu Pang",
+       "title": "Weak-to-Strong Jailbreaking on Large Language Models",
+       "url": "https://arxiv.org/abs/2401.17256v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 125
+      },
+      {
+       "person": "Zhiqing Sun",
+       "title": "Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision",
+       "url": "https://arxiv.org/abs/2403.09472v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 124
+      },
+      {
+       "person": "Yikang Shen",
+       "title": "Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision",
+       "url": "https://arxiv.org/abs/2403.09472v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 124
+      },
+      {
+       "person": "Chuang Gan",
+       "title": "Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision",
+       "url": "https://arxiv.org/abs/2403.09472v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 124
+      },
+      {
+       "person": "Yiming Yang",
+       "title": "Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision",
+       "url": "https://arxiv.org/abs/2403.09472v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 124
+      },
+      {
+       "person": "Yun Shen",
+       "title": "Breaking Agents: Compromising Autonomous LLM Agents Through Malfunction Amplification",
+       "url": "https://arxiv.org/abs/2407.20859v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 104
+      }
+     ]
+    },
+    "Process supervision & judging": {
+     "works": 200,
+     "people": 111,
+     "top_works": [
+      {
+       "person": "Xuehai Pan",
+       "title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+       "url": "https://arxiv.org/abs/2501.12599v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 1075
+      },
+      {
+       "person": "Azalia Mirhoseini",
+       "title": "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling",
+       "url": "https://arxiv.org/abs/2407.21787v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 968
+      },
+      {
+       "person": "Samuel R. Bowman",
+       "title": "LLM Evaluators Recognize and Favor Their Own Generations",
+       "url": "https://arxiv.org/abs/2404.13076v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 782
+      },
+      {
+       "person": "Arjun Panickssery",
+       "title": "LLM Evaluators Recognize and Favor Their Own Generations",
+       "url": "https://arxiv.org/abs/2404.13076v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 782
+      },
+      {
+       "person": "Nathan Lambert",
+       "title": "RewardBench: Evaluating Reward Models for Language Modeling",
+       "url": "https://arxiv.org/abs/2403.13787v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 477
+      },
+      {
+       "person": "Nouha Dziri",
+       "title": "RewardBench: Evaluating Reward Models for Language Modeling",
+       "url": "https://arxiv.org/abs/2403.13787v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 477
+      },
+      {
+       "person": "Noah A. Smith",
+       "title": "RewardBench: Evaluating Reward Models for Language Modeling",
+       "url": "https://arxiv.org/abs/2403.13787v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 477
+      },
+      {
+       "person": "Hannaneh Hajishirzi",
+       "title": "RewardBench: Evaluating Reward Models for Language Modeling",
+       "url": "https://arxiv.org/abs/2403.13787v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 477
+      }
+     ]
+    }
+   }
+  },
+  "Evaluations": {
+   "blurb": "Measuring what models can do, and whether the measurement holds",
+   "works": 400,
+   "people": 598,
+   "primary_people": 179,
+   "subs": {
+    "Dangerous capability evals": {
+     "works": 140,
+     "people": 118,
+     "top_works": [
+      {
+       "person": "Nikola Jurkovic",
+       "title": "Measuring AI Ability to Complete Long Software Tasks",
+       "url": "https://arxiv.org/abs/2503.14499v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 147
+      },
+      {
+       "person": "Megan Kinniment",
+       "title": "Measuring AI Ability to Complete Long Software Tasks",
+       "url": "https://arxiv.org/abs/2503.14499v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 147
+      },
+      {
+       "person": "Daniel M. Ziegler",
+       "title": "Measuring AI Ability to Complete Long Software Tasks",
+       "url": "https://arxiv.org/abs/2503.14499v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 147
+      },
+      {
+       "person": "David Rein",
+       "title": "Measuring AI Ability to Complete Long Software Tasks",
+       "url": "https://arxiv.org/abs/2503.14499v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 147
+      },
+      {
+       "person": "Rohin Shah",
+       "title": "Evaluating Frontier Models for Dangerous Capabilities",
+       "url": "https://arxiv.org/abs/2403.13793v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 141
+      },
+      {
+       "person": "David Lindner",
+       "title": "Evaluating Frontier Models for Dangerous Capabilities",
+       "url": "https://arxiv.org/abs/2403.13793v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 141
+      },
+      {
+       "person": "Ramana Kumar",
+       "title": "Evaluating Frontier Models for Dangerous Capabilities",
+       "url": "https://arxiv.org/abs/2403.13793v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 141
+      },
+      {
+       "person": "Victoria Krakovna",
+       "title": "Evaluating Frontier Models for Dangerous Capabilities",
+       "url": "https://arxiv.org/abs/2403.13793v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 141
+      }
+     ]
+    },
+    "Capability elicitation": {
+     "works": 163,
+     "people": 133,
+     "top_works": [
+      {
+       "person": "Dawn Song",
+       "title": "Scalable Best-of-N Selection for Large Language Models via Self-Certainty",
+       "url": "https://arxiv.org/abs/2502.18581v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 200
+      },
+      {
+       "person": "Xuandong Zhao",
+       "title": "Scalable Best-of-N Selection for Large Language Models via Self-Certainty",
+       "url": "https://arxiv.org/abs/2502.18581v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 200
+      },
+      {
+       "person": "Mengdi Wang",
+       "title": "Fast Best-of-N Decoding via Speculative Rejection",
+       "url": "https://arxiv.org/abs/2410.20290v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 143
+      },
+      {
+       "person": "Francis Rhys Ward",
+       "title": "AI Sandbagging: Language Models can Strategically Underperform on Evaluations",
+       "url": "https://arxiv.org/abs/2406.07358v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 135
+      },
+      {
+       "person": "Teun van der Weij",
+       "title": "AI Sandbagging: Language Models can Strategically Underperform on Evaluations",
+       "url": "https://arxiv.org/abs/2406.07358v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 135
+      },
+      {
+       "person": "Felix Hofstätter",
+       "title": "AI Sandbagging: Language Models can Strategically Underperform on Evaluations",
+       "url": "https://arxiv.org/abs/2406.07358v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 135
+      },
+      {
+       "person": "Ahmad Beirami",
+       "title": "Theoretical guarantees on the best-of-n alignment policy",
+       "url": "https://arxiv.org/abs/2401.01879v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 126
+      },
+      {
+       "person": "Alekh Agarwal",
+       "title": "Theoretical guarantees on the best-of-n alignment policy",
+       "url": "https://arxiv.org/abs/2401.01879v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 126
+      }
+     ]
+    },
+    "Benchmark validity": {
+     "works": 200,
+     "people": 134,
+     "top_works": [
+      {
+       "person": "Thong Hoang",
+       "title": "BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions",
+       "url": "https://arxiv.org/abs/2406.15877v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 679
+      },
+      {
+       "person": "Alexander Robey",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Florian Tramèr",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Hamed Hassani",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "George J. Pappas",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Patrick Chao",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Maksym Andriushchenko",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Francesco Croce",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      }
+     ]
+    },
+    "Evaluation awareness": {
+     "works": 95,
+     "people": 78,
+     "top_works": [
+      {
+       "person": "Marius Hobbhahn",
+       "title": "Large Language Models Often Know When They Are Being Evaluated",
+       "url": "https://arxiv.org/abs/2505.23836v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 106
+      },
+      {
+       "person": "Marius Hobbhahn",
+       "title": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
+       "url": "https://arxiv.org/abs/2407.04694v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 83
+      },
+      {
+       "person": "Jérémy Scheurer",
+       "title": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
+       "url": "https://arxiv.org/abs/2407.04694v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 83
+      },
+      {
+       "person": "Mikita Balesni",
+       "title": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
+       "url": "https://arxiv.org/abs/2407.04694v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 83
+      },
+      {
+       "person": "Owain Evans",
+       "title": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
+       "url": "https://arxiv.org/abs/2407.04694v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 83
+      },
+      {
+       "person": "Bilal Chughtai",
+       "title": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
+       "url": "https://arxiv.org/abs/2407.04694v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 83
+      },
+      {
+       "person": "Alexander Meinke",
+       "title": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
+       "url": "https://arxiv.org/abs/2407.04694v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 83
+      },
+      {
+       "person": "Jan Betley",
+       "title": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
+       "url": "https://arxiv.org/abs/2407.04694v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 83
+      }
+     ]
+    }
+   }
+  },
+  "Deception & Scheming": {
+   "blurb": "Models pursuing goals they conceal",
+   "works": 400,
+   "people": 183,
+   "primary_people": 45,
+   "subs": {
+    "Deceptive alignment": {
+     "works": 200,
+     "people": 122,
+     "top_works": [
+      {
+       "person": "Ryan Greenblatt",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Samuel R. Bowman",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Jared Kaplan",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Amanda Askell",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Shauna Kravec",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Evan Hubinger",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Sören Mindermann",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Nicholas Schiefer",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      }
+     ]
+    },
+    "Lie & deception detection": {
+     "works": 106,
+     "people": 99,
+     "top_works": [
+      {
+       "person": "Samuel R. Bowman",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "Ethan Perez",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "Ansh Radhakrishnan",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "Akbir Khan",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "Kshitij Sachan",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "John Hughes",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "Dan Valentine",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "Yarin Gal",
+       "title": "Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs",
+       "url": "https://arxiv.org/abs/2406.15927v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 267
+      }
+     ]
+    },
+    "Secret knowledge elicitation": {
+     "works": 27,
+     "people": 19,
+     "top_works": [
+      {
+       "person": "Dylan Hadfield-Menell",
+       "title": "Eight Methods to Evaluate Robust Unlearning in LLMs",
+       "url": "https://arxiv.org/abs/2402.16835v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 162
+      },
+      {
+       "person": "Phillip Guo",
+       "title": "Eight Methods to Evaluate Robust Unlearning in LLMs",
+       "url": "https://arxiv.org/abs/2402.16835v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 162
+      },
+      {
+       "person": "Aengus Lynch",
+       "title": "Eight Methods to Evaluate Robust Unlearning in LLMs",
+       "url": "https://arxiv.org/abs/2402.16835v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 162
+      },
+      {
+       "person": "Aidan Ewart",
+       "title": "Eight Methods to Evaluate Robust Unlearning in LLMs",
+       "url": "https://arxiv.org/abs/2402.16835v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 162
+      },
+      {
+       "person": "Stephen Casper",
+       "title": "Eight Methods to Evaluate Robust Unlearning in LLMs",
+       "url": "https://arxiv.org/abs/2402.16835v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 162
+      },
+      {
+       "person": "Arthur Conmy",
+       "title": "Eliciting Secret Knowledge from Language Models",
+       "url": "https://arxiv.org/abs/2510.01070v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 24
+      },
+      {
+       "person": "Senthooran Rajamanoharan",
+       "title": "Eliciting Secret Knowledge from Language Models",
+       "url": "https://arxiv.org/abs/2510.01070v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 24
+      },
+      {
+       "person": "Bartosz Cywiński",
+       "title": "Eliciting Secret Knowledge from Language Models",
+       "url": "https://arxiv.org/abs/2510.01070v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 24
+      }
+     ]
+    }
+   }
+  },
+  "Misalignment & Reward Hacking": {
+   "blurb": "Misalignment arising from ordinary training",
+   "works": 400,
+   "people": 392,
+   "primary_people": 89,
+   "subs": {
+    "Reward hacking & specification gaming": {
+     "works": 200,
+     "people": 152,
+     "top_works": [
+      {
+       "person": "Fabien Roger",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Samuel R. Bowman",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Jared Kaplan",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Vlad Mikulik",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Joe Benton",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Ethan Perez",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Jan Leike",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      },
+      {
+       "person": "Jonathan Uesato",
+       "title": "Reasoning Models Don't Always Say What They Think",
+       "url": "https://arxiv.org/abs/2505.05410v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 449
+      }
+     ]
+    },
+    "Goal misgeneralisation": {
+     "works": 18,
+     "people": 16,
+     "top_works": [
+      {
+       "person": "Senthooran Rajamanoharan",
+       "title": "Steering Out-of-Distribution Generalization with Concept Ablation Fine-Tuning",
+       "url": "https://arxiv.org/abs/2507.16795v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 34
+      },
+      {
+       "person": "Adam Karvonen",
+       "title": "Steering Out-of-Distribution Generalization with Concept Ablation Fine-Tuning",
+       "url": "https://arxiv.org/abs/2507.16795v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 34
+      },
+      {
+       "person": "Risto Uuk",
+       "title": "The AI risk repository: A meta-review, database, and taxonomy of risks from artificial intelligence",
+       "url": "https://arxiv.org/abs/2408.12622v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 18
+      },
+      {
+       "person": "Soroush Pour",
+       "title": "The AI risk repository: A meta-review, database, and taxonomy of risks from artificial intelligence",
+       "url": "https://arxiv.org/abs/2408.12622v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 18
+      },
+      {
+       "person": "Sonia Joseph",
+       "title": "Interpretability in Action: Exploratory Analysis of VPT, a Minecraft Agent",
+       "url": "https://arxiv.org/abs/2407.12161v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 4
+      },
+      {
+       "person": "Karolis Jucys",
+       "title": "Interpretability in Action: Exploratory Analysis of VPT, a Minecraft Agent",
+       "url": "https://arxiv.org/abs/2407.12161v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 4
+      },
+      {
+       "person": "Elliott Thornley",
+       "title": "Spurious Correlation Learning in Preference Optimization: Mechanisms, Consequences, and Mitigation via Tie Training",
+       "url": "https://arxiv.org/abs/2605.11134v2",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 3
+      },
+      {
+       "person": "Francesco Croce",
+       "title": "On the Out-of-Distribution Generalization of Reasoning in Multimodal LLMs for Simple Visual Planning Tasks",
+       "url": "https://arxiv.org/abs/2602.15460v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 1
+      }
+     ]
+    },
+    "Emergent misalignment": {
+     "works": 147,
+     "people": 122,
+     "top_works": [
+      {
+       "person": "Owain Evans",
+       "title": "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs",
+       "url": "https://arxiv.org/abs/2502.17424v7",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 177
+      },
+      {
+       "person": "Martín Soto",
+       "title": "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs",
+       "url": "https://arxiv.org/abs/2502.17424v7",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 177
+      },
+      {
+       "person": "Jan Betley",
+       "title": "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs",
+       "url": "https://arxiv.org/abs/2502.17424v7",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 177
+      },
+      {
+       "person": "Daniel Tan",
+       "title": "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs",
+       "url": "https://arxiv.org/abs/2502.17424v7",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 177
+      },
+      {
+       "person": "Ryan Greenblatt",
+       "title": "Natural Emergent Misalignment from Reward Hacking in Production RL",
+       "url": "https://arxiv.org/abs/2511.18397v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 101
+      },
+      {
+       "person": "Vlad Mikulik",
+       "title": "Natural Emergent Misalignment from Reward Hacking in Production RL",
+       "url": "https://arxiv.org/abs/2511.18397v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 101
+      },
+      {
+       "person": "Evan Hubinger",
+       "title": "Natural Emergent Misalignment from Reward Hacking in Production RL",
+       "url": "https://arxiv.org/abs/2511.18397v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 101
+      },
+      {
+       "person": "Joe Benton",
+       "title": "Natural Emergent Misalignment from Reward Hacking in Production RL",
+       "url": "https://arxiv.org/abs/2511.18397v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 101
+      }
+     ]
+    },
+    "Model organisms & data transmission": {
+     "works": 200,
+     "people": 155,
+     "top_works": [
+      {
+       "person": "Fengqing Jiang",
+       "title": "BadChain: Backdoor Chain-of-Thought Prompting for Large Language Models",
+       "url": "https://arxiv.org/abs/2401.12242v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 124
+      },
+      {
+       "person": "Radha Poovendran",
+       "title": "BadChain: Backdoor Chain-of-Thought Prompting for Large Language Models",
+       "url": "https://arxiv.org/abs/2401.12242v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 124
+      },
+      {
+       "person": "Yun Shen",
+       "title": "Instruction Backdoor Attacks Against Customized LLMs",
+       "url": "https://arxiv.org/abs/2402.09179v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 111
+      },
+      {
+       "person": "Michael Backes",
+       "title": "Instruction Backdoor Attacks Against Customized LLMs",
+       "url": "https://arxiv.org/abs/2402.09179v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 111
+      },
+      {
+       "person": "Owain Evans",
+       "title": "Subliminal Learning: Language models transmit behavioral traits via hidden signals in data",
+       "url": "https://arxiv.org/abs/2507.14805v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 103
+      },
+      {
+       "person": "James Chua",
+       "title": "Subliminal Learning: Language models transmit behavioral traits via hidden signals in data",
+       "url": "https://arxiv.org/abs/2507.14805v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 103
+      },
+      {
+       "person": "Jan Betley",
+       "title": "Subliminal Learning: Language models transmit behavioral traits via hidden signals in data",
+       "url": "https://arxiv.org/abs/2507.14805v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 103
+      },
+      {
+       "person": "Jacob Hilton",
+       "title": "Subliminal Learning: Language models transmit behavioral traits via hidden signals in data",
+       "url": "https://arxiv.org/abs/2507.14805v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 103
+      }
+     ]
+    }
+   }
+  },
+  "Alignment Training": {
+   "blurb": "Shaping behaviour and character through training",
+   "works": 400,
+   "people": 715,
+   "primary_people": 245,
+   "subs": {
+    "RLHF & preference optimisation": {
+     "works": 200,
+     "people": 104,
+     "top_works": [
+      {
+       "person": "Danqi Chen",
+       "title": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+       "url": "https://arxiv.org/abs/2405.14734v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1169
+      },
+      {
+       "person": "Nathan Lambert",
+       "title": "Tulu 3: Pushing Frontiers in Open Language Model Post-Training",
+       "url": "https://arxiv.org/abs/2411.15124v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 877
+      },
+      {
+       "person": "Nouha Dziri",
+       "title": "Tulu 3: Pushing Frontiers in Open Language Model Post-Training",
+       "url": "https://arxiv.org/abs/2411.15124v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 877
+      },
+      {
+       "person": "Noah A. Smith",
+       "title": "Tulu 3: Pushing Frontiers in Open Language Model Post-Training",
+       "url": "https://arxiv.org/abs/2411.15124v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 877
+      },
+      {
+       "person": "Faeze Brahman",
+       "title": "Tulu 3: Pushing Frontiers in Open Language Model Post-Training",
+       "url": "https://arxiv.org/abs/2411.15124v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 877
+      },
+      {
+       "person": "Nathan Lambert",
+       "title": "RewardBench: Evaluating Reward Models for Language Modeling",
+       "url": "https://arxiv.org/abs/2403.13787v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 477
+      },
+      {
+       "person": "Nouha Dziri",
+       "title": "RewardBench: Evaluating Reward Models for Language Modeling",
+       "url": "https://arxiv.org/abs/2403.13787v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 477
+      },
+      {
+       "person": "Noah A. Smith",
+       "title": "RewardBench: Evaluating Reward Models for Language Modeling",
+       "url": "https://arxiv.org/abs/2403.13787v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 477
+      }
+     ]
+    },
+    "Sycophancy & reward model failure": {
+     "works": 200,
+     "people": 157,
+     "top_works": [
+      {
+       "person": "Adam Jermyn",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Tom Henighan",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Andy Jones",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Esin Durmus",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Monte MacDiarmid",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Chris Olah",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Tristan Hume",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Alex Tamkin",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      }
+     ]
+    },
+    "Constitutional AI & harmlessness": {
+     "works": 200,
+     "people": 166,
+     "top_works": [
+      {
+       "person": "Samuel R. Bowman",
+       "title": "LLM Evaluators Recognize and Favor Their Own Generations",
+       "url": "https://arxiv.org/abs/2404.13076v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 782
+      },
+      {
+       "person": "Arjun Panickssery",
+       "title": "LLM Evaluators Recognize and Favor Their Own Generations",
+       "url": "https://arxiv.org/abs/2404.13076v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 782
+      },
+      {
+       "person": "Bill Yuchen Lin",
+       "title": "Prometheus 2: An Open Source Language Model Specialized in Evaluating Other Language Models",
+       "url": "https://arxiv.org/abs/2405.01535v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 535
+      },
+      {
+       "person": "Shayne Longpre",
+       "title": "Prometheus 2: An Open Source Language Model Specialized in Evaluating Other Language Models",
+       "url": "https://arxiv.org/abs/2405.01535v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 535
+      },
+      {
+       "person": "Ryan Greenblatt",
+       "title": "Alignment faking in large language models",
+       "url": "https://arxiv.org/abs/2412.14093v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 338
+      },
+      {
+       "person": "Fabien Roger",
+       "title": "Alignment faking in large language models",
+       "url": "https://arxiv.org/abs/2412.14093v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 338
+      },
+      {
+       "person": "Samuel R. Bowman",
+       "title": "Alignment faking in large language models",
+       "url": "https://arxiv.org/abs/2412.14093v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 338
+      },
+      {
+       "person": "Jared Kaplan",
+       "title": "Alignment faking in large language models",
+       "url": "https://arxiv.org/abs/2412.14093v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 338
+      }
+     ]
+    },
+    "Personas & model character": {
+     "works": 189,
+     "people": 153,
+     "top_works": [
+      {
+       "person": "Ya-Qin Zhang",
+       "title": "Personal LLM Agents: Insights and Survey about the Capability, Efficiency and Security",
+       "url": "https://arxiv.org/abs/2401.05459v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 378
+      },
+      {
+       "person": "Owain Evans",
+       "title": "Persona Vectors: Monitoring and Controlling Character Traits in Language Models",
+       "url": "https://arxiv.org/abs/2507.21509v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 313
+      },
+      {
+       "person": "Henry Sleight",
+       "title": "Persona Vectors: Monitoring and Controlling Character Traits in Language Models",
+       "url": "https://arxiv.org/abs/2507.21509v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 313
+      },
+      {
+       "person": "Jack Lindsey",
+       "title": "Persona Vectors: Monitoring and Controlling Character Traits in Language Models",
+       "url": "https://arxiv.org/abs/2507.21509v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 313
+      },
+      {
+       "person": "Percy Liang",
+       "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+       "url": "https://arxiv.org/abs/2411.10109v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 312
+      },
+      {
+       "person": "Meredith Ringel Morris",
+       "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+       "url": "https://arxiv.org/abs/2411.10109v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 312
+      },
+      {
+       "person": "Natasha Jaques",
+       "title": "Personalizing Reinforcement Learning from Human Feedback with Variational Preference Learning",
+       "url": "https://arxiv.org/abs/2408.10075v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 176
+      },
+      {
+       "person": "Bochuan Cao",
+       "title": "Personalized Steering of Large Language Models: Versatile Steering Vectors Through Bi-directional Preference Optimization",
+       "url": "https://arxiv.org/abs/2406.00045v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 131
+      }
+     ]
+    }
+   }
+  },
+  "Adversarial Robustness & Security": {
+   "blurb": "Attacks on models and on the systems around them",
+   "works": 400,
+   "people": 759,
+   "primary_people": 415,
+   "subs": {
+    "Jailbreaks & red teaming": {
+     "works": 200,
+     "people": 97,
+     "top_works": [
+      {
+       "person": "Mantas Mazeika",
+       "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+       "url": "https://arxiv.org/abs/2402.04249v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1562
+      },
+      {
+       "person": "Dan Hendrycks",
+       "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+       "url": "https://arxiv.org/abs/2402.04249v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1562
+      },
+      {
+       "person": "Steven Basart",
+       "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+       "url": "https://arxiv.org/abs/2402.04249v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1562
+      },
+      {
+       "person": "Nathaniel Li",
+       "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+       "url": "https://arxiv.org/abs/2402.04249v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1562
+      },
+      {
+       "person": "Neel Nanda",
+       "title": "Refusal in Language Models Is Mediated by a Single Direction",
+       "url": "https://arxiv.org/abs/2406.11717v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1059
+      },
+      {
+       "person": "Ruoxi Jia",
+       "title": "How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs",
+       "url": "https://arxiv.org/abs/2401.06373v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 721
+      },
+      {
+       "person": "Alexander Robey",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Florian Tramèr",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      }
+     ]
+    },
+    "Refusal & safety training": {
+     "works": 200,
+     "people": 133,
+     "top_works": [
+      {
+       "person": "Mantas Mazeika",
+       "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+       "url": "https://arxiv.org/abs/2402.04249v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1562
+      },
+      {
+       "person": "Dan Hendrycks",
+       "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+       "url": "https://arxiv.org/abs/2402.04249v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1562
+      },
+      {
+       "person": "Steven Basart",
+       "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+       "url": "https://arxiv.org/abs/2402.04249v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1562
+      },
+      {
+       "person": "Nathaniel Li",
+       "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+       "url": "https://arxiv.org/abs/2402.04249v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1562
+      },
+      {
+       "person": "Neel Nanda",
+       "title": "Refusal in Language Models Is Mediated by a Single Direction",
+       "url": "https://arxiv.org/abs/2406.11717v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1059
+      },
+      {
+       "person": "Daniel Paleka",
+       "title": "Refusal in Language Models Is Mediated by a Single Direction",
+       "url": "https://arxiv.org/abs/2406.11717v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 1059
+      },
+      {
+       "person": "Ryan Greenblatt",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      },
+      {
+       "person": "Samuel R. Bowman",
+       "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+       "url": "https://arxiv.org/abs/2401.05566v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 567
+      }
+     ]
+    },
+    "Prompt injection & agent security": {
+     "works": 200,
+     "people": 130,
+     "top_works": [
+      {
+       "person": "Alex Beutel",
+       "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+       "url": "https://arxiv.org/abs/2404.13208v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 514
+      },
+      {
+       "person": "Eric Wallace",
+       "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+       "url": "https://arxiv.org/abs/2404.13208v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 514
+      },
+      {
+       "person": "Johannes Heidecke",
+       "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+       "url": "https://arxiv.org/abs/2404.13208v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 514
+      },
+      {
+       "person": "Florian Tramèr",
+       "title": "Defeating Prompt Injections by Design",
+       "url": "https://arxiv.org/abs/2503.18813v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 276
+      },
+      {
+       "person": "Ilia Shumailov",
+       "title": "Defeating Prompt Injections by Design",
+       "url": "https://arxiv.org/abs/2503.18813v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 276
+      },
+      {
+       "person": "Edoardo Debenedetti",
+       "title": "Defeating Prompt Injections by Design",
+       "url": "https://arxiv.org/abs/2503.18813v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 276
+      },
+      {
+       "person": "Nicholas Carlini",
+       "title": "Defeating Prompt Injections by Design",
+       "url": "https://arxiv.org/abs/2503.18813v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 276
+      },
+      {
+       "person": "Jamie Hayes",
+       "title": "Defeating Prompt Injections by Design",
+       "url": "https://arxiv.org/abs/2503.18813v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 276
+      }
+     ]
+    },
+    "Attribution & provenance": {
+     "works": 159,
+     "people": 130,
+     "top_works": [
+      {
+       "person": "Yonatan Belinkov",
+       "title": "Have Faith in Faithfulness: Going Beyond Circuit Overlap When Finding Model Mechanisms",
+       "url": "https://arxiv.org/abs/2403.17806v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 154
+      },
+      {
+       "person": "Yuxin Wen",
+       "title": "WAVES: Benchmarking the Robustness of Image Watermarks",
+       "url": "https://arxiv.org/abs/2401.08573v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 114
+      },
+      {
+       "person": "Tom Goldstein",
+       "title": "WAVES: Benchmarking the Robustness of Image Watermarks",
+       "url": "https://arxiv.org/abs/2401.08573v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 114
+      },
+      {
+       "person": "Sicheng Zhu",
+       "title": "WAVES: Benchmarking the Robustness of Image Watermarks",
+       "url": "https://arxiv.org/abs/2401.08573v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 114
+      },
+      {
+       "person": "Bang An",
+       "title": "WAVES: Benchmarking the Robustness of Image Watermarks",
+       "url": "https://arxiv.org/abs/2401.08573v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 114
+      },
+      {
+       "person": "Furong Huang",
+       "title": "WAVES: Benchmarking the Robustness of Image Watermarks",
+       "url": "https://arxiv.org/abs/2401.08573v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 114
+      },
+      {
+       "person": "Rohin Shah",
+       "title": "AtP*: An efficient and scalable method for localizing LLM behaviour to components",
+       "url": "https://arxiv.org/abs/2403.00745v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 110
+      },
+      {
+       "person": "Neel Nanda",
+       "title": "AtP*: An efficient and scalable method for localizing LLM behaviour to components",
+       "url": "https://arxiv.org/abs/2403.00745v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 110
+      }
+     ]
+    }
+   }
+  },
+  "Unlearning & Capability Removal": {
+   "blurb": "Removing knowledge or abilities after training",
+   "works": 400,
+   "people": 290,
+   "primary_people": 110,
+   "subs": {
+    "Machine unlearning": {
+     "works": 200,
+     "people": 100,
+     "top_works": [
+      {
+       "person": "Mantas Mazeika",
+       "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+       "url": "https://arxiv.org/abs/2403.03218v7",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 543
+      },
+      {
+       "person": "Dan Hendrycks",
+       "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+       "url": "https://arxiv.org/abs/2403.03218v7",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 543
+      },
+      {
+       "person": "Nathan Helm-Burger",
+       "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+       "url": "https://arxiv.org/abs/2403.03218v7",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 543
+      },
+      {
+       "person": "Steven Basart",
+       "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+       "url": "https://arxiv.org/abs/2403.03218v7",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 543
+      },
+      {
+       "person": "Nathaniel Li",
+       "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+       "url": "https://arxiv.org/abs/2403.03218v7",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 543
+      },
+      {
+       "person": "Alexander Pan",
+       "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+       "url": "https://arxiv.org/abs/2403.03218v7",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 543
+      },
+      {
+       "person": "Long Phan",
+       "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+       "url": "https://arxiv.org/abs/2403.03218v7",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 543
+      },
+      {
+       "person": "Shashwat Goel",
+       "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+       "url": "https://arxiv.org/abs/2403.03218v7",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 543
+      }
+     ]
+    },
+    "Filtering & data curation": {
+     "works": 42,
+     "people": 36,
+     "top_works": [
+      {
+       "person": "Wei Shen",
+       "title": "Skywork-Reward-V2: Scaling Preference Data Curation via Human-AI Synergy",
+       "url": "https://arxiv.org/abs/2507.01352v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 186
+      },
+      {
+       "person": "Leon Derczynski",
+       "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
+       "url": "https://arxiv.org/abs/2508.14444v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 87
+      },
+      {
+       "person": "Banghua Zhu",
+       "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
+       "url": "https://arxiv.org/abs/2508.14444v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 87
+      },
+      {
+       "person": "Erick Galinkin",
+       "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
+       "url": "https://arxiv.org/abs/2508.14444v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 87
+      },
+      {
+       "person": "Seungju Han",
+       "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
+       "url": "https://arxiv.org/abs/2508.14444v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 87
+      },
+      {
+       "person": "Yejin Choi",
+       "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
+       "url": "https://arxiv.org/abs/2508.14444v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 87
+      },
+      {
+       "person": "Shaona Ghosh",
+       "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
+       "url": "https://arxiv.org/abs/2508.14444v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 87
+      },
+      {
+       "person": "Christopher Parisien",
+       "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
+       "url": "https://arxiv.org/abs/2508.14444v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 87
+      }
+     ]
+    }
+   }
+  },
+  "Multi-Agent Safety": {
+   "blurb": "Risks that only appear between agents",
+   "works": 372,
+   "people": 188,
+   "primary_people": 43,
+   "subs": {
+    "Cooperation & commitment": {
+     "works": 157,
+     "people": 117,
+     "top_works": [
+      {
+       "person": "Kaixuan Huang",
+       "title": "Embodied LLM Agents Learn to Cooperate in Organized Teams",
+       "url": "https://arxiv.org/abs/2403.12482v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 103
+      },
+      {
+       "person": "Thomas L. Griffiths",
+       "title": "Embodied LLM Agents Learn to Cooperate in Organized Teams",
+       "url": "https://arxiv.org/abs/2403.12482v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 103
+      },
+      {
+       "person": "Huazheng Wang",
+       "title": "Embodied LLM Agents Learn to Cooperate in Organized Teams",
+       "url": "https://arxiv.org/abs/2403.12482v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 103
+      },
+      {
+       "person": "Vasilios Mavroudis",
+       "title": "Open Challenges in Multi-Agent Security: Towards Secure Systems of Interacting AI Agents",
+       "url": "https://arxiv.org/abs/2505.02077v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 91
+      },
+      {
+       "person": "Ben Bucknall",
+       "title": "Open Challenges in Multi-Agent Security: Towards Secure Systems of Interacting AI Agents",
+       "url": "https://arxiv.org/abs/2505.02077v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 91
+      },
+      {
+       "person": "Bowen Yu",
+       "title": "Seedance 1.5 pro: A Native Audio-Visual Joint Generation Foundation Model",
+       "url": "https://arxiv.org/abs/2512.13507v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 66
+      },
+      {
+       "person": "Xi Lin",
+       "title": "Seedance 1.5 pro: A Native Audio-Visual Joint Generation Foundation Model",
+       "url": "https://arxiv.org/abs/2512.13507v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 66
+      },
+      {
+       "person": "Paolo Bova",
+       "title": "Trust AI Regulation? Discerning users are vital to build trust and effective AI regulation",
+       "url": "https://arxiv.org/abs/2403.09510v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 40
+      }
+     ]
+    },
+    "Multi-agent failure modes": {
+     "works": 200,
+     "people": 166,
+     "top_works": [
+      {
+       "person": "Dan Klein",
+       "title": "Why Do Multi-Agent LLM Systems Fail?",
+       "url": "https://arxiv.org/abs/2503.13657v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 610
+      },
+      {
+       "person": "Rishabh Tiwari",
+       "title": "Why Do Multi-Agent LLM Systems Fail?",
+       "url": "https://arxiv.org/abs/2503.13657v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 610
+      },
+      {
+       "person": "Kurt Keutzer",
+       "title": "Why Do Multi-Agent LLM Systems Fail?",
+       "url": "https://arxiv.org/abs/2503.13657v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 610
+      },
+      {
+       "person": "Ying Su",
+       "title": "Rethinking the Bounds of LLM Reasoning: Are Multi-Agent Discussions the Key?",
+       "url": "https://arxiv.org/abs/2402.18272v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 219
+      },
+      {
+       "person": "Juanzi Li",
+       "title": "Simulating Classroom Education with LLM-Empowered Agents",
+       "url": "https://arxiv.org/abs/2406.19226v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 212
+      },
+      {
+       "person": "Jifan Yu",
+       "title": "Simulating Classroom Education with LLM-Empowered Agents",
+       "url": "https://arxiv.org/abs/2406.19226v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 212
+      },
+      {
+       "person": "Jan_Kulveit",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      },
+      {
+       "person": "Iason Gabriel",
+       "title": "Multi-Agent Risks from Advanced AI",
+       "url": "https://arxiv.org/abs/2502.14143v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 196
+      }
+     ]
+    }
+   }
+  },
+  "AI Welfare & Moral Status": {
+   "blurb": "Whether and how models matter morally",
+   "works": 83,
+   "people": 38,
+   "primary_people": 14,
+   "subs": {
+    "Model welfare & self-reports": {
+     "works": 40,
+     "people": 39,
+     "top_works": [
+      {
+       "person": "Percy Liang",
+       "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+       "url": "https://arxiv.org/abs/2411.10109v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 312
+      },
+      {
+       "person": "Meredith Ringel Morris",
+       "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+       "url": "https://arxiv.org/abs/2411.10109v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 312
+      },
+      {
+       "person": "Owain Evans",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Ethan Perez",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Tomek Korbak",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "James Chua",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Henry Sleight",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Miles Turpin",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      }
+     ]
+    },
+    "Consciousness & moral patienthood": {
+     "works": 43,
+     "people": 35,
+     "top_works": [
+      {
+       "person": "Owain Evans",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Ethan Perez",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Tomek Korbak",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "James Chua",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Henry Sleight",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Miles Turpin",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "John Hughes",
+       "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+       "url": "https://arxiv.org/abs/2410.13787v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 105
+      },
+      {
+       "person": "Jacob Pfau",
+       "title": "Taking AI Welfare Seriously",
+       "url": "https://arxiv.org/abs/2411.00986v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 57
+      }
+     ]
+    }
+   }
+  },
+  "Agent Foundations": {
+   "blurb": "Formal accounts of agency and decision-making",
+   "works": 96,
+   "people": 53,
+   "primary_people": 18,
+   "subs": {
+    "Decision theory & embedded agency": {
+     "works": 11,
+     "people": 10,
+     "top_works": [
+      {
+       "person": "Caspar Oesterheld",
+       "title": "A dataset of questions on decision-theoretic reasoning in Newcomb-like problems",
+       "url": "https://arxiv.org/abs/2411.10588v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 3
+      },
+      {
+       "person": "Cole Wyeth",
+       "title": "Formalizing Embeddedness Failures in Universal Artificial Intelligence",
+       "url": "https://arxiv.org/abs/2505.17882v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 1
+      },
+      {
+       "person": "Marcus Hütter",
+       "title": "Formalizing Embeddedness Failures in Universal Artificial Intelligence",
+       "url": "https://arxiv.org/abs/2505.17882v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 1
+      },
+      {
+       "person": "Cole Wyeth",
+       "title": "Unbounded Embedded Agency: AEDT w.r.t. rOSI",
+       "url": "https://www.lesswrong.com/posts/B6gumHyuxzR5yn5tH/unbounded-embedded-agency-aedt-w-r-t-rosi",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      },
+      {
+       "person": "Tapatakt",
+       "title": "Weird Random Newcomb Problem",
+       "url": "https://www.lesswrong.com/posts/e9EdFNYyrzipnmN8u/weird-random-newcomb-problem",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      },
+      {
+       "person": "james.lucassen",
+       "title": "Decision Theory Guarding is Sufficient for Scheming",
+       "url": "https://www.lesswrong.com/posts/NccvE4GAhHbFim5Eb/decision-theory-guarding-is-sufficient-for-scheming",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      },
+      {
+       "person": "Daniel Herrmann",
+       "title": "Subjective Naturalism in Decision Theory: Savage vs. Jeffrey–Bolker",
+       "url": "https://www.lesswrong.com/posts/FL8RunWvyS5L8uJEw/subjective-naturalism-in-decision-theory-savage-vs-jeffrey",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      },
+      {
+       "person": "ben_levinstein",
+       "title": "Subjective Naturalism in Decision Theory: Savage vs. Jeffrey–Bolker",
+       "url": "https://www.lesswrong.com/posts/FL8RunWvyS5L8uJEw/subjective-naturalism-in-decision-theory-savage-vs-jeffrey",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      }
+     ]
+    },
+    "Corrigibility & shutdown": {
+     "works": 27,
+     "people": 18,
+     "top_works": [
+      {
+       "person": "Elliott Thornley",
+       "title": "The Shutdown Problem: An AI Engineering Puzzle for Decision Theorists",
+       "url": "https://arxiv.org/abs/2403.04471v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 29
+      },
+      {
+       "person": "Jeffrey Ladish",
+       "title": "Incomplete Tasks Induce Shutdown Resistance in Some Frontier LLMs",
+       "url": "https://arxiv.org/abs/2509.14260v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 14
+      },
+      {
+       "person": "Aran Nayebi",
+       "title": "Core Safety Values for Provably Corrigible Agents",
+       "url": "https://arxiv.org/abs/2507.20964v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 8
+      },
+      {
+       "person": "Elliott Thornley",
+       "title": "Towards Shutdownable Agents via Stochastic Choice",
+       "url": "https://arxiv.org/abs/2407.00805v7",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 4
+      },
+      {
+       "person": "Elliott Thornley",
+       "title": "Shutdownable Agents through POST-Agency",
+       "url": "https://arxiv.org/abs/2505.20203v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 3
+      },
+      {
+       "person": "Max Harms",
+       "title": "Corrigibility as a Singular Target: A Vision for Inherently Reliable Foundation Models",
+       "url": "https://arxiv.org/abs/2506.03056v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 2
+      },
+      {
+       "person": "Ram Potham",
+       "title": "Corrigibility as a Singular Target: A Vision for Inherently Reliable Foundation Models",
+       "url": "https://arxiv.org/abs/2506.03056v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 2
+      },
+      {
+       "person": "Elliott Thornley",
+       "title": "Towards Shutdownable Agents: Generalizing Stochastic Choice in RL Agents and LLMs",
+       "url": "https://arxiv.org/abs/2604.17502v4",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 1
+      }
+     ]
+    },
+    "Power-seeking & instrumental goals": {
+     "works": 58,
+     "people": 56,
+     "top_works": [
+      {
+       "person": "Adam Jermyn",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Tom Henighan",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Andy Jones",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Esin Durmus",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Monte MacDiarmid",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Chris Olah",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Tristan Hume",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Alex Tamkin",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      }
+     ]
+    }
+   }
+  },
+  "Forecasting & Timelines": {
+   "blurb": "When capabilities arrive and how fast",
+   "works": 230,
+   "people": 133,
+   "primary_people": 35,
+   "subs": {
+    "Capability forecasting": {
+     "works": 200,
+     "people": 168,
+     "top_works": [
+      {
+       "person": "Max Tegmark",
+       "title": "KAN: Kolmogorov-Arnold Networks",
+       "url": "https://arxiv.org/abs/2404.19756v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 2137
+      },
+      {
+       "person": "Ziming Liu",
+       "title": "KAN: Kolmogorov-Arnold Networks",
+       "url": "https://arxiv.org/abs/2404.19756v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 2137
+      },
+      {
+       "person": "Azalia Mirhoseini",
+       "title": "Large Language Monkeys: Scaling Inference Compute with Repeated Sampling",
+       "url": "https://arxiv.org/abs/2407.21787v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 968
+      },
+      {
+       "person": "Adam Jermyn",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Tom Henighan",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Andy Jones",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Esin Durmus",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      },
+      {
+       "person": "Monte MacDiarmid",
+       "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+       "url": "https://arxiv.org/abs/2605.29358v1",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 790
+      }
+     ]
+    },
+    "Takeoff & R&D automation": {
+     "works": 19,
+     "people": 14,
+     "top_works": [
+      {
+       "person": "Raymond Douglas",
+       "title": "AI Researchers' Views on Automating AI R&amp;D and Intelligence Explosions",
+       "url": "https://arxiv.org/abs/2603.03338v2",
+       "kind": "paper",
+       "year": 2026,
+       "citations": 2
+      },
+      {
+       "person": "owencb",
+       "title": "AI takeoff and nuclear war",
+       "url": "https://www.lesswrong.com/posts/wSEPrKkLmnwxFBkFD/ai-takeoff-and-nuclear-war",
+       "kind": "post",
+       "year": 2024,
+       "citations": null
+      },
+      {
+       "person": "Algon",
+       "title": "What are the differences between a singularity, an intelligence explosion, and a hard takeoff?",
+       "url": "https://www.lesswrong.com/posts/axketqtqa6vMFnkqn/what-are-the-differences-between-a-singularity-an",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      },
+      {
+       "person": "Vishakha",
+       "title": "What are the differences between a singularity, an intelligence explosion, and a hard takeoff?",
+       "url": "https://www.lesswrong.com/posts/axketqtqa6vMFnkqn/what-are-the-differences-between-a-singularity-an",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      },
+      {
+       "person": "Tom Davidson",
+       "title": "Takeoff speeds presentation at Anthropic",
+       "url": "https://www.lesswrong.com/posts/Nsmabb9fhpLuLdtLE/takeoff-speeds-presentation-at-anthropic",
+       "kind": "post",
+       "year": 2024,
+       "citations": null
+      },
+      {
+       "person": "Tom Davidson",
+       "title": "Will compute bottlenecks prevent a software intelligence explosion?",
+       "url": "https://www.lesswrong.com/posts/XDF6ovePBJf6hsxGj/will-compute-bottlenecks-prevent-a-software-intelligence-1",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      },
+      {
+       "person": "Tom Davidson",
+       "title": "How quick and big would a software intelligence explosion be?",
+       "url": "https://www.lesswrong.com/posts/s2yvH4xdcYNheSohZ/how-quick-and-big-would-a-software-intelligence-explosion-be",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      },
+      {
+       "person": "Tom Davidson",
+       "title": "Three Types of Intelligence Explosion",
+       "url": "https://www.lesswrong.com/posts/PzbEpSGvwH3NnegDB/three-types-of-intelligence-explosion",
+       "kind": "post",
+       "year": 2025,
+       "citations": null
+      }
+     ]
+    }
+   }
+  },
+  "Governance & Policy": {
+   "blurb": "Rules, institutions and the physical inputs to frontier AI",
+   "works": 292,
+   "people": 181,
+   "primary_people": 49,
+   "subs": {
+    "Compute governance": {
+     "works": 37,
+     "people": 34,
+     "top_works": [
+      {
+       "person": "Richard_Ngo",
+       "title": "Computing Power and the Governance of Artificial Intelligence",
+       "url": "https://arxiv.org/abs/2402.08797v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 86
+      },
+      {
+       "person": "Yoshua Bengio",
+       "title": "Computing Power and the Governance of Artificial Intelligence",
+       "url": "https://arxiv.org/abs/2402.08797v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 86
+      },
+      {
+       "person": "Gillian K. Hadfield",
+       "title": "Computing Power and the Governance of Artificial Intelligence",
+       "url": "https://arxiv.org/abs/2402.08797v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 86
+      },
+      {
+       "person": "Miles Brundage",
+       "title": "Computing Power and the Governance of Artificial Intelligence",
+       "url": "https://arxiv.org/abs/2402.08797v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 86
+      },
+      {
+       "person": "Markus Anderljung",
+       "title": "Computing Power and the Governance of Artificial Intelligence",
+       "url": "https://arxiv.org/abs/2402.08797v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 86
+      },
+      {
+       "person": "Shahar Avin",
+       "title": "Computing Power and the Governance of Artificial Intelligence",
+       "url": "https://arxiv.org/abs/2402.08797v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 86
+      },
+      {
+       "person": "Yizhou Wang",
+       "title": "Towards Zero-shot 3D Anomaly Localization",
+       "url": "https://arxiv.org/abs/2412.04304v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 13
+      },
+      {
+       "person": "Nora_Ammann",
+       "title": "Flexible Hardware-Enabled Guarantees for AI Compute",
+       "url": "https://arxiv.org/abs/2506.15093v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 10
+      }
+     ]
+    },
+    "International coordination": {
+     "works": 26,
+     "people": 22,
+     "top_works": [
+      {
+       "person": "Aaron_Scher",
+       "title": "Mechanisms to Verify International Agreements About AI Development",
+       "url": "https://arxiv.org/abs/2506.15867v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 18
+      },
+      {
+       "person": "Miles Brundage",
+       "title": "Verifying International Agreements on AI: Six Layers of Verification for Rules on Large-Scale AI Development and Deployment",
+       "url": "https://arxiv.org/abs/2507.15916v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 15
+      },
+      {
+       "person": "Christopher Ackerman",
+       "title": "Inspection and Control of Self-Generated-Text Recognition Ability in Llama3-8b-Instruct",
+       "url": "https://arxiv.org/abs/2410.02064v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 15
+      },
+      {
+       "person": "Nina Panickssery",
+       "title": "Inspection and Control of Self-Generated-Text Recognition Ability in Llama3-8b-Instruct",
+       "url": "https://arxiv.org/abs/2410.02064v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 15
+      },
+      {
+       "person": "Aaron_Scher",
+       "title": "An International Agreement to Prevent the Premature Creation of Artificial Superintelligence",
+       "url": "https://arxiv.org/abs/2511.10783v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 10
+      },
+      {
+       "person": "David Abecassis",
+       "title": "An International Agreement to Prevent the Premature Creation of Artificial Superintelligence",
+       "url": "https://arxiv.org/abs/2511.10783v3",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 10
+      },
+      {
+       "person": "Sören Mindermann",
+       "title": "In Which Areas of Technical AI Safety Could Geopolitical Rivals Cooperate?",
+       "url": "https://arxiv.org/abs/2504.12914v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 3
+      },
+      {
+       "person": "Robert Trager",
+       "title": "In Which Areas of Technical AI Safety Could Geopolitical Rivals Cooperate?",
+       "url": "https://arxiv.org/abs/2504.12914v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 3
+      }
+     ]
+    },
+    "Regulation & liability": {
+     "works": 200,
+     "people": 158,
+     "top_works": [
+      {
+       "person": "Luciano Floridi",
+       "title": "Generative AI in EU Law: Liability, Privacy, Intellectual Property, and Cybersecurity",
+       "url": "https://arxiv.org/abs/2401.07348v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 140
+      },
+      {
+       "person": "Adrià Garriga-Alonso",
+       "title": "Analyzing the Generalization and Reliability of Steering Vectors",
+       "url": "https://arxiv.org/abs/2407.12404v8",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 140
+      },
+      {
+       "person": "Claudio Novelli",
+       "title": "Generative AI in EU Law: Liability, Privacy, Intellectual Property, and Cybersecurity",
+       "url": "https://arxiv.org/abs/2401.07348v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 140
+      },
+      {
+       "person": "Aengus Lynch",
+       "title": "Analyzing the Generalization and Reliability of Steering Vectors",
+       "url": "https://arxiv.org/abs/2407.12404v8",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 140
+      },
+      {
+       "person": "Robert Kirk",
+       "title": "Analyzing the Generalization and Reliability of Steering Vectors",
+       "url": "https://arxiv.org/abs/2407.12404v8",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 140
+      },
+      {
+       "person": "Daniel Tan",
+       "title": "Analyzing the Generalization and Reliability of Steering Vectors",
+       "url": "https://arxiv.org/abs/2407.12404v8",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 140
+      },
+      {
+       "person": "Francis Rhys Ward",
+       "title": "AI Sandbagging: Language Models can Strategically Underperform on Evaluations",
+       "url": "https://arxiv.org/abs/2406.07358v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 135
+      },
+      {
+       "person": "Teun van der Weij",
+       "title": "AI Sandbagging: Language Models can Strategically Underperform on Evaluations",
+       "url": "https://arxiv.org/abs/2406.07358v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 135
+      }
+     ]
+    },
+    "Institutions & state capacity": {
+     "works": 28,
+     "people": 27,
+     "top_works": [
+      {
+       "person": "Deep Ganguli",
+       "title": "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions",
+       "url": "https://arxiv.org/abs/2504.15236v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 56
+      },
+      {
+       "person": "Esin Durmus",
+       "title": "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions",
+       "url": "https://arxiv.org/abs/2504.15236v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 56
+      },
+      {
+       "person": "Alex Tamkin",
+       "title": "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions",
+       "url": "https://arxiv.org/abs/2504.15236v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 56
+      },
+      {
+       "person": "Saffron Huang",
+       "title": "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions",
+       "url": "https://arxiv.org/abs/2504.15236v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 56
+      },
+      {
+       "person": "Jacy Reese Anthis",
+       "title": "HumanAgencyBench: Scalable Evaluation of Human Agency Support in AI Assistants",
+       "url": "https://arxiv.org/abs/2509.08494v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 15
+      },
+      {
+       "person": "Kush R. Varshney",
+       "title": "When Trust is Zero Sum: Automation Threat to Epistemic Agency",
+       "url": "https://arxiv.org/abs/2408.08846v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 14
+      },
+      {
+       "person": "Gleb Papyshev",
+       "title": "The Stories We Govern By: AI, Risk, and the Power of Imaginaries",
+       "url": "https://arxiv.org/abs/2508.11729v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 9
+      },
+      {
+       "person": "Elliott Thornley",
+       "title": "Shutdownable Agents through POST-Agency",
+       "url": "https://arxiv.org/abs/2505.20203v4",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 3
+      }
+     ]
+    }
+   }
+  },
+  "Safety Cases & Assurance": {
+   "blurb": "Arguing a system is safe enough to deploy",
+   "works": 248,
+   "people": 109,
+   "primary_people": 25,
+   "subs": {
+    "Safety cases & frameworks": {
+     "works": 109,
+     "people": 70,
+     "top_works": [
+      {
+       "person": "Thomas Larsen",
+       "title": "Safety Cases: How to Justify the Safety of Advanced AI Systems",
+       "url": "https://arxiv.org/abs/2403.10462v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 73
+      },
+      {
+       "person": "David Krueger",
+       "title": "Safety Cases: How to Justify the Safety of Advanced AI Systems",
+       "url": "https://arxiv.org/abs/2403.10462v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 73
+      },
+      {
+       "person": "Borhane Blili-Hamelin",
+       "title": "A Framework for Assurance Audits of Algorithmic Systems",
+       "url": "https://arxiv.org/abs/2401.14908v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 53
+      },
+      {
+       "person": "Rohin Shah",
+       "title": "An Approach to Technical AGI Safety and Security",
+       "url": "https://arxiv.org/abs/2504.01849v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 52
+      },
+      {
+       "person": "David Lindner",
+       "title": "An Approach to Technical AGI Safety and Security",
+       "url": "https://arxiv.org/abs/2504.01849v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 52
+      },
+      {
+       "person": "Arthur Conmy",
+       "title": "An Approach to Technical AGI Safety and Security",
+       "url": "https://arxiv.org/abs/2504.01849v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 52
+      },
+      {
+       "person": "Victoria Krakovna",
+       "title": "An Approach to Technical AGI Safety and Security",
+       "url": "https://arxiv.org/abs/2504.01849v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 52
+      },
+      {
+       "person": "Vikrant Varma",
+       "title": "An Approach to Technical AGI Safety and Security",
+       "url": "https://arxiv.org/abs/2504.01849v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 52
+      }
+     ]
+    },
+    "Auditing & third-party access": {
+     "works": 139,
+     "people": 120,
+     "top_works": [
+      {
+       "person": "Jakob Mökander",
+       "title": "Auditing of AI: Legal, Ethical and Technical Approaches",
+       "url": "https://arxiv.org/abs/2407.06235v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 129
+      },
+      {
+       "person": "Inioluwa Deborah Raji",
+       "title": "AI auditing: The Broken Bus on the Road to AI Accountability",
+       "url": "https://arxiv.org/abs/2401.14462v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 120
+      },
+      {
+       "person": "Luciano Floridi",
+       "title": "Operationalising AI governance through ethics-based auditing: An industry case study",
+       "url": "https://arxiv.org/abs/2407.06232v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 114
+      },
+      {
+       "person": "Jakob Mökander",
+       "title": "Operationalising AI governance through ethics-based auditing: An industry case study",
+       "url": "https://arxiv.org/abs/2407.06232v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 114
+      },
+      {
+       "person": "Niloofar Mireshghallah",
+       "title": "Trust No Bot: Discovering Personal Disclosures in Human-LLM Conversations in the Wild",
+       "url": "https://arxiv.org/abs/2407.11438v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 90
+      },
+      {
+       "person": "Golnoosh Farnadi",
+       "title": "Trust No Bot: Discovering Personal Disclosures in Human-LLM Conversations in the Wild",
+       "url": "https://arxiv.org/abs/2407.11438v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 90
+      },
+      {
+       "person": "Fabien Roger",
+       "title": "Auditing language models for hidden objectives",
+       "url": "https://arxiv.org/abs/2503.10965v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 74
+      },
+      {
+       "person": "Samuel R. Bowman",
+       "title": "Auditing language models for hidden objectives",
+       "url": "https://arxiv.org/abs/2503.10965v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 74
+      }
+     ]
+    }
+   }
+  },
+  "Societal Impact & Epistemics": {
+   "blurb": "Effects on people, institutions and knowledge",
+   "works": 234,
+   "people": 147,
+   "primary_people": 31,
+   "subs": {
+    "Persuasion & manipulation": {
+     "works": 141,
+     "people": 117,
+     "top_works": [
+      {
+       "person": "Ruoxi Jia",
+       "title": "How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs",
+       "url": "https://arxiv.org/abs/2401.06373v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 721
+      },
+      {
+       "person": "Yi Zeng",
+       "title": "How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs",
+       "url": "https://arxiv.org/abs/2401.06373v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 721
+      },
+      {
+       "person": "Diyi Yang",
+       "title": "How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs",
+       "url": "https://arxiv.org/abs/2401.06373v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 721
+      },
+      {
+       "person": "Weiyan Shi",
+       "title": "How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs",
+       "url": "https://arxiv.org/abs/2401.06373v2",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 721
+      },
+      {
+       "person": "Samuel R. Bowman",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "Ethan Perez",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "Ansh Radhakrishnan",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      },
+      {
+       "person": "Akbir Khan",
+       "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+       "url": "https://arxiv.org/abs/2402.06782v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 310
+      }
+     ]
+    },
+    "Epistemics & human autonomy": {
+     "works": 57,
+     "people": 54,
+     "top_works": [
+      {
+       "person": "Stephan Günnemann",
+       "title": "The Geometry of Refusal in Large Language Models: Concept Cones and Representational Independence",
+       "url": "https://arxiv.org/abs/2502.17420v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 107
+      },
+      {
+       "person": "Jannes Elstner",
+       "title": "The Geometry of Refusal in Large Language Models: Concept Cones and Representational Independence",
+       "url": "https://arxiv.org/abs/2502.17420v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 107
+      },
+      {
+       "person": "Qiao Jin",
+       "title": "Risks of AI Scientists: Prioritizing Safeguarding Over Autonomy",
+       "url": "https://arxiv.org/abs/2402.04247v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 92
+      },
+      {
+       "person": "Deep Ganguli",
+       "title": "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions",
+       "url": "https://arxiv.org/abs/2504.15236v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 56
+      },
+      {
+       "person": "Esin Durmus",
+       "title": "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions",
+       "url": "https://arxiv.org/abs/2504.15236v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 56
+      },
+      {
+       "person": "Alex Tamkin",
+       "title": "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions",
+       "url": "https://arxiv.org/abs/2504.15236v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 56
+      },
+      {
+       "person": "Saffron Huang",
+       "title": "Values in the Wild: Discovering and Analyzing Values in Real-World Language Model Interactions",
+       "url": "https://arxiv.org/abs/2504.15236v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 56
+      },
+      {
+       "person": "Yinpeng Dong",
+       "title": "A Survey on Autonomy-Induced Security Risks in Large Model-Based Agents",
+       "url": "https://arxiv.org/abs/2506.23844v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 41
+      }
+     ]
+    },
+    "Labour & economic effects": {
+     "works": 36,
+     "people": 33,
+     "top_works": [
+      {
+       "person": "David Rein",
+       "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+       "url": "https://arxiv.org/abs/2507.09089v2",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 197
+      },
+      {
+       "person": "Jared Kaplan",
+       "title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+       "url": "https://arxiv.org/abs/2503.04761v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 149
+      },
+      {
+       "person": "Dario Amodei",
+       "title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+       "url": "https://arxiv.org/abs/2503.04761v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 149
+      },
+      {
+       "person": "Deep Ganguli",
+       "title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+       "url": "https://arxiv.org/abs/2503.04761v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 149
+      },
+      {
+       "person": "Esin Durmus",
+       "title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+       "url": "https://arxiv.org/abs/2503.04761v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 149
+      },
+      {
+       "person": "Alex Tamkin",
+       "title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+       "url": "https://arxiv.org/abs/2503.04761v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 149
+      },
+      {
+       "person": "Saffron Huang",
+       "title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+       "url": "https://arxiv.org/abs/2503.04761v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 149
+      },
+      {
+       "person": "Jared Mueller",
+       "title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+       "url": "https://arxiv.org/abs/2503.04761v1",
+       "kind": "paper",
+       "year": 2025,
+       "citations": 149
+      }
+     ]
+    }
+   }
+  },
+  "Existential Risk & Threat Models": {
+   "blurb": "Whole-system arguments about catastrophe",
+   "works": 354,
+   "people": 202,
+   "primary_people": 65,
+   "subs": {
+    "Threat models & risk analysis": {
+     "works": 200,
+     "people": 156,
+     "top_works": [
+      {
+       "person": "Alexander Robey",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Florian Tramèr",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Hamed Hassani",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "George J. Pappas",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Patrick Chao",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Maksym Andriushchenko",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Francesco Croce",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      },
+      {
+       "person": "Nicolas Flammarion",
+       "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+       "url": "https://arxiv.org/abs/2404.01318v5",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 645
+      }
+     ]
+    },
+    "Strategy & prioritisation": {
+     "works": 125,
+     "people": 117,
+     "top_works": [
+      {
+       "person": "Alex Beutel",
+       "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+       "url": "https://arxiv.org/abs/2404.13208v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 514
+      },
+      {
+       "person": "Eric Wallace",
+       "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+       "url": "https://arxiv.org/abs/2404.13208v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 514
+      },
+      {
+       "person": "Johannes Heidecke",
+       "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+       "url": "https://arxiv.org/abs/2404.13208v1",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 514
+      },
+      {
+       "person": "Niloofar Mireshghallah",
+       "title": "A Roadmap to Pluralistic Alignment",
+       "url": "https://arxiv.org/abs/2402.05070v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 233
+      },
+      {
+       "person": "Nouha Dziri",
+       "title": "A Roadmap to Pluralistic Alignment",
+       "url": "https://arxiv.org/abs/2402.05070v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 233
+      },
+      {
+       "person": "Liwei Jiang",
+       "title": "A Roadmap to Pluralistic Alignment",
+       "url": "https://arxiv.org/abs/2402.05070v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 233
+      },
+      {
+       "person": "Ximing Lu",
+       "title": "A Roadmap to Pluralistic Alignment",
+       "url": "https://arxiv.org/abs/2402.05070v3",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 233
+      },
+      {
+       "person": "Chaowei Xiao",
+       "title": "AutoDAN-Turbo: A Lifelong Agent for Strategy Self-Exploration to Jailbreak LLMs",
+       "url": "https://arxiv.org/abs/2410.05295v4",
+       "kind": "paper",
+       "year": 2024,
+       "citations": 223
+      }
+     ]
+    }
+   }
+  }
+ },
+ "matched_works": 8407,
+ "total_works": 13396
+}

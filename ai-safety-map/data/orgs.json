@@ -1,0 +1,1545 @@
+[
+ {
+  "name": "Machine Intelligence Research Institute (MIRI)",
+  "aliases": [
+   "MIRI",
+   "Machine Intelligence Research Institute",
+   "Machine Intelligence Research Institute (MIRI)"
+  ],
+  "source_sheet": "technical",
+  "category": "Agent foundations",
+  "founded": "2000",
+  "closed": "2024",
+  "ftes": 10,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Future of Humanity Institute (FHI)",
+  "aliases": [
+   "FHI",
+   "Future of Humanity Institute",
+   "Future of Humanity Institute (FHI)"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2005",
+  "closed": "2024",
+  "ftes": 10,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Google DeepMind",
+  "aliases": [
+   "Google DeepMind"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2010",
+  "closed": "",
+  "ftes": 30,
+  "link": "",
+  "sector": "frontier_lab"
+ },
+ {
+  "name": "GoodAI",
+  "aliases": [
+   "GoodAI"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2014",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Jacob Steinhardt research group",
+  "aliases": [
+   "Jacob Steinhardt research group"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2016",
+  "closed": "",
+  "ftes": 9,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "David Krueger (Cambridge)",
+  "aliases": [
+   "Cambridge",
+   "David Krueger",
+   "David Krueger (Cambridge)"
+  ],
+  "source_sheet": "technical",
+  "category": "RL safety",
+  "founded": "2016",
+  "closed": "",
+  "ftes": 15,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Center for Human-Compatible AI",
+  "aliases": [
+   "Center for Human-Compatible AI"
+  ],
+  "source_sheet": "technical",
+  "category": "RL safety",
+  "founded": "2016",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "OpenAI",
+  "aliases": [
+   "OpenAI"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2016",
+  "closed": "",
+  "ftes": 15,
+  "link": "",
+  "sector": "frontier_lab"
+ },
+ {
+  "name": "Truthful AI (Owain Evans)",
+  "aliases": [
+   "Owain Evans",
+   "Truthful AI",
+   "Truthful AI (Owain Evans)"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2016",
+  "closed": "",
+  "ftes": 3,
+  "link": "https://www.truthfulai.org/about",
+  "sector": "safety_org"
+ },
+ {
+  "name": "CORAL",
+  "aliases": [
+   "CORAL"
+  ],
+  "source_sheet": "technical",
+  "category": "Agent foundations",
+  "founded": "2017",
+  "closed": "",
+  "ftes": 2,
+  "link": "https://coral-research.org/research/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Scott Niekum (University of Massachusetts Amherst)",
+  "aliases": [
+   "Scott Niekum",
+   "Scott Niekum (University of Massachusetts Amherst)"
+  ],
+  "source_sheet": "technical",
+  "category": "RL safety",
+  "founded": "2018",
+  "closed": "",
+  "ftes": 4,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Eleuther AI",
+  "aliases": [
+   "Eleuther AI"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2020",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "NYU He He research group",
+  "aliases": [
+   "NYU He He research group"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 4,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "MIT Algorithmic Alignment Group (Dylan Hadfield-Menell)",
+  "aliases": [
+   "Dylan Hadfield-Menell",
+   "MIT Algorithmic Alignment Group",
+   "MIT Algorithmic Alignment Group (Dylan Hadfield-Menell)"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Anthropic",
+  "aliases": [
+   "Anthropic"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 40,
+  "link": "",
+  "sector": "frontier_lab"
+ },
+ {
+  "name": "Redwood Research",
+  "aliases": [
+   "Redwood Research"
+  ],
+  "source_sheet": "technical",
+  "category": "AI control",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Alignment Research Center (ARC)",
+  "aliases": [
+   "ARC",
+   "Alignment Research Center",
+   "Alignment Research Center (ARC)"
+  ],
+  "source_sheet": "technical",
+  "category": "Theoretical AI safety research",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 4,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Lakera",
+  "aliases": [
+   "Lakera"
+  ],
+  "source_sheet": "technical",
+  "category": "AI security",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "MATS",
+  "aliases": [
+   "MATS"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 20,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Constellation",
+  "aliases": [
+   "Constellation"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 18,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "NYU Alignment Research Group (Sam Bowman)",
+  "aliases": [
+   "NYU Alignment Research Group",
+   "NYU Alignment Research Group (Sam Bowman)",
+   "Sam Bowman"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2022",
+  "closed": "2024",
+  "ftes": 5,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Center for AI Safety (CAIS)",
+  "aliases": [
+   "CAIS",
+   "Center for AI Safety",
+   "Center for AI Safety (CAIS)"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Fund for Alignment Research (FAR)",
+  "aliases": [
+   "FAR",
+   "Fund for Alignment Research",
+   "Fund for Alignment Research (FAR)"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 15,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Conjecture",
+  "aliases": [
+   "Conjecture"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Aligned AI",
+  "aliases": [
+   "Aligned AI"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 2,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Epoch AI",
+  "aliases": [
+   "Epoch AI"
+  ],
+  "source_sheet": "technical",
+  "category": "AI forecasting",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "AI Safety Student Team (Harvard)",
+  "aliases": [
+   "AI Safety Student Team",
+   "AI Safety Student Team (Harvard)",
+   "Harvard"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Tegmark Group",
+  "aliases": [
+   "Tegmark Group"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 5,
+  "link": "https://tegmark.org/",
+  "sector": "academia"
+ },
+ {
+  "name": "David Bau Interpretability Group",
+  "aliases": [
+   "David Bau Interpretability Group"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 12,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Apart Research",
+  "aliases": [
+   "Apart Research"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 30,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Dovetail Research",
+  "aliases": [
+   "Dovetail Research"
+  ],
+  "source_sheet": "technical",
+  "category": "Agent foundations",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "PIBBSS",
+  "aliases": [
+   "PIBBSS"
+  ],
+  "source_sheet": "technical",
+  "category": "Interdisciplinary",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "METR",
+  "aliases": [
+   "METR"
+  ],
+  "source_sheet": "technical",
+  "category": "Evals",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 31,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Apollo Research",
+  "aliases": [
+   "Apollo Research"
+  ],
+  "source_sheet": "technical",
+  "category": "Evals",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 19,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Timaeus",
+  "aliases": [
+   "Timaeus"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 8,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "London Initiative for AI Safety (LISA) and related programs",
+  "aliases": [
+   "LISA",
+   "London Initiative for AI Safety (LISA) and related programs",
+   "London Initiative for AI Safety and related programs"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Cadenza Labs",
+  "aliases": [
+   "Cadenza Labs"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Realm Labs",
+  "aliases": [
+   "Realm Labs"
+  ],
+  "source_sheet": "technical",
+  "category": "AI security",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 6,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "ACS",
+  "aliases": [
+   "ACS"
+  ],
+  "source_sheet": "technical",
+  "category": "Interdisciplinary",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Meaning Alignment Institute",
+  "aliases": [
+   "Meaning Alignment Institute"
+  ],
+  "source_sheet": "technical",
+  "category": "Value learning",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Orthogonal",
+  "aliases": [
+   "Orthogonal"
+  ],
+  "source_sheet": "technical",
+  "category": "Agent foundations",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 1,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "AI Security Institute (AISI)",
+  "aliases": [
+   "AI Security Institute",
+   "AI Security Institute (AISI)",
+   "AISI"
+  ],
+  "source_sheet": "technical",
+  "category": "Evals",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 50,
+  "link": "",
+  "sector": "government"
+ },
+ {
+  "name": "Shi Feng research group (George Washington University)",
+  "aliases": [
+   "George Washington University",
+   "Shi Feng research group",
+   "Shi Feng research group (George Washington University)"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Virtue AI",
+  "aliases": [
+   "Virtue AI"
+  ],
+  "source_sheet": "technical",
+  "category": "AI security",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Goodfire",
+  "aliases": [
+   "Goodfire"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 29,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Gray Swan AI",
+  "aliases": [
+   "Gray Swan AI"
+  ],
+  "source_sheet": "technical",
+  "category": "AI security",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Transluce",
+  "aliases": [
+   "Transluce"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 15,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Guide Labs",
+  "aliases": [
+   "Guide Labs"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 4,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Aether research",
+  "aliases": [
+   "Aether research"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 3,
+  "link": "https://www.lesswrong.com/posts/B8Cmtf5gdHwxb8qtT/aether-july-2025-update",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Simplex",
+  "aliases": [
+   "Simplex"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 2,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Contramont Research",
+  "aliases": [
+   "Contramont Research"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Tilde",
+  "aliases": [
+   "Tilde"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Palisade Research",
+  "aliases": [
+   "Palisade Research"
+  ],
+  "source_sheet": "technical",
+  "category": "AI security",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 6,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Luthien",
+  "aliases": [
+   "Luthien"
+  ],
+  "source_sheet": "technical",
+  "category": "AI control",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 1,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "ARIA",
+  "aliases": [
+   "ARIA"
+  ],
+  "source_sheet": "technical",
+  "category": "Provably safe AI",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 1,
+  "link": "",
+  "sector": "government"
+ },
+ {
+  "name": "CaML",
+  "aliases": [
+   "CaML"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 3,
+  "link": "https://www.compassionml.com/who-we-are",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Decode Research",
+  "aliases": [
+   "Decode Research"
+  ],
+  "source_sheet": "technical",
+  "category": "Interpretability",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 2,
+  "link": "http://decoderesearch.org/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Meta superintelligence alignment and safety",
+  "aliases": [
+   "Meta superintelligence alignment and safety"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2025",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "frontier_lab"
+ },
+ {
+  "name": "LawZero",
+  "aliases": [
+   "LawZero"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2025",
+  "closed": "",
+  "ftes": 10,
+  "link": "https://lawzero.org",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Geodesic",
+  "aliases": [
+   "Geodesic"
+  ],
+  "source_sheet": "technical",
+  "category": "CoT monitoring",
+  "founded": "2025",
+  "closed": "",
+  "ftes": 4,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Sharon Li (University of Wisconsin Madison)",
+  "aliases": [
+   "Sharon Li",
+   "Sharon Li (University of Wisconsin Madison)"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2020",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Yaodong Yang (Peking University)",
+  "aliases": [
+   "Peking University",
+   "Yaodong Yang",
+   "Yaodong Yang (Peking University)"
+  ],
+  "source_sheet": "technical",
+  "category": "LLM safety",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Dawn Song",
+  "aliases": [
+   "Dawn Song"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2020",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Vincent Conitzer",
+  "aliases": [
+   "Vincent Conitzer"
+  ],
+  "source_sheet": "technical",
+  "category": "Multi-agent alignment",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 8,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Stanford Center for AI Safety",
+  "aliases": [
+   "Stanford Center for AI Safety"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2018",
+  "closed": "",
+  "ftes": 20,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Formation Research",
+  "aliases": [
+   "Formation Research"
+  ],
+  "source_sheet": "technical",
+  "category": "Lock-in risk research",
+  "founded": "2025",
+  "closed": "",
+  "ftes": 2,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Stephen Byrnes",
+  "aliases": [
+   "Stephen Byrnes"
+  ],
+  "source_sheet": "technical",
+  "category": "Brain-like AGI safety",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 1,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Roman Yampolskiy",
+  "aliases": [
+   "Roman Yampolskiy"
+  ],
+  "source_sheet": "technical",
+  "category": "Misc technical AI safety research",
+  "founded": "2011",
+  "closed": "",
+  "ftes": 1,
+  "link": "",
+  "sector": "academia"
+ },
+ {
+  "name": "Softmax",
+  "aliases": [
+   "Softmax"
+  ],
+  "source_sheet": "technical",
+  "category": "Multi-agent alignment",
+  "founded": "2025",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Centre for Security and Emerging Technology (CSET)",
+  "aliases": [
+   "CSET",
+   "Centre for Security and Emerging Technology",
+   "Centre for Security and Emerging Technology (CSET)"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2019",
+  "closed": "",
+  "ftes": 20,
+  "link": "https://cset.georgetown.edu/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Centre for Governance of AI (GovAI)",
+  "aliases": [
+   "Centre for Governance of AI",
+   "Centre for Governance of AI (GovAI)",
+   "GovAI"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2018",
+  "closed": "",
+  "ftes": 40,
+  "link": "https://www.governance.ai/",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Leverhulme Centre for the Future of Intelligence",
+  "aliases": [
+   "Leverhulme Centre for the Future of Intelligence"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2016",
+  "closed": "",
+  "ftes": 10,
+  "link": "https://lcfi.ac.uk/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Center for the Study of Existential Risk (CSER)",
+  "aliases": [
+   "CSER",
+   "Center for the Study of Existential Risk",
+   "Center for the Study of Existential Risk (CSER)"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2012",
+  "closed": "",
+  "ftes": 3,
+  "link": "https://www.cser.ac.uk/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "DeepMind",
+  "aliases": [
+   "DeepMind"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2010",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "frontier_lab"
+ },
+ {
+  "name": "Future of Life Institute",
+  "aliases": [
+   "Future of Life Institute"
+  ],
+  "source_sheet": "governance",
+  "category": "advocacy",
+  "founded": "2014",
+  "closed": "",
+  "ftes": 10,
+  "link": "https://futureoflife.org/",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Center on Long-Term Risk",
+  "aliases": [
+   "Center on Long-Term Risk"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2013",
+  "closed": "",
+  "ftes": 5,
+  "link": "https://longtermrisk.org/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Open Philanthropy",
+  "aliases": [
+   "Open Philanthropy"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2017",
+  "closed": "",
+  "ftes": 15,
+  "link": "https://www.openphilanthropy.org/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Rethink Priorities",
+  "aliases": [
+   "Rethink Priorities"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2018",
+  "closed": "",
+  "ftes": 5,
+  "link": "https://rethinkpriorities.org/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "UK AI Security Institute (AISI)",
+  "aliases": [
+   "AISI",
+   "UK AI Security Institute",
+   "UK AI Security Institute (AISI)"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 25,
+  "link": "https://www.aisi.gov.uk/",
+  "sector": "government"
+ },
+ {
+  "name": "European AI Office",
+  "aliases": [
+   "European AI Office"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 50,
+  "link": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+  "sector": "government"
+ },
+ {
+  "name": "Ada Lovelace Institute",
+  "aliases": [
+   "Ada Lovelace Institute"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2018",
+  "closed": "",
+  "ftes": 15,
+  "link": "https://www.adalovelaceinstitute.org/",
+  "sector": "policy_org"
+ },
+ {
+  "name": "AI Now Institute",
+  "aliases": [
+   "AI Now Institute"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2017",
+  "closed": "",
+  "ftes": 15,
+  "link": "https://ainowinstitute.org/",
+  "sector": "policy_org"
+ },
+ {
+  "name": "The Future Society (TFS)",
+  "aliases": [
+   "TFS",
+   "The Future Society",
+   "The Future Society (TFS)"
+  ],
+  "source_sheet": "governance",
+  "category": "advocacy",
+  "founded": "2014",
+  "closed": "",
+  "ftes": 18,
+  "link": "https://thefuturesociety.org/",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Centre for Long-Term Resilience (CLTR)",
+  "aliases": [
+   "CLTR",
+   "Centre for Long-Term Resilience",
+   "Centre for Long-Term Resilience (CLTR)"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2019",
+  "closed": "",
+  "ftes": 5,
+  "link": "https://www.longtermresilience.org/",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Stanford Institute for Human-Centered AI (HAI)",
+  "aliases": [
+   "HAI",
+   "Stanford Institute for Human-Centered AI",
+   "Stanford Institute for Human-Centered AI (HAI)"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2019",
+  "closed": "",
+  "ftes": 5,
+  "link": "https://hai.stanford.edu/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Pause AI",
+  "aliases": [
+   "Pause AI"
+  ],
+  "source_sheet": "governance",
+  "category": "advocacy",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 20,
+  "link": "https://pauseai.info/",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Simon Institute for Longterm Governance",
+  "aliases": [
+   "Simon Institute for Longterm Governance"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 10,
+  "link": "https://simoninstitute.ch/",
+  "sector": "policy_org"
+ },
+ {
+  "name": "AI Policy Institute",
+  "aliases": [
+   "AI Policy Institute"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 1,
+  "link": "https://theaipi.org/",
+  "sector": "policy_org"
+ },
+ {
+  "name": "The AI Whistleblower Initiative",
+  "aliases": [
+   "The AI Whistleblower Initiative"
+  ],
+  "source_sheet": "governance",
+  "category": "whistleblower support",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Machine Intelligence Research Institute",
+  "aliases": [
+   "Machine Intelligence Research Institute"
+  ],
+  "source_sheet": "governance",
+  "category": "advocacy",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Beijing Institute of AI Safety and Governance",
+  "aliases": [
+   "Beijing Institute of AI Safety and Governance"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "government"
+ },
+ {
+  "name": "ControlAI",
+  "aliases": [
+   "ControlAI"
+  ],
+  "source_sheet": "governance",
+  "category": "advocacy",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "International Association for Safe and Ethical AI",
+  "aliases": [
+   "International Association for Safe and Ethical AI"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "International AI Governance Alliance",
+  "aliases": [
+   "International AI Governance Alliance"
+  ],
+  "source_sheet": "governance",
+  "category": "advocacy",
+  "founded": "2025",
+  "closed": "",
+  "ftes": 1,
+  "link": "https://www.iaiga.org/about",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Center for AI Standards and Innovation (U.S. AI Safety Institute)",
+  "aliases": [
+   "Center for AI Standards and Innovation",
+   "Center for AI Standards and Innovation (U.S. AI Safety Institute)",
+   "U.S. AI Safety Institute"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "government"
+ },
+ {
+  "name": "China AI Safety and Development Association",
+  "aliases": [
+   "China AI Safety and Development Association"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2025",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "government"
+ },
+ {
+  "name": "Transformative Futures Institute",
+  "aliases": [
+   "Transformative Futures Institute"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 4,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "AI Futures Project",
+  "aliases": [
+   "AI Futures Project"
+  ],
+  "source_sheet": "governance",
+  "category": "advocacy",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "AI Lab Watch",
+  "aliases": [
+   "AI Lab Watch"
+  ],
+  "source_sheet": "governance",
+  "category": "watchdog",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 1,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Center for Long-Term Artificial Intelligence",
+  "aliases": [
+   "Center for Long-Term Artificial Intelligence"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 12,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "SaferAI",
+  "aliases": [
+   "SaferAI"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 14,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "AI Objectives Institute",
+  "aliases": [
+   "AI Objectives Institute"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 16,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Concordia AI",
+  "aliases": [
+   "Concordia AI"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2020",
+  "closed": "",
+  "ftes": 8,
+  "link": "https://concordia-ai.com/research/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "CARMA",
+  "aliases": [
+   "CARMA"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 10,
+  "link": "https://carma.org/our-work",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Encode AI",
+  "aliases": [
+   "Encode AI"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2020",
+  "closed": "",
+  "ftes": 7,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Safe AI Forum (SAIF)",
+  "aliases": [
+   "SAIF",
+   "Safe AI Forum",
+   "Safe AI Forum (SAIF)"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2023",
+  "closed": "",
+  "ftes": 8,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Forethought Foundation",
+  "aliases": [
+   "Forethought Foundation"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2018",
+  "closed": "",
+  "ftes": 8,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "AI Impacts",
+  "aliases": [
+   "AI Impacts"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2014",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "safety_org"
+ },
+ {
+  "name": "Cosmos Institute",
+  "aliases": [
+   "Cosmos Institute"
+  ],
+  "source_sheet": "governance",
+  "category": "research",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 5,
+  "link": "https://cosmos-institute.org/",
+  "sector": "safety_org"
+ },
+ {
+  "name": "AI Standards Labs",
+  "aliases": [
+   "AI Standards Labs"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 2,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Center for AI Safety",
+  "aliases": [
+   "Center for AI Safety"
+  ],
+  "source_sheet": "governance",
+  "category": "advocacy",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "CeSIA",
+  "aliases": [
+   "CeSIA"
+  ],
+  "source_sheet": "governance",
+  "category": "advocacy",
+  "founded": "2024",
+  "closed": "",
+  "ftes": 5,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Good Ancestors",
+  "aliases": [
+   "Good Ancestors"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2022",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Pour Demain",
+  "aliases": [
+   "Pour Demain"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 3,
+  "link": "",
+  "sector": "policy_org"
+ },
+ {
+  "name": "Center for Future Generations",
+  "aliases": [
+   "Center for Future Generations"
+  ],
+  "source_sheet": "governance",
+  "category": "governance",
+  "founded": "2021",
+  "closed": "",
+  "ftes": 10,
+  "link": "",
+  "sector": "policy_org"
+ }
+]
