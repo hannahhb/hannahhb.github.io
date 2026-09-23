@@ -19,6 +19,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from common import load, save
+from relevance import score as rel_score
 from taxonomy import TAXONOMY, flat
 
 TOP_K = 4              # areas kept per work
@@ -39,8 +40,10 @@ def main():
                 continue
             seen.add(key)
             rec = abstracts.get(key)
+            ab_text = rec["abstract"] if rec else ""
             works[key] = {
                 "key": key, "title": w.get("title") or "", "url": w.get("url"),
+                "rel": rel_score(w.get("title") or "", ab_text),
                 "kind": w.get("kind"), "year": w.get("year"), "cites": w.get("citations"),
                 "text": ((w.get("title") or "") + ". " + (rec["abstract"] if rec else "")).strip(),
                 "has_abstract": bool(rec),
@@ -48,6 +51,14 @@ def main():
     withab = sum(1 for w in works.values() if w["has_abstract"])
     print(f"{len(works)} distinct works, {withab} with an abstract "
           f"({100*withab//max(1,len(works))}%)")
+
+    # Judge each work on its own title and abstract. A capabilities paper that
+    # cites alignment in its related work is not an alignment paper, and letting
+    # those through is what filled the map with medical imaging and recommenders.
+    REL_MIN = 2.0
+    dropped = [w for w in works.values() if w["rel"] < REL_MIN]
+    works = {k: w for k, w in works.items() if w["rel"] >= REL_MIN}
+    print(f"relevance gate at {REL_MIN}: kept {len(works)}, dropped {len(dropped)}")
 
     # ---- seed each area from high-confidence regex matches on the abstract ----
     areas = list(TAXONOMY)
@@ -100,7 +111,7 @@ def main():
             continue
         share = scores / scores.sum()
         out[key] = {
-            **{k: works[key][k] for k in ("title", "url", "kind", "year", "cites", "has_abstract")},
+            **{k: works[key][k] for k in ("title", "url", "kind", "year", "cites", "has_abstract", "rel")},
             "areas": [{"a": areas[order[i][j]], "w": round(float(share[j]), 3)}
                       for j in range(TOP_K) if share[j] >= 0.08],
         }

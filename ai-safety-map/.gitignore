@@ -3,4 +3,8 @@ __pycache__/
 scripts/.cache/
 scripts/index.txt
 logs/
-ai-safety-map/data/abstracts.json
+
+# Harvest caches. Too large for GitHub (100 MB hard limit) and rebuildable
+# from the scripts, so they stay local.
+data/abstracts.json
+data/specter.json
