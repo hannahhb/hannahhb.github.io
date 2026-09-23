@@ -19,7 +19,7 @@ from taxonomy import TAXONOMY
 
 NOW = datetime.date.today()
 NOW_Q = (NOW.year, (NOW.month - 1) // 3 + 1)
-START = (2023, 1)
+START = (2021, 1)
 
 
 def quarters():
@@ -103,7 +103,7 @@ def main():
     for key, rec in works_meta.items():
         q = qkey(dates.get(key), rec.get("year"))
         if q not in qidx:
-            continue                       # before 2023, or undated
+            continue                       # before START, or undated
         cites = rec.get("cites")
         yrs = max(0.35, (NOW.year + NOW.month / 12) - (int(q[:4]) + (int(q[-1]) - 1) * 0.25))
         out_works.append({

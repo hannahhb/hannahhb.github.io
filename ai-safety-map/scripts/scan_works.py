@@ -8,17 +8,18 @@ rule that a preprint is a stronger signal than a forum post.
 
     python3 scan_works.py --person "Neel Nanda"
     python3 scan_works.py --all --min-works 4        # everyone in people.json
-    python3 scan_works.py --person "Neel Nanda" --since 2024 --top 10
+    python3 scan_works.py --person "Neel Nanda" --since 2021 --top 10
 
 Citations come from OpenAlex when OPENALEX_API_KEY is set, or Semantic Scholar
 when S2_API_KEY is set. With neither, works are ranked by recency and keyword
 density and marked `citations: null` rather than guessed at.
 """
-import argparse, concurrent.futures as futures, json, os, re, sys, threading, urllib.parse
+import argparse, datetime, concurrent.futures as futures, json, os, re, sys, threading, urllib.parse
 from common import get, load, save, norm_name
 
 ARXIV = "https://export.arxiv.org/api/query"
 PAUSE = 3.2          # seconds between arXiv requests; lowered when parallel
+YEARS = 3.0          # harvest window in years; set from --since, scales the per-person quota
 S2 = "https://api.semanticscholar.org/graph/v1"
 OA = "https://api.openalex.org/works"
 S2_KEY = os.environ.get("S2_API_KEY", "").strip()
@@ -170,17 +171,25 @@ def citations_for(works):
     return None
 
 
-def depth_for(person):
+def depth_for(person, years=3.0):
     """How many works to keep. An established researcher with a long record
     needs a wider sample before their interests are legible; someone with a
-    handful of works is fully described by ten."""
+    handful of works is fully described by ten.
+
+    The quota scales with the harvest window. hits are ranked by citations, so
+    holding the quota fixed while widening the window lets older, better-cited
+    work crowd the recent work out of a person's slots - the window would grow
+    at the back and quietly shrink at the front."""
+    span = max(1.0, years / 3.0)
     if not person:
-        return 10
-    if person.get("works_total", 0) >= 25 or person.get("leads_work", 0) >= 3:
-        return 20
-    if person.get("works_total", 0) >= 10:
-        return 15
-    return 10
+        base = 10
+    elif person.get("works_total", 0) >= 25 or person.get("leads_work", 0) >= 3:
+        base = 20
+    elif person.get("works_total", 0) >= 10:
+        base = 15
+    else:
+        base = 10
+    return int(round(base * span))
 
 
 def scan(name, person, terms, rx, since, top):
@@ -213,9 +222,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--person", help="one person by name")
     ap.add_argument("--all", action="store_true", help="everyone in people.json")
+    ap.add_argument("--names", help="extra names to scan, one per line, unioned with --all. "
+                    "people.json is the curated roster; the literature is written by more "
+                    "people than that, and dropping them shrinks the map at its recent edge")
     ap.add_argument("--min-works", type=int, default=6,
                     help="with --all, only scan people at least this productive")
-    ap.add_argument("--since", type=int, default=2024)
+    ap.add_argument("--since", type=int, default=2021)
     ap.add_argument("--top", type=int, default=0,
                     help="fixed depth; 0 (default) scales it to how established "
                          "someone is - more works means a fuller picture is useful")
@@ -237,13 +249,23 @@ def main():
         skip = {x.strip() for x in args.skip_confidence.split(",") if x.strip()}
         targets = [n for n, p in people.items()
                    if p["works_total"] >= args.min_works and p["confidence"] not in skip]
+    elif not args.names:
+        sys.exit("pass --person NAME, --all or --names FILE")
     else:
-        sys.exit("pass --person NAME or --all")
+        targets = []
+
+    if args.names:
+        extra = [l.strip() for l in open(args.names, encoding="utf-8") if l.strip()]
+        seen = set(targets)
+        targets = targets + [n for n in extra if not (n in seen or seen.add(n))]
 
     global PAUSE
     if args.workers > 1:
         PAUSE = max(0.2, 3.2 / args.workers)
+    global YEARS
+    YEARS = max(1.0, datetime.date.today().year + 1 - args.since)
     print(f"scanning {len(targets)} people for work since {args.since} "
+          f"({YEARS:.0f}y window, depth x{max(1.0, YEARS/3.0):.2f}) "
           f"on {args.workers} workers\n")
 
     out, src, lock, done = {}, None, threading.Lock(), [0]
@@ -251,7 +273,7 @@ def main():
     def one(name):
         person = people.get(name)
         return name, scan(name, person, terms, rx, args.since,
-                          args.top or depth_for(person))
+                          args.top or depth_for(person, YEARS))
 
     with futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
         for name, (hits, source) in pool.map(one, targets):
