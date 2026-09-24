@@ -26,6 +26,41 @@ REL_MIN = 2.0
 SEED_MIN = 2          # regex hits before a work seeds an area
 TEMP = 0.55           # softmax temperature, applied to z-scored similarity
 
+# A second way in, for work the text gate cannot see. Judging safety from
+# vocabulary punishes exactly the papers that coin their own - "Thought
+# Anchors" never says "mechanistic interpretability" anywhere in its abstract,
+# and scores 0.2. But three of its four authors do interpretability full time.
+# Safety is a research community as much as a subject, so provenance carries
+# real information that the abstract does not.
+#
+# Deliberately strict, because the failure mode is obvious: safety researchers
+# also publish ordinary capabilities work. Requiring that they be most of the
+# author list, with at least one long-standing safety record, keeps benchmarks
+# and training-method papers out while letting the community's own work in.
+PROV_REL_MIN = 0.2    # still needs *some* safety signal in the text
+PROV_MIN_AUTHORS = 2  # at least two of them
+PROV_MIN_SHARE = 0.5  # and at least half the byline
+PROV_MIN_RECORD = 10  # one of whom has a substantial safety record
+
+
+def safety_authors():
+    """Names with a high-confidence, sustained record of safety work."""
+    out = {}
+    for p in (load("people.json", {}) or {}).get("people", []):
+        if p.get("confidence") == "high" and (p.get("strong_works") or 0) >= 2:
+            out[p["name"]] = p.get("strong_works") or 0
+    return out
+
+
+def by_provenance(authors, rel, roster):
+    """True when the byline is mostly established safety researchers."""
+    if rel < PROV_REL_MIN or not authors:
+        return False
+    rec = [roster[a] for a in authors if a in roster]
+    return (len(rec) >= PROV_MIN_AUTHORS
+            and len(rec) / len(authors) >= PROV_MIN_SHARE
+            and max(rec) >= PROV_MIN_RECORD)
+
 
 def main():
     spec = load("specter.json", {}) or {}
@@ -35,6 +70,7 @@ def main():
         sys.exit("run fetch_specter.py first")
 
     # gather the works we care about, with text for relevance + seeding
+    roster = safety_authors()
     works, seen = {}, set()
     for ws in kw.values():
         for w in ws:
@@ -52,6 +88,8 @@ def main():
                 "cites": s.get("cites", w.get("citations")),
                 "tldr": s.get("tldr"), "venue": s.get("venue"),
                 "rel": rel_score(title, abstract),
+                "prov": by_provenance(w.get("authors") or [],
+                                      rel_score(title, abstract), roster),
                 "v": s.get("v"), "text": title + ". " + abstract,
             }
 
@@ -59,8 +97,11 @@ def main():
     print(f"{len(works)} works, {len(embedded)} with embeddings "
           f"({100*len(embedded)//max(1,len(works))}%)")
 
-    keep = {k: w for k, w in works.items() if w["rel"] >= REL_MIN and w["v"]}
-    print(f"relevance gate at {REL_MIN}: kept {len(keep)}")
+    keep = {k: w for k, w in works.items()
+            if w["v"] and (w["rel"] >= REL_MIN or w["prov"])}
+    nprov = sum(1 for w in keep.values() if w["rel"] < REL_MIN)
+    print(f"relevance gate at {REL_MIN}: kept {len(keep)} "
+          f"({nprov} of them on author provenance rather than text)")
 
     areas = list(TAXONOMY)
     pats = defaultdict(list)
@@ -116,6 +157,8 @@ def main():
         out[k] = {
             "title": w["title"], "url": w["url"], "kind": w["kind"], "year": w["year"],
             "date": w["date"], "cites": w["cites"], "rel": w["rel"], "tldr": w["tldr"],
+            # how it got in, so a provenance admission stays auditable
+            "via": "authors" if w["rel"] < REL_MIN else "text",
             "venue": w["venue"], "has_abstract": True,
             "areas": [{"a": areas[j], "w": round(float(p[j]), 3)}
                       for j in order if p[j] >= 0.06],

@@ -19,6 +19,12 @@ CORE = re.compile(
     r"dangerous capabilit\w*|capability elicitation|red.?teaming|jailbreak\w*|"
     r"prompt injection|sycophan\w*|chain.of.thought (faithful|monitor)\w*|"
     r"corrigib\w*|power.seeking|instrumental convergence|\bAI control\b|"
+    # Order-insensitive: "Measuring Faithfulness in Chain-of-Thought Reasoning"
+    # states the same contribution as "chain-of-thought faithfulness", and the
+    # strict-adjacency pattern above only caught the second phrasing - which
+    # admitted a dozen follow-up papers while rejecting the one they all cite.
+    r"(un)?faithful\w*[^.]{0,40}(chain.of.thought|\bCoT\b|reasoning|explanation)|"
+    r"(chain.of.thought|\bCoT\b|reasoning trace)[^.]{0,40}(un)?faithful\w*|"
     r"untrusted monitor\w*|machine unlearning|constitutional AI|harmlessness|"
     r"model welfare|existential risk|catastrophic risk|frontier (model|AI) (safety|risk)|"
     r"compute governance|AI governance|safety case\w*|model organism|"
@@ -26,6 +32,15 @@ CORE = re.compile(
     r"monosemantic\w*|polysemantic\w*|superposition|feature (ablation|steering|direction)|"
     r"deception detect\w*|lie detect\w*|hallucination detect\w*|honest\w*|"
     r"interpretability of (language models|neural networks|transformers)|"
+    # Interpretability aimed at model internals or at a reasoning trace. The
+    # literal phrases above miss any paper that coins its own vocabulary, which
+    # is exactly what the influential ones do - "Thought Anchors" never says
+    # "mechanistic interpretability" anywhere in its abstract.
+    r"(interpretab\w*|attribut\w*|causal (influence|importance)|circuit\w*)[^.]{0,60}"
+    r"(reasoning (step|trace|chain|process)|chain.of.thought|\bCoT\b|"
+    r"(language |frontier )?model'?s? (internal|computation|behaviou?r))|"
+    r"(reasoning (step|trace|chain)|chain.of.thought|\bCoT\b)[^.]{0,60}"
+    r"(interpretab\w*|attribut\w*|which .{0,20}matter|causal (influence|importance))|"
     r"latent knowledge|steering vector|residual stream|induction head|"
     r"emergent misalign\w*|subliminal learning|backdoor\w*|data poisoning|"
     r"value alignment|human feedback|preference (learning|optimi\w+)|"
