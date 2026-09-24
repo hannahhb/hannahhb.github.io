@@ -8,3 +8,7 @@ logs/
 # from the scripts, so they stay local.
 data/abstracts.json
 data/specter.json
+
+# Rendered walkthroughs. Reproducible from the capture scripts, and 48 MB of
+# video makes the repo heavy to clone for no benefit to the published site.
+media/*.mp4

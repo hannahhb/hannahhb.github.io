@@ -32,6 +32,15 @@ a{color:var(--link)}
 .flt input{width:74px;accent-color:var(--link)}
 .who{background:var(--surface-2);border:1px solid var(--hairline);border-radius:6px;padding:5px 9px;font-size:12px;width:168px}
 .who.on{border-color:var(--link);color:var(--link)}
+.find{position:relative}
+.find input{background:var(--surface-2);border:1px solid var(--hairline);border-radius:6px;padding:5px 9px;font-size:12px;width:186px;color:inherit}
+.find input.on{border-color:var(--link);color:var(--link)}
+.find ol{position:absolute;top:calc(100% + 4px);left:0;z-index:20;margin:0;padding:4px;list-style:none;width:360px;max-height:320px;overflow:auto;background:var(--surface);border:1px solid var(--hairline);border-radius:8px;box-shadow:var(--shadow)}
+.find ol[hidden]{display:none}
+.find li{padding:6px 8px;border-radius:5px;font-size:12px;line-height:1.35;cursor:pointer;display:flex;gap:8px}
+.find li:hover,.find li[aria-selected="true"]{background:var(--surface-2)}
+.find li b{font-family:var(--mono);font-size:10.5px;color:var(--link);flex:0 0 auto;min-width:40px;text-align:right}
+.find .none{color:var(--muted);cursor:default}
 .hint{font-family:var(--mono);font-size:10px;color:var(--faint)}
 .canvas{grid-row:2;position:relative;overflow:hidden;background:var(--ground)}
 #c{display:block;width:100%;height:100%;cursor:grab}
@@ -80,7 +89,9 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
       <span id="fltLab">all</span>
       <input type="range" id="flt" min="0" max="6" step="1" value="0">
     </label>
+    <button class="tb" id="moBtn" aria-pressed="true" title="Papers whose only claim on safety is preference-tuning machinery — DPO, SimPO and the like — with no harm named anywhere">Method papers</button>
     <input id="who" class="who" type="search" placeholder="Highlight a researcher…" autocomplete="off">
+    <span class="find"><input id="findw" type="search" placeholder="Find a paper…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="findres"><ol id="findres" role="listbox" hidden></ol></span>
     <button class="tb" id="labBtn" aria-pressed="true">Labels</button>
     <a class="tb" href="index.html">Overlap map &rarr;</a>
     <a class="tb" href="wave.html">Flat map &rarr;</a>
@@ -24623,7 +24634,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Eric Mitchell",
     "Rafael Rafailov",
     "Archit Sharma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
@@ -24751,7 +24763,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Danqi Chen",
     "Mengzhou Xia"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A General Theoretical Paradigm to Understand Learning from Human Preferences",
@@ -24761,7 +24774,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Daniele Calandriello",
     "Bilal Piot"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Steering Llama 2 via Contrastive Activation Addition",
@@ -24857,7 +24871,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Eric Mitchell",
     "Rafael Rafailov",
     "Archit Sharma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models",
@@ -24900,7 +24915,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Shafiq Joty",
     "Rafael Rafailov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Discovering Latent Knowledge in Language Models Without Supervision",
@@ -25006,7 +25022,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Siyuan Ma",
     "Yiheng Liu",
     "Tianle Han"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Jailbreaking ChatGPT via Prompt Engineering: An Empirical Study",
@@ -25187,7 +25204,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Jan Leike",
     "Jeff Wu",
     "Collin Burns"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models",
@@ -25227,7 +25245,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Çağlar Gülçehre"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Fine-Grained Human Feedback Gives Better Rewards for Language Model Training",
@@ -25386,7 +25405,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Tianqi Liu",
     "Misha Khalman",
     "Rishabh Joshi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Gemma Scope: Open Sparse Autoencoders Everywhere All At Once on Gemma 2",
@@ -25437,7 +25457,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Hanze Dong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Preference Ranking Optimization for Human Alignment",
@@ -25446,7 +25467,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AI Alignment: A Comprehensive Survey",
@@ -25501,7 +25523,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Jan Leike",
     "Paul Christiano",
     "Jeff Wu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Statistical Rejection Sampling Improves Preference Optimization",
@@ -25512,7 +25535,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Tianqi Liu",
     "Misha Khalman",
     "Rishabh Joshi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Unrolling SGD: Understanding Factors Influencing Machine Unlearning",
@@ -25656,7 +25680,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Nouha Dziri",
     "Bill Yuchen Lin",
     "Ximing Lu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Persona Vectors: Monitoring and Controlling Character Traits in Language Models",
@@ -25689,7 +25714,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Banghua Zhu",
     "Jiantao Jiao",
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Frontier Models are Capable of In-context Scheming",
@@ -25827,7 +25853,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Hanze Dong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Rewarded soups: towards Pareto-optimal alignment by interpolating weights fine-tuned on diverse rewards",
@@ -25836,7 +25863,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Alexandre Ramé"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Self-Play Preference Optimization for Language Model Alignment",
@@ -25867,7 +25895,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Chelsea Finn",
     "Rafael Rafailov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "MasterKey: Automated Jailbreak Across Multiple Large Language Model Chatbots",
@@ -25918,7 +25947,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Johan Ferret",
     "Alexandre Ramé",
     "Thomas Mésnard"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "In-Context Unlearning: Language Models as Few Shot Unlearners",
@@ -26008,7 +26038,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Ryan A. Rossi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation",
@@ -26041,7 +26072,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "David Krueger",
     "Thomas Coste",
     "Robert Kirk"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Nash Learning from Human Feedback",
@@ -26052,7 +26084,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Thomas Mésnard",
     "Daniele Calandriello",
     "Olivier Bachem"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now",
@@ -26217,7 +26250,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Hanze Dong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "The Capacity for Moral Self-Correction in Large Language Models",
@@ -26579,7 +26613,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Natasha Jaques"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AdvPrompter: Fast Adaptive Adversarial Prompting for LLMs",
@@ -26597,7 +26632,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Tianyu Pang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Red-Teaming for Generative AI: Silver Bullet or Security Theater?",
@@ -26636,7 +26672,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Daniele Calandriello",
     "Bilal Piot"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast",
@@ -26730,7 +26767,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Zachary C. Lipton"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Federated Unlearning for On-Device Recommendation",
@@ -26885,7 +26923,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Soujanya Poria",
     "Rada Mihalcea"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Instructions as Backdoors: Backdoor Vulnerabilities of Instruction Tuning for Large Language Models",
@@ -27344,7 +27383,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Tomasz Korbak"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "GradSafe: Detecting Jailbreak Prompts for LLMs via Safety-Critical Gradient Analysis",
@@ -27406,7 +27446,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Zhiqing Sun",
     "Yikang Shen",
     "Chuang Gan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "BadChain: Backdoor Chain-of-Thought Prompting for Large Language Models",
@@ -27474,7 +27515,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Qifeng Chen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SOUL: Unlocking the Power of Second-Order Optimization for LLM Unlearning",
@@ -27496,7 +27538,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Chelsea Finn",
     "Rafael Rafailov",
     "Louis Castricato"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Measuring Sycophancy of Language Models in Multi-turn Dialogues",
@@ -27526,7 +27569,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Nathan Lambert"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Understanding the performance gap between online and offline alignment algorithms",
@@ -27535,7 +27579,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Daniele Calandriello"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Consequences of Misaligned AI",
@@ -27575,7 +27620,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Tianqi Liu",
     "Misha Khalman",
     "Rishabh Joshi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Operationalising AI governance through ethics-based auditing: An industry case study",
@@ -27874,7 +27920,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Daniele Calandriello",
     "Tianqi Liu",
     "Rishabh Joshi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Is Best-of-N the Best of Them? Coverage, Scaling, and Optimality in Inference-Time Alignment",
@@ -28206,7 +28253,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Chelsea Finn",
     "Rafael Rafailov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Fight Back Against Jailbreaking via Prompt Adversarial Tuning",
@@ -28264,7 +28312,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Louis Castricato"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Open Problems in Technical AI Governance",
@@ -28324,7 +28373,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Banghua Zhu",
     "Jiantao Jiao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
@@ -28576,7 +28626,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Diyi Yang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Red Teaming Language Model Detectors with Language Models",
@@ -29147,7 +29198,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Tomer Ullman"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Stress Testing Deliberative Alignment for Anti-Scheming Training",
@@ -29231,7 +29283,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Daniele Calandriello",
     "Tianqi Liu",
     "Misha Khalman"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Machine Unlearning in Generative AI: A Survey",
@@ -29325,7 +29378,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Souradip Chakraborty"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Value FULCRA: Mapping Large Language Models to the Multidimensional Spectrum of Basic Human Values",
@@ -29396,7 +29450,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Michael Noukhovitch"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Tricking LLMs into Disobedience: Formalizing, Analyzing, and Detecting Jailbreaks",
@@ -29473,7 +29528,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Itai Shapira"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RewardDance: Reward Scaling in Visual Generation",
@@ -29729,7 +29785,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Hanze Dong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Iterative Data Smoothing: Mitigating Reward Overfitting and Overoptimization in RLHF",
@@ -29740,7 +29797,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Banghua Zhu",
     "Jiantao Jiao",
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Closer Look at Machine Unlearning for Large Language Models",
@@ -29902,7 +29960,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Sara Hooker"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "BadMerging: Backdoor Attacks Against Model Merging",
@@ -30023,7 +30082,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Yuanzhao Zhai",
     "Kele Xu",
     "Dawei Feng"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Duty to Forget, a Right to be Assured? Exposing Vulnerabilities in Machine Unlearning Services",
@@ -30096,7 +30156,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Banghua Zhu",
     "Jiantao Jiao",
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Stealthy and Persistent Unalignment on Large Language Models via Backdoor Injections",
@@ -30125,7 +30186,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Baolin Peng",
     "Haitao Mi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Separating Tongue from Thought: Activation Patching Reveals Language-Agnostic Concept Representations in Transformers",
@@ -30179,7 +30241,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Souradip Chakraborty",
     "Amrit Singh Bedi",
     "Huazheng Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Defending Against Prompt Injection With a Few DefensiveTokens",
@@ -30231,7 +30294,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Yaodong Yang",
     "Jiaming Ji",
     "Hantao Lou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Revisiting Jailbreaking for Large Language Models: A Representation Engineering Perspective",
@@ -30272,7 +30336,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Léonard Hussenot",
     "Olivier Bachem"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Weak-to-Strong Search: Align Large Language Models via Searching over Small Language Models",
@@ -30283,7 +30348,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Yu Qiao",
     "Jie Liu",
     "Zhanhui Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Just Rotate it: Deploying Backdoor Attacks via Rotation Transformation",
@@ -30412,7 +30478,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Johan Ferret",
     "Alexandre Ramé",
     "Léonard Hussenot"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Improving Reinforcement Learning from Human Feedback with Efficient Reward Model Ensemble",
@@ -30432,7 +30499,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Diyi Yang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RedAgent: Red Teaming Large Language Models with Context-aware Autonomous Language Agent",
@@ -30499,7 +30567,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Eric Horvitz"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AgentVigil: Generic Black-Box Red-teaming for Indirect Prompt Injection against LLM Agents",
@@ -30651,7 +30720,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Abhilash Mishra"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Membership Inference via Backdooring",
@@ -30669,7 +30739,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Mubarak Shah"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Beyond Imitation: Leveraging Fine-grained Quality Signals for Alignment",
@@ -30678,7 +30749,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Tianyi Tang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "FairSteer: Inference Time Debiasing for LLMs with Dynamic Activation Steering",
@@ -30761,7 +30833,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Shafiq Joty"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment",
@@ -30816,7 +30889,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Dylan Hadfield-Menell"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Model Tampering Attacks Enable More Rigorous Evaluations of LLM Capabilities",
@@ -31288,7 +31362,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Mingyuan Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Mitigating Content Effects on Reasoning in Language Models through Fine-Grained Activation Steering",
@@ -31369,7 +31444,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Mingyuan Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Making Users Indistinguishable: Attribute-wise Unlearning in Recommender Systems",
@@ -31598,7 +31674,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Prototypical Reward Network for Data-Efficient RLHF",
@@ -31607,7 +31684,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Xiting Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Test-time Backdoor Mitigation for Black-Box Large Language Models with Defensive Demonstrations",
@@ -31878,7 +31956,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Rohin Shah"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Inoculation Prompting: Instructing LLMs to misbehave at train-time improves test-time alignment",
@@ -31928,7 +32007,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SAE-SSV: Supervised Steering in Sparse Representation Spaces for Reliable Control of Language Models",
@@ -32029,7 +32109,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Chaowei Xiao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Failures to Find Transferable Image Jailbreaks Between Vision-Language Models",
@@ -32322,7 +32403,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Daniel Khashabi",
     "Baolin Peng",
     "Haitao Mi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Representation Bending for Large Language Model Safety",
@@ -32539,7 +32621,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Zhiwei Steven Wu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "QUEEN: Query Unlearning against Model Extraction",
@@ -32576,7 +32659,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Bowen Yu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Interpretable Concept Bottlenecks to Align Reinforcement Learning Agents",
@@ -32771,7 +32855,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Shihan Dou",
     "Junjie Ye",
     "Songyang Gao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "FLAME: Taming Backdoors in Federated Learning (Extended Version 1)",
@@ -32965,7 +33050,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Kailai Yang",
     "Zhiwei Liu",
     "Qianqian Xie"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Accounting for Sycophancy in Language Model Uncertainty Estimation",
@@ -33041,7 +33127,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Archit Sharma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Dynamic Graph Unlearning: A General and Efficient Post-Processing Method via Gradient Transformation",
@@ -33059,7 +33146,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Yuhao Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Intrinsic Test of Unlearning Using Parametric Knowledge Traces",
@@ -33274,7 +33362,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Diyi Yang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Imitating Language via Scalable Inverse Reinforcement Learning",
@@ -33295,7 +33384,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Baolin Peng",
     "Haitao Mi",
     "Furong Huang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Improving LLM General Preference Alignment via Optimistic Online Mirror Descent",
@@ -33304,7 +33394,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Haitao Mi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Mixture of Experts Made Intrinsically Interpretable",
@@ -33376,7 +33467,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Wenhong Zhu",
     "Zhiwei He",
     "Xiaofeng Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AgentMisalignment: Measuring the Propensity for Misaligned Behaviour in LLM-Based Agents",
@@ -33453,7 +33545,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Yaodong Yang",
     "Zhaowei Zhang",
     "Chengdong Ma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Breaking the Ceiling: Exploring the Potential of Jailbreak Attacks through Expanding Strategy Space",
@@ -33482,7 +33575,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Ya-Qin Zhang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Jailbreak Antidote: Runtime Safety-Utility Balance via Sparse Representation Adjustment in Large Language Models",
@@ -33524,7 +33618,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Souradip Chakraborty",
     "Furong Huang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Alignment Pretraining: AI Discourse Causes Self-Fulfilling (Mis)alignment",
@@ -33679,7 +33774,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Souradip Chakraborty",
     "Amrit Singh Bedi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Know Thy Judge: On the Robustness Meta-Evaluation of LLM Safety Judges",
@@ -33913,7 +34009,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "GRASP: A Disagreement Analysis Framework to Assess Group Associations in Perspectives",
@@ -33978,7 +34075,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Hiroki Furuta"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Causal Tracing of Object Representations in Large Vision Language Models: Mechanistic Interpretability and Hallucination",
@@ -34062,7 +34160,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Xipeng Qiu",
     "Rong Bao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Boosting Alignment for Post-Unlearning Text-to-Image Generative Models",
@@ -34139,7 +34238,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Minlie Huang",
     "Hongning Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "From Theft to Bomb-Making: The Ripple Effect of Unlearning in Defending Against Jailbreak Attacks",
@@ -34382,7 +34482,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Boxi Wú"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Predicting vs. Acting: A Trade-off Between World Modeling &amp; Agent Modeling",
@@ -34391,7 +34492,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Weijia Shi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "\"I Searched for a Religious Song in Amharic and Got Sexual Content Instead\": Investigating Online Harm in Low-Resourced ",
@@ -34692,7 +34794,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Wei Shen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Backdoor Vulnerabilities in Normally Trained Deep Learning Models",
@@ -34730,7 +34833,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Nanyun Peng"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "PBI-Attack: Prior-Guided Bimodal Interactive Black-Box Jailbreak Attack for Toxicity Maximization",
@@ -34877,7 +34981,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Mengdi Wang",
     "Souradip Chakraborty",
     "Dinesh Manocha"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Transformer Circuit Faithfulness Metrics are not Robust",
@@ -34965,7 +35070,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Backdoor Secrets Unveiled: Identifying Backdoor Data with Optimized Scaled Prediction Consistency",
@@ -35104,7 +35210,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Rohin Shah"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Why Do Some Language Models Fake Alignment While Others Don't?",
@@ -35124,7 +35231,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "David Lindner"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Engineering Monosemanticity in Toy Models",
@@ -35220,7 +35328,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Shihan Dou",
     "Rui Zheng",
     "Sixian Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Closer Look at Bias and Chain-of-Thought Faithfulness of Large (Vision) Language Models",
@@ -35490,7 +35599,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Yaodong Yang",
     "Jiaming Ji",
     "Boyuan Chen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "The Future of Open Human Feedback",
@@ -35501,7 +35611,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Yangsibo Huang",
     "Tatsunori Hashimoto",
     "Hannah Rose Kirk"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RSafe: Incentivizing proactive reasoning to build robust and adaptive LLM safeguards",
@@ -36429,7 +36540,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Rafael Rafailov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Architectural Neural Backdoors from First Principles",
@@ -36672,7 +36784,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Shuyi Zhang",
     "Wei Shi",
     "Sihang Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Understanding and Mitigating Overrefusal in LLMs from an Unveiling Perspective of Safety Decision Boundary",
@@ -36940,7 +37053,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Hailey Schoelkopf",
     "Stella Biderman",
     "Louis Castricato"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
@@ -37169,7 +37283,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Mingyuan Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "On the Limits of Sparse Autoencoders: A Theoretical Framework and Reweighted Remedy",
@@ -37318,7 +37433,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Seamus Somerstep",
     "Ya'acov Ritov",
     "Mikhail Yurochkin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Reflect-Guard: Enhancing LLM Safeguards against Adversarial Prompts via Logical Self-Reflection",
@@ -37447,7 +37563,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Yaodong Yang",
     "Juntao Dai"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RedCodeAgent: Automatic Red-teaming Agent against Diverse Code Agents",
@@ -37507,7 +37624,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Thilo Hagendorff"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Diversity-driven Data Selection for Language Model Tuning through Sparse Autoencoder",
@@ -37518,7 +37636,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Madian Khabsa",
     "Xianjun Yang",
     "Yuning Mao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs",
@@ -37645,7 +37764,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Emre Kıcıman"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Counterfactual Simulation Training for Chain-of-Thought Faithfulness",
@@ -38035,7 +38155,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Nathalie Baracaldo",
     "Parikshit Ram"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "An Interpretable N-gram Perplexity Threat Model for Large Language Model Jailbreaks",
@@ -38063,7 +38184,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Songyang Gao",
     "Zhiheng Xi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "FORCE: Transferable Visual Jailbreaking Attacks via Feature Over-Reliance CorrEction",
@@ -38211,7 +38333,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Boyuan Chen",
     "Zhaowei Zhang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "JADES: A Universal Framework for Jailbreak Assessment via Decompositional Scoring",
@@ -38399,7 +38522,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Qingyu Yin",
     "Chak Tou Leong",
     "Wenjie Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "BLUR: A Benchmark for LLM Unlearning Robust to Forget-Retain Overlap",
@@ -39025,7 +39149,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Nathan Lambert"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Towards Understanding the Nature of Attention with Low-Rank Sparse Decomposition",
@@ -39135,7 +39260,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Tom Goldstein",
     "John Kirchenbauer"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Democratic AI is Possible. The Democracy Levels Framework Shows How It Might Work",
@@ -39298,7 +39424,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Leyang Cui",
     "Xinting Huang",
     "Shuming Shi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Gradient Shaping: Enhancing Backdoor Attack Against Reverse Engineering",
@@ -39421,7 +39548,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Junyang Lin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Revisiting Backdoor Attacks on LLMs: A Stealthy and Practical Poisoning Framework via Harmless Inputs",
@@ -39439,7 +39567,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "See-Kiong Ng"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Keeping an Eye on LLM Unlearning: The Hidden Risk and Remedy",
@@ -39837,7 +39966,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Xuehai Pan",
     "Jiaming Ji"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AI Debate Aids Assessment of Controversial Claims",
@@ -40200,7 +40330,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Mingyuan Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Northeastern Uni at Multilingual Counterspeech Generation: Enhancing Counter Speech Generation with LLM Alignment throug",
@@ -40209,7 +40340,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Divya Chaudhary"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "LLMs Deceive Unintentionally: Emergent Misalignment in Dishonesty from Misaligned Samples to Biased Human-AI Interaction",
@@ -40263,7 +40395,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Erik Jenner"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Rethinking Circuit Completeness in Language Models: AND, OR, and ADDER Gates",
@@ -40406,7 +40539,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Yipeng Kang",
     "Junqi Wang",
     "Yexin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Representations Shape Weak-to-Strong Generalization: Theoretical Insights and Empirical Predictions",
@@ -40629,7 +40763,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Xipeng Qiu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Generalization Analogies: A Testbed for Generalizing AI Oversight to Hard-To-Measure Domains",
@@ -40647,7 +40782,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Jacob Steinhardt"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Sparse Autoencoder as a Zero-Shot Classifier for Concept Erasing in Text-to-Image Diffusion Models",
@@ -40666,7 +40802,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Jindong Gu",
     "Tong Liu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Core Safety Values for Provably Corrigible Agents",
@@ -40873,7 +41010,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Jonathan H. Chen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "MAiDE-up: Multilingual Deception Detection of GPT-generated Hotel Reviews",
@@ -41075,7 +41213,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Yuxuan Liu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Three Minds, One Legend: Jailbreak Large Reasoning Model with Adaptive Stacked Ciphers",
@@ -41418,7 +41557,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "David Lindner"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Towards Safe and Honest AI Agents with Neural Self-Other Overlap",
@@ -41599,7 +41739,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Maheep Chaudhary",
     "Ashwinee Panda",
     "Vasu Sharma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Attention Eclipse: Manipulating Attention to Bypass LLM Safety-Alignment",
@@ -41680,7 +41821,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Natasha Jaques",
     "Mickel Liu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AMIA: Automatic Masking and Joint Intention Analysis Makes LVLMs Robust Jailbreak Defenders",
@@ -41817,7 +41959,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Xiaoyuan Yi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Optimal Transport-Based Token Weighting scheme for Enhanced Preference Optimization",
@@ -41826,7 +41969,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Xiting Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Self-Deception: Reverse Penetrating the Semantic Firewall of Large Language Models",
@@ -41846,7 +41990,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Alekh Agarwal"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SoK: Systematizing LLM Prompt Security: Taxonomies, Datasets, and Unified Evaluation of Attacks and Defenses",
@@ -41892,7 +42037,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Robert Kirk"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "OrthAlign: Orthogonal Subspace Decomposition for Non-Interfering Multi-Objective Alignment",
@@ -42173,7 +42319,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Chao Zhang",
     "Ziyun Cui",
     "Ziyang Zhang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Enhancing Cross-task Transfer of Large Language Models via Activation Steering",
@@ -42228,7 +42375,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Yihao Wu",
     "He Zhang",
     "Junbo Tan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Reward Hacking Mitigation using Verifiable Composite Rewards",
@@ -42258,7 +42406,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Víctor Gallego"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "GT-HarmBench: Benchmarking AI Safety Risks Through the Lens of Game Theory",
@@ -42612,7 +42761,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Shihan Dou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "What Drives Representation Steering? A Mechanistic Case Study on Steering Refusal",
@@ -42686,7 +42836,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Johannes Ackermann",
     "Masashi Sugiyama",
     "Takashi Ishida"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "How Does DPO Reduce Toxicity? A Mechanistic Neuron-Level Analysis",
@@ -42885,7 +43036,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Watch the Watcher! Backdoor Attacks on Security-Enhancing Diffusion Models",
@@ -43049,7 +43201,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Zhuo Li",
     "Dandan Guo"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SAEMark: Steering Personalized Multilingual LLM Watermarks with Sparse Autoencoders",
@@ -43369,7 +43522,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Dengcan Liu",
     "Jiahao Li",
     "Zheren Fu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Why Do Some Inputs Break Low-Bit LLM Quantization?",
@@ -43550,7 +43704,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Myeongho Jeon",
     "Jan Sobotka",
     "Suhwan Choi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Weak-to-Strong Generalization beyond Accuracy: a Pilot Study in Safety, Toxicity, and Legal Reasoning",
@@ -44049,7 +44204,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Kush R. Varshney"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "TCPO: Thought-Centric Preference Optimization for Effective Embodied Decision-making",
@@ -44399,7 +44555,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Zhaoxuan Tan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "DYNASHIELD: A Black-Box Moving Target Defense for LLMs via Dynamic Decoding Customization",
@@ -45264,7 +45421,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Wei Dai"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "MISR: Measuring Instrumental Self-Reasoning in Frontier Models",
@@ -45481,7 +45639,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Mengdi Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "On the Role of Preference Variance in Preference Optimization",
@@ -45490,7 +45649,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Mengdi Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Constructing Interpretable Features from Compositional Neuron Groups",
@@ -45618,7 +45778,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Soujanya Poria"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "On Symmetric Losses for Robust Policy Optimization with Noisy Preferences",
@@ -46028,7 +46189,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Daniel Khashabi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "What Is AI Safety? What Do We Want It to Be?",
@@ -46139,7 +46301,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Ming Jin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Tell Me What You Don't Know: Enhancing Refusal Capabilities of Role-Playing Agents via Representation Space Analysis and",
@@ -47279,7 +47442,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Carl-Leander Henneking",
     "Claas Beger"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Single Neuron Is Sufficient to Bypass Safety Alignment in Large Language Models",
@@ -47350,7 +47514,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Gihoon Kim",
     "Euntai Kim"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Invisible Safety Threat: Malicious Finetuning for LLM via Steganography",
@@ -47428,7 +47593,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Dacheng Tao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "MonitoringBench: Semi-Automated Red-Teaming for Agent Monitoring",
@@ -47486,7 +47652,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Jason R. Brown"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Signal in the Noise: Polysemantic Interference Transfers and Predicts Cross-Model Influence",
@@ -47616,7 +47783,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Junjie Ye",
     "Rui Zheng",
     "Limao Xiong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Evaluation Awareness in Language Models Has Limited Effect on Behaviour",
@@ -47655,7 +47823,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Songyang Gao",
     "Kai Chen",
     "Dahua Lin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "LIAR: Leveraging Inference Time Alignment (Best-of-N) to Jailbreak LLMs in Seconds",
@@ -47849,7 +48018,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Jiaming Zhang",
     "Chaochao Chen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Agent Hacks Agent: Autoresearch for Production-Agent Red-Teaming",
@@ -47981,7 +48151,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Boxi Wú"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "LatentBreak: Jailbreaking Large Language Models through Latent Space Feedback",
@@ -48018,7 +48189,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Hassan Mansoor"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Lie detection algorithms attract few users but vastly increase accusation rates",
@@ -48111,7 +48283,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Erasing Without Remembering: Implicit Knowledge Forgetting in Large Language Models",
@@ -48167,7 +48340,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Pei Ke"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RePPL: Recalibrating Perplexity by Uncertainty in Semantic Propagation and Language Generation for Explainable QA Halluc",
@@ -49868,7 +50042,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Motoki Omura",
     "Yasuhiro Fujita",
     "Toshiki Kataoka"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "GDM AI Control Roadmap",
@@ -50415,7 +50590,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Stefan Heimersheim",
     "Andrzej Szablewski",
     "Gabriel Konar-Steenberg"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "ReGA: Model-Based Safeguard for LLMs via Representation-Guided Abstraction",
@@ -50475,7 +50651,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Masashi Sugiyama"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SafeWork-R1: Coevolving Safety and Intelligence under the AI-45$^{\\circ}$ Law",
@@ -50526,7 +50703,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Zeyi Liao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RUBAS: Rubric-Based Reinforcement Learning for Agent Safety",
@@ -50633,7 +50811,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Amrit Singh Bedi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AgenticRed: Evolving Agentic Systems for Red-Teaming",
@@ -50786,7 +50965,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "HonestCyberEval: An AI Cyber Risk Benchmark for Automated Software Exploitation",
@@ -50835,7 +51015,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Zuxuan Wu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Context is the Key: Backdoor Attacks for In-Context Learning with Vision Transformers",
@@ -51097,7 +51278,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Ivan Titov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Towards Efficient Target-Level Machine Unlearning Based on Essential Graph",
@@ -51163,7 +51345,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Pengfei Wan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Robust Optimization for Mitigating Reward Hacking with Correlated Proxies",
@@ -51247,7 +51430,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Subramanyam Sahoo"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Resource Consumption Red-Teaming for Large Vision-Language Models",
@@ -51456,7 +51640,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Xi Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Visual-Noise Guided In-Context Distillation for Multimodal Large Language Model Unlearning",
@@ -51973,7 +52158,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Wei Xue",
     "Yike Guo",
     "Chi-Min Chan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Steering LLMs? Actually, Sparse Autoencoders can outperform simple baselines",
@@ -52584,7 +52770,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Guangyu Wei",
     "Ke Han",
     "Yueming Lyu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "LLMs as High-Dimensional Nonlinear Autoregressive Models with Attention: Training, Alignment and Inference",
@@ -53253,7 +53440,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Mahmoud Srewa",
     "Tianyu Zhao",
     "Salma Elmalaki"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Bayesian Evaluation of Large Language Model Behavior",
@@ -53774,7 +53962,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Tongliang Liu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Probabilistic Modeling of Jailbreak on Multimodal LLMs: From Quantification to Application",
@@ -54085,7 +54274,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Sam Toyer"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RAPO: Risk-Aware Preference Optimization for Generalizable Safe Reasoning",
@@ -54345,7 +54535,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Shuming Shi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Beyond Model Jailbreak: Systematic Dissection of the \"Ten DeadlySins\" in Embodied Intelligence",
@@ -54446,7 +54637,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Wei Shen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Into the Gray Zone: Domain Contexts Can Blur LLM Safety Boundaries",
@@ -54720,7 +54912,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Yi Xin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Sober Look at Agentic Misalignment in Automated Workflows",
@@ -54750,7 +54943,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Mubarak Shah"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AI Alignment From Social Choice Perspectives",
@@ -54759,7 +54953,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Itai Shapira"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Generative AI for Managerial Decision-Making under Ambiguity and Sycophancy",
@@ -55284,7 +55479,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "k": "paper",
    "au": [
     "Jingyuan Zhang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Comprehensive Evaluation of LLM Unlearning Robustness under Multi-Turn Interaction",
@@ -56774,7 +56970,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Florian Hoppe",
     "David Khachaturov",
     "Robert Mullins"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "REOPD: Reliability-Adaptive Reward Extrapolation for On-Policy Distillation",
@@ -57590,7 +57787,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
     "Trung Le",
     "Haocheng Luo",
     "Zehang Deng"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "PsychJail: Exploring Psychological Jailbreaks via Multi-Turn Persuasion of LLM Policies",
@@ -58844,7 +59042,8 @@ h2.ps{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.06e
    "au": [
     "Lucio La Cava",
     "Andrea Tagarelli"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Refusal Lives Downstream of Persona in Chat Models",
@@ -58958,7 +59157,7 @@ var win={cx:0,cy:0,half:660}, target=null, focusArea=null;
 var R=84;
 var SMOOTH=1.95;        // kernel width in cells; higher = smoother massifs
 var minCites=0;         // impact floor, set by the toolbar slider
-var hiName='', hiSet=null, selWork=null;   // selWork: a work picked straight off the terrain                       // grid cells per side, constant - detail comes
+var hiName='', hiSet=null, selWork=null, showMethods=true;   // selWork: a work picked straight off the terrain                       // grid cells per side, constant - detail comes
                                 // from the window shrinking, not more cells
 var measure='cumulative', t=QS.length-1, showWorks=false, showLab=true, playing=null;
 var cam={az:-0.55,el:0.62,dist:1500};
@@ -58999,6 +59198,7 @@ function rebuild(){
     if(d[3]>qi) continue;
     if(measure==='trailing' && d[3]<=qi-TRAIL) continue;
     if(minCites>0 && (META[i].c||0)<minCites) continue;
+    if(!showMethods && META[i].mo) continue;
     var lx=d[0]-win.cx+win.half, ly=d[1]-win.cy+win.half;
     if(lx<-reach||lx>win.half*2+reach||ly<-reach||ly>win.half*2+reach) continue;
     var gx0=Math.max(0,Math.floor((lx-reach)/step)), gx1=Math.min(R-1,Math.ceil((lx+reach)/step));
@@ -59105,6 +59305,7 @@ function drawWorks(HS,sc){
     if(Math.abs(d[0]-win.cx)>win.half||Math.abs(d[1]-win.cy)>win.half) continue;
     var m=META[i], c=m.c||0;
     if(minCites>0 && c<minCites) continue;
+    if(!showMethods && m.mo && i!==selWork) continue;
     var mine=hiSet?hiSet.has(i):false;
     if(hiSet && !mine && i!==selWork) continue;
     var ground=Math.pow(heightAt(d[0],d[1]),0.62)*HS;
@@ -59186,6 +59387,7 @@ function visibleNear(i,k){
     if(d[3]>qi) continue;
     if(measure==='trailing' && d[3]<=qi-TRAIL) continue;
     if(minCites>0 && (META[j].c||0)<minCites) continue;
+    if(!showMethods && META[j].mo) continue;
     out.push({j:j,d:Math.hypot(d[0]-here[0],d[1]-here[1])});
   }
   out.sort(function(a,b){return a.d-b.d;});
@@ -59455,6 +59657,54 @@ document.getElementById('wkBtn').addEventListener('click',function(){
   showWorks=!showWorks;this.setAttribute('aria-pressed',showWorks);draw();});
 document.getElementById('labBtn').addEventListener('click',function(){
   showLab=!showLab;this.setAttribute('aria-pressed',showLab);draw();});
+document.getElementById('moBtn').addEventListener('click',function(){
+  showMethods=!showMethods;this.setAttribute('aria-pressed',showMethods);
+  this.textContent=showMethods?'Method papers':'Method papers hidden';
+  rebuild(); if(selWork!==null) workPanel();});
+
+/* ---- finding a paper by name ---- */
+// The researcher box highlights a set; this one goes to a single work, because
+// looking a paper up is only useful if it puts you next to it on the ground.
+(function(){
+  var box=document.getElementById('findw'), list=document.getElementById('findres'), cur=-1, rows=[];
+  function close(){list.hidden=true;box.setAttribute('aria-expanded','false');cur=-1;}
+  function run(){
+    var q=box.value.trim().toLowerCase();
+    box.classList.toggle('on',!!q);
+    if(q.length<2){close();return;}
+    rows=[];
+    for(var i=0;i<META.length&&rows.length<40;i++){
+      if(!showMethods&&META[i].mo) continue;
+      if(META[i].t.toLowerCase().indexOf(q)>-1) rows.push(i);
+    }
+    // most cited first: with a short query the interesting one is usually the big one
+    rows.sort(function(a,b){return (META[b].c||0)-(META[a].c||0);});
+    rows=rows.slice(0,12);
+    list.innerHTML=rows.length
+      ? rows.map(function(i,k){return '<li role="option" data-i="'+i+'" aria-selected="'+(k===0)+'">'+
+          '<b>'+(META[i].c||0).toLocaleString()+'</b><span>'+esc(META[i].t)+'</span></li>';}).join('')
+      : '<li class="none">no paper matches that</li>';
+    cur=rows.length?0:-1;
+    list.hidden=false;box.setAttribute('aria-expanded','true');
+  }
+  function go(i){close();box.value='';box.classList.remove('on');zoomToWork(i);}
+  box.addEventListener('input',run);
+  box.addEventListener('focus',function(){if(box.value.trim().length>1)run();});
+  box.addEventListener('keydown',function(e){
+    if(list.hidden||!rows.length) return;
+    if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+      e.preventDefault();
+      cur=(cur+(e.key==='ArrowDown'?1:rows.length-1))%rows.length;
+      Array.prototype.forEach.call(list.children,function(li,k){
+        li.setAttribute('aria-selected',k===cur);});
+      list.children[cur].scrollIntoView({block:'nearest'});
+    } else if(e.key==='Enter'&&cur>-1){ e.preventDefault(); go(rows[cur]); }
+    else if(e.key==='Escape'){ close(); }});
+  list.addEventListener('mousedown',function(e){
+    var li=e.target.closest('li[data-i]');
+    if(li){e.preventDefault();go(+li.dataset.i);}});
+  box.addEventListener('blur',function(){setTimeout(close,120);});
+})();
 document.getElementById('sub').textContent=DEP.length.toLocaleString()+' works · '+AREAS.length+' areas';
 addEventListener('resize',resize);
 panel(); resize();

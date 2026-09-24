@@ -24519,7 +24519,8 @@
     "Eric Mitchell",
     "Rafael Rafailov",
     "Archit Sharma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
@@ -24647,7 +24648,8 @@
    "au": [
     "Danqi Chen",
     "Mengzhou Xia"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A General Theoretical Paradigm to Understand Learning from Human Preferences",
@@ -24657,7 +24659,8 @@
    "au": [
     "Daniele Calandriello",
     "Bilal Piot"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Steering Llama 2 via Contrastive Activation Addition",
@@ -24753,7 +24756,8 @@
     "Eric Mitchell",
     "Rafael Rafailov",
     "Archit Sharma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models",
@@ -24796,7 +24800,8 @@
    "au": [
     "Shafiq Joty",
     "Rafael Rafailov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Discovering Latent Knowledge in Language Models Without Supervision",
@@ -24902,7 +24907,8 @@
     "Siyuan Ma",
     "Yiheng Liu",
     "Tianle Han"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Jailbreaking ChatGPT via Prompt Engineering: An Empirical Study",
@@ -25083,7 +25089,8 @@
     "Jan Leike",
     "Jeff Wu",
     "Collin Burns"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models",
@@ -25123,7 +25130,8 @@
    "k": "paper",
    "au": [
     "Çağlar Gülçehre"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Fine-Grained Human Feedback Gives Better Rewards for Language Model Training",
@@ -25282,7 +25290,8 @@
     "Tianqi Liu",
     "Misha Khalman",
     "Rishabh Joshi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Gemma Scope: Open Sparse Autoencoders Everywhere All At Once on Gemma 2",
@@ -25333,7 +25342,8 @@
    "k": "paper",
    "au": [
     "Hanze Dong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Preference Ranking Optimization for Human Alignment",
@@ -25342,7 +25352,8 @@
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AI Alignment: A Comprehensive Survey",
@@ -25397,7 +25408,8 @@
     "Jan Leike",
     "Paul Christiano",
     "Jeff Wu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Statistical Rejection Sampling Improves Preference Optimization",
@@ -25408,7 +25420,8 @@
     "Tianqi Liu",
     "Misha Khalman",
     "Rishabh Joshi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Unrolling SGD: Understanding Factors Influencing Machine Unlearning",
@@ -25552,7 +25565,8 @@
     "Nouha Dziri",
     "Bill Yuchen Lin",
     "Ximing Lu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Persona Vectors: Monitoring and Controlling Character Traits in Language Models",
@@ -25585,7 +25599,8 @@
     "Banghua Zhu",
     "Jiantao Jiao",
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Frontier Models are Capable of In-context Scheming",
@@ -25723,7 +25738,8 @@
    "k": "paper",
    "au": [
     "Hanze Dong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Rewarded soups: towards Pareto-optimal alignment by interpolating weights fine-tuned on diverse rewards",
@@ -25732,7 +25748,8 @@
    "k": "paper",
    "au": [
     "Alexandre Ramé"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Self-Play Preference Optimization for Language Model Alignment",
@@ -25763,7 +25780,8 @@
    "au": [
     "Chelsea Finn",
     "Rafael Rafailov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "MasterKey: Automated Jailbreak Across Multiple Large Language Model Chatbots",
@@ -25814,7 +25832,8 @@
     "Johan Ferret",
     "Alexandre Ramé",
     "Thomas Mésnard"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "In-Context Unlearning: Language Models as Few Shot Unlearners",
@@ -25904,7 +25923,8 @@
    "k": "paper",
    "au": [
     "Ryan A. Rossi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation",
@@ -25937,7 +25957,8 @@
     "David Krueger",
     "Thomas Coste",
     "Robert Kirk"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Nash Learning from Human Feedback",
@@ -25948,7 +25969,8 @@
     "Thomas Mésnard",
     "Daniele Calandriello",
     "Olivier Bachem"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now",
@@ -26113,7 +26135,8 @@
    "k": "paper",
    "au": [
     "Hanze Dong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "The Capacity for Moral Self-Correction in Large Language Models",
@@ -26475,7 +26498,8 @@
    "k": "paper",
    "au": [
     "Natasha Jaques"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AdvPrompter: Fast Adaptive Adversarial Prompting for LLMs",
@@ -26493,7 +26517,8 @@
    "k": "paper",
    "au": [
     "Tianyu Pang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Red-Teaming for Generative AI: Silver Bullet or Security Theater?",
@@ -26532,7 +26557,8 @@
    "au": [
     "Daniele Calandriello",
     "Bilal Piot"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast",
@@ -26626,7 +26652,8 @@
    "k": "paper",
    "au": [
     "Zachary C. Lipton"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Federated Unlearning for On-Device Recommendation",
@@ -26781,7 +26808,8 @@
    "au": [
     "Soujanya Poria",
     "Rada Mihalcea"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Instructions as Backdoors: Backdoor Vulnerabilities of Instruction Tuning for Large Language Models",
@@ -27240,7 +27268,8 @@
    "k": "paper",
    "au": [
     "Tomasz Korbak"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "GradSafe: Detecting Jailbreak Prompts for LLMs via Safety-Critical Gradient Analysis",
@@ -27302,7 +27331,8 @@
     "Zhiqing Sun",
     "Yikang Shen",
     "Chuang Gan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "BadChain: Backdoor Chain-of-Thought Prompting for Large Language Models",
@@ -27370,7 +27400,8 @@
    "k": "paper",
    "au": [
     "Qifeng Chen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SOUL: Unlocking the Power of Second-Order Optimization for LLM Unlearning",
@@ -27392,7 +27423,8 @@
     "Chelsea Finn",
     "Rafael Rafailov",
     "Louis Castricato"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Measuring Sycophancy of Language Models in Multi-turn Dialogues",
@@ -27422,7 +27454,8 @@
    "k": "paper",
    "au": [
     "Nathan Lambert"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Understanding the performance gap between online and offline alignment algorithms",
@@ -27431,7 +27464,8 @@
    "k": "paper",
    "au": [
     "Daniele Calandriello"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Consequences of Misaligned AI",
@@ -27471,7 +27505,8 @@
     "Tianqi Liu",
     "Misha Khalman",
     "Rishabh Joshi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Operationalising AI governance through ethics-based auditing: An industry case study",
@@ -27770,7 +27805,8 @@
     "Daniele Calandriello",
     "Tianqi Liu",
     "Rishabh Joshi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Is Best-of-N the Best of Them? Coverage, Scaling, and Optimality in Inference-Time Alignment",
@@ -28102,7 +28138,8 @@
    "au": [
     "Chelsea Finn",
     "Rafael Rafailov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Fight Back Against Jailbreaking via Prompt Adversarial Tuning",
@@ -28160,7 +28197,8 @@
    "k": "paper",
    "au": [
     "Louis Castricato"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Open Problems in Technical AI Governance",
@@ -28220,7 +28258,8 @@
    "au": [
     "Banghua Zhu",
     "Jiantao Jiao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
@@ -28472,7 +28511,8 @@
    "k": "paper",
    "au": [
     "Diyi Yang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Red Teaming Language Model Detectors with Language Models",
@@ -29043,7 +29083,8 @@
    "k": "paper",
    "au": [
     "Tomer Ullman"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Stress Testing Deliberative Alignment for Anti-Scheming Training",
@@ -29127,7 +29168,8 @@
     "Daniele Calandriello",
     "Tianqi Liu",
     "Misha Khalman"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Machine Unlearning in Generative AI: A Survey",
@@ -29221,7 +29263,8 @@
    "k": "paper",
    "au": [
     "Souradip Chakraborty"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Value FULCRA: Mapping Large Language Models to the Multidimensional Spectrum of Basic Human Values",
@@ -29292,7 +29335,8 @@
    "k": "paper",
    "au": [
     "Michael Noukhovitch"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Tricking LLMs into Disobedience: Formalizing, Analyzing, and Detecting Jailbreaks",
@@ -29369,7 +29413,8 @@
    "k": "paper",
    "au": [
     "Itai Shapira"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RewardDance: Reward Scaling in Visual Generation",
@@ -29625,7 +29670,8 @@
    "k": "paper",
    "au": [
     "Hanze Dong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Iterative Data Smoothing: Mitigating Reward Overfitting and Overoptimization in RLHF",
@@ -29636,7 +29682,8 @@
     "Banghua Zhu",
     "Jiantao Jiao",
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Closer Look at Machine Unlearning for Large Language Models",
@@ -29798,7 +29845,8 @@
    "k": "paper",
    "au": [
     "Sara Hooker"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "BadMerging: Backdoor Attacks Against Model Merging",
@@ -29919,7 +29967,8 @@
     "Yuanzhao Zhai",
     "Kele Xu",
     "Dawei Feng"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Duty to Forget, a Right to be Assured? Exposing Vulnerabilities in Machine Unlearning Services",
@@ -29992,7 +30041,8 @@
     "Banghua Zhu",
     "Jiantao Jiao",
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Stealthy and Persistent Unalignment on Large Language Models via Backdoor Injections",
@@ -30021,7 +30071,8 @@
    "au": [
     "Baolin Peng",
     "Haitao Mi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Separating Tongue from Thought: Activation Patching Reveals Language-Agnostic Concept Representations in Transformers",
@@ -30075,7 +30126,8 @@
     "Souradip Chakraborty",
     "Amrit Singh Bedi",
     "Huazheng Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Defending Against Prompt Injection With a Few DefensiveTokens",
@@ -30127,7 +30179,8 @@
     "Yaodong Yang",
     "Jiaming Ji",
     "Hantao Lou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Revisiting Jailbreaking for Large Language Models: A Representation Engineering Perspective",
@@ -30168,7 +30221,8 @@
    "au": [
     "Léonard Hussenot",
     "Olivier Bachem"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Weak-to-Strong Search: Align Large Language Models via Searching over Small Language Models",
@@ -30179,7 +30233,8 @@
     "Yu Qiao",
     "Jie Liu",
     "Zhanhui Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Just Rotate it: Deploying Backdoor Attacks via Rotation Transformation",
@@ -30308,7 +30363,8 @@
     "Johan Ferret",
     "Alexandre Ramé",
     "Léonard Hussenot"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Improving Reinforcement Learning from Human Feedback with Efficient Reward Model Ensemble",
@@ -30328,7 +30384,8 @@
    "k": "paper",
    "au": [
     "Diyi Yang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RedAgent: Red Teaming Large Language Models with Context-aware Autonomous Language Agent",
@@ -30395,7 +30452,8 @@
    "k": "paper",
    "au": [
     "Eric Horvitz"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AgentVigil: Generic Black-Box Red-teaming for Indirect Prompt Injection against LLM Agents",
@@ -30547,7 +30605,8 @@
    "k": "paper",
    "au": [
     "Abhilash Mishra"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Membership Inference via Backdooring",
@@ -30565,7 +30624,8 @@
    "k": "paper",
    "au": [
     "Mubarak Shah"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Beyond Imitation: Leveraging Fine-grained Quality Signals for Alignment",
@@ -30574,7 +30634,8 @@
    "k": "paper",
    "au": [
     "Tianyi Tang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "FairSteer: Inference Time Debiasing for LLMs with Dynamic Activation Steering",
@@ -30657,7 +30718,8 @@
    "k": "paper",
    "au": [
     "Shafiq Joty"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment",
@@ -30712,7 +30774,8 @@
    "k": "paper",
    "au": [
     "Dylan Hadfield-Menell"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Model Tampering Attacks Enable More Rigorous Evaluations of LLM Capabilities",
@@ -31184,7 +31247,8 @@
    "k": "paper",
    "au": [
     "Mingyuan Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Mitigating Content Effects on Reasoning in Language Models through Fine-Grained Activation Steering",
@@ -31265,7 +31329,8 @@
    "k": "paper",
    "au": [
     "Mingyuan Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Making Users Indistinguishable: Attribute-wise Unlearning in Recommender Systems",
@@ -31494,7 +31559,8 @@
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Prototypical Reward Network for Data-Efficient RLHF",
@@ -31503,7 +31569,8 @@
    "k": "paper",
    "au": [
     "Xiting Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Test-time Backdoor Mitigation for Black-Box Large Language Models with Defensive Demonstrations",
@@ -31774,7 +31841,8 @@
    "k": "paper",
    "au": [
     "Rohin Shah"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Inoculation Prompting: Instructing LLMs to misbehave at train-time improves test-time alignment",
@@ -31824,7 +31892,8 @@
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SAE-SSV: Supervised Steering in Sparse Representation Spaces for Reliable Control of Language Models",
@@ -31925,7 +31994,8 @@
    "k": "paper",
    "au": [
     "Chaowei Xiao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Failures to Find Transferable Image Jailbreaks Between Vision-Language Models",
@@ -32218,7 +32288,8 @@
     "Daniel Khashabi",
     "Baolin Peng",
     "Haitao Mi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Representation Bending for Large Language Model Safety",
@@ -32435,7 +32506,8 @@
    "k": "paper",
    "au": [
     "Zhiwei Steven Wu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "QUEEN: Query Unlearning against Model Extraction",
@@ -32472,7 +32544,8 @@
    "k": "paper",
    "au": [
     "Bowen Yu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Interpretable Concept Bottlenecks to Align Reinforcement Learning Agents",
@@ -32667,7 +32740,8 @@
     "Shihan Dou",
     "Junjie Ye",
     "Songyang Gao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "FLAME: Taming Backdoors in Federated Learning (Extended Version 1)",
@@ -32861,7 +32935,8 @@
     "Kailai Yang",
     "Zhiwei Liu",
     "Qianqian Xie"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Accounting for Sycophancy in Language Model Uncertainty Estimation",
@@ -32937,7 +33012,8 @@
    "k": "paper",
    "au": [
     "Archit Sharma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Dynamic Graph Unlearning: A General and Efficient Post-Processing Method via Gradient Transformation",
@@ -32955,7 +33031,8 @@
    "k": "paper",
    "au": [
     "Yuhao Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Intrinsic Test of Unlearning Using Parametric Knowledge Traces",
@@ -33170,7 +33247,8 @@
    "k": "paper",
    "au": [
     "Diyi Yang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Imitating Language via Scalable Inverse Reinforcement Learning",
@@ -33191,7 +33269,8 @@
     "Baolin Peng",
     "Haitao Mi",
     "Furong Huang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Improving LLM General Preference Alignment via Optimistic Online Mirror Descent",
@@ -33200,7 +33279,8 @@
    "k": "paper",
    "au": [
     "Haitao Mi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Mixture of Experts Made Intrinsically Interpretable",
@@ -33272,7 +33352,8 @@
     "Wenhong Zhu",
     "Zhiwei He",
     "Xiaofeng Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AgentMisalignment: Measuring the Propensity for Misaligned Behaviour in LLM-Based Agents",
@@ -33349,7 +33430,8 @@
     "Yaodong Yang",
     "Zhaowei Zhang",
     "Chengdong Ma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Breaking the Ceiling: Exploring the Potential of Jailbreak Attacks through Expanding Strategy Space",
@@ -33378,7 +33460,8 @@
    "k": "paper",
    "au": [
     "Ya-Qin Zhang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Jailbreak Antidote: Runtime Safety-Utility Balance via Sparse Representation Adjustment in Large Language Models",
@@ -33420,7 +33503,8 @@
    "au": [
     "Souradip Chakraborty",
     "Furong Huang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Alignment Pretraining: AI Discourse Causes Self-Fulfilling (Mis)alignment",
@@ -33575,7 +33659,8 @@
    "au": [
     "Souradip Chakraborty",
     "Amrit Singh Bedi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Know Thy Judge: On the Robustness Meta-Evaluation of LLM Safety Judges",
@@ -33809,7 +33894,8 @@
    "k": "paper",
    "au": [
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "GRASP: A Disagreement Analysis Framework to Assess Group Associations in Perspectives",
@@ -33874,7 +33960,8 @@
    "k": "paper",
    "au": [
     "Hiroki Furuta"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Causal Tracing of Object Representations in Large Vision Language Models: Mechanistic Interpretability and Hallucination",
@@ -33958,7 +34045,8 @@
    "au": [
     "Xipeng Qiu",
     "Rong Bao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Boosting Alignment for Post-Unlearning Text-to-Image Generative Models",
@@ -34035,7 +34123,8 @@
    "au": [
     "Minlie Huang",
     "Hongning Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "From Theft to Bomb-Making: The Ripple Effect of Unlearning in Defending Against Jailbreak Attacks",
@@ -34278,7 +34367,8 @@
    "k": "paper",
    "au": [
     "Boxi Wú"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Predicting vs. Acting: A Trade-off Between World Modeling &amp; Agent Modeling",
@@ -34287,7 +34377,8 @@
    "k": "paper",
    "au": [
     "Weijia Shi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "\"I Searched for a Religious Song in Amharic and Got Sexual Content Instead\": Investigating Online Harm in Low-Resourced ",
@@ -34588,7 +34679,8 @@
    "k": "paper",
    "au": [
     "Wei Shen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Backdoor Vulnerabilities in Normally Trained Deep Learning Models",
@@ -34626,7 +34718,8 @@
    "k": "paper",
    "au": [
     "Nanyun Peng"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "PBI-Attack: Prior-Guided Bimodal Interactive Black-Box Jailbreak Attack for Toxicity Maximization",
@@ -34773,7 +34866,8 @@
     "Mengdi Wang",
     "Souradip Chakraborty",
     "Dinesh Manocha"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Transformer Circuit Faithfulness Metrics are not Robust",
@@ -34861,7 +34955,8 @@
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Backdoor Secrets Unveiled: Identifying Backdoor Data with Optimized Scaled Prediction Consistency",
@@ -35000,7 +35095,8 @@
    "k": "paper",
    "au": [
     "Rohin Shah"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Why Do Some Language Models Fake Alignment While Others Don't?",
@@ -35020,7 +35116,8 @@
    "k": "paper",
    "au": [
     "David Lindner"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Engineering Monosemanticity in Toy Models",
@@ -35116,7 +35213,8 @@
     "Shihan Dou",
     "Rui Zheng",
     "Sixian Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Closer Look at Bias and Chain-of-Thought Faithfulness of Large (Vision) Language Models",
@@ -35386,7 +35484,8 @@
     "Yaodong Yang",
     "Jiaming Ji",
     "Boyuan Chen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "The Future of Open Human Feedback",
@@ -35397,7 +35496,8 @@
     "Yangsibo Huang",
     "Tatsunori Hashimoto",
     "Hannah Rose Kirk"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RSafe: Incentivizing proactive reasoning to build robust and adaptive LLM safeguards",
@@ -36325,7 +36425,8 @@
    "k": "paper",
    "au": [
     "Rafael Rafailov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Architectural Neural Backdoors from First Principles",
@@ -36568,7 +36669,8 @@
     "Shuyi Zhang",
     "Wei Shi",
     "Sihang Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Understanding and Mitigating Overrefusal in LLMs from an Unveiling Perspective of Safety Decision Boundary",
@@ -36836,7 +36938,8 @@
     "Hailey Schoelkopf",
     "Stella Biderman",
     "Louis Castricato"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
@@ -37065,7 +37168,8 @@
    "k": "paper",
    "au": [
     "Mingyuan Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "On the Limits of Sparse Autoencoders: A Theoretical Framework and Reweighted Remedy",
@@ -37214,7 +37318,8 @@
     "Seamus Somerstep",
     "Ya'acov Ritov",
     "Mikhail Yurochkin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Reflect-Guard: Enhancing LLM Safeguards against Adversarial Prompts via Logical Self-Reflection",
@@ -37343,7 +37448,8 @@
    "au": [
     "Yaodong Yang",
     "Juntao Dai"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RedCodeAgent: Automatic Red-teaming Agent against Diverse Code Agents",
@@ -37403,7 +37509,8 @@
    "k": "paper",
    "au": [
     "Thilo Hagendorff"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Diversity-driven Data Selection for Language Model Tuning through Sparse Autoencoder",
@@ -37414,7 +37521,8 @@
     "Madian Khabsa",
     "Xianjun Yang",
     "Yuning Mao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs",
@@ -37541,7 +37649,8 @@
    "k": "paper",
    "au": [
     "Emre Kıcıman"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Counterfactual Simulation Training for Chain-of-Thought Faithfulness",
@@ -37931,7 +38040,8 @@
    "au": [
     "Nathalie Baracaldo",
     "Parikshit Ram"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "An Interpretable N-gram Perplexity Threat Model for Large Language Model Jailbreaks",
@@ -37959,7 +38069,8 @@
    "au": [
     "Songyang Gao",
     "Zhiheng Xi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "FORCE: Transferable Visual Jailbreaking Attacks via Feature Over-Reliance CorrEction",
@@ -38107,7 +38218,8 @@
    "au": [
     "Boyuan Chen",
     "Zhaowei Zhang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "JADES: A Universal Framework for Jailbreak Assessment via Decompositional Scoring",
@@ -38295,7 +38407,8 @@
     "Qingyu Yin",
     "Chak Tou Leong",
     "Wenjie Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "BLUR: A Benchmark for LLM Unlearning Robust to Forget-Retain Overlap",
@@ -38921,7 +39034,8 @@
    "k": "paper",
    "au": [
     "Nathan Lambert"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Towards Understanding the Nature of Attention with Low-Rank Sparse Decomposition",
@@ -39031,7 +39145,8 @@
    "au": [
     "Tom Goldstein",
     "John Kirchenbauer"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Democratic AI is Possible. The Democracy Levels Framework Shows How It Might Work",
@@ -39194,7 +39309,8 @@
     "Leyang Cui",
     "Xinting Huang",
     "Shuming Shi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Gradient Shaping: Enhancing Backdoor Attack Against Reverse Engineering",
@@ -39317,7 +39433,8 @@
    "k": "paper",
    "au": [
     "Junyang Lin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Revisiting Backdoor Attacks on LLMs: A Stealthy and Practical Poisoning Framework via Harmless Inputs",
@@ -39335,7 +39452,8 @@
    "k": "paper",
    "au": [
     "See-Kiong Ng"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Keeping an Eye on LLM Unlearning: The Hidden Risk and Remedy",
@@ -39733,7 +39851,8 @@
    "au": [
     "Xuehai Pan",
     "Jiaming Ji"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AI Debate Aids Assessment of Controversial Claims",
@@ -40096,7 +40215,8 @@
    "k": "paper",
    "au": [
     "Mingyuan Zhou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Northeastern Uni at Multilingual Counterspeech Generation: Enhancing Counter Speech Generation with LLM Alignment throug",
@@ -40105,7 +40225,8 @@
    "k": "paper",
    "au": [
     "Divya Chaudhary"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "LLMs Deceive Unintentionally: Emergent Misalignment in Dishonesty from Misaligned Samples to Biased Human-AI Interaction",
@@ -40159,7 +40280,8 @@
    "k": "paper",
    "au": [
     "Erik Jenner"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Rethinking Circuit Completeness in Language Models: AND, OR, and ADDER Gates",
@@ -40302,7 +40424,8 @@
     "Yipeng Kang",
     "Junqi Wang",
     "Yexin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Representations Shape Weak-to-Strong Generalization: Theoretical Insights and Empirical Predictions",
@@ -40525,7 +40648,8 @@
    "k": "paper",
    "au": [
     "Xipeng Qiu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Generalization Analogies: A Testbed for Generalizing AI Oversight to Hard-To-Measure Domains",
@@ -40543,7 +40667,8 @@
    "k": "paper",
    "au": [
     "Jacob Steinhardt"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Sparse Autoencoder as a Zero-Shot Classifier for Concept Erasing in Text-to-Image Diffusion Models",
@@ -40562,7 +40687,8 @@
    "au": [
     "Jindong Gu",
     "Tong Liu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Core Safety Values for Provably Corrigible Agents",
@@ -40769,7 +40895,8 @@
    "k": "paper",
    "au": [
     "Jonathan H. Chen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "MAiDE-up: Multilingual Deception Detection of GPT-generated Hotel Reviews",
@@ -40971,7 +41098,8 @@
    "k": "paper",
    "au": [
     "Yuxuan Liu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Three Minds, One Legend: Jailbreak Large Reasoning Model with Adaptive Stacked Ciphers",
@@ -41314,7 +41442,8 @@
    "k": "paper",
    "au": [
     "David Lindner"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Towards Safe and Honest AI Agents with Neural Self-Other Overlap",
@@ -41495,7 +41624,8 @@
     "Maheep Chaudhary",
     "Ashwinee Panda",
     "Vasu Sharma"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Attention Eclipse: Manipulating Attention to Bypass LLM Safety-Alignment",
@@ -41576,7 +41706,8 @@
    "au": [
     "Natasha Jaques",
     "Mickel Liu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AMIA: Automatic Masking and Joint Intention Analysis Makes LVLMs Robust Jailbreak Defenders",
@@ -41713,7 +41844,8 @@
    "k": "paper",
    "au": [
     "Xiaoyuan Yi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Optimal Transport-Based Token Weighting scheme for Enhanced Preference Optimization",
@@ -41722,7 +41854,8 @@
    "k": "paper",
    "au": [
     "Xiting Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Self-Deception: Reverse Penetrating the Semantic Firewall of Large Language Models",
@@ -41742,7 +41875,8 @@
    "k": "paper",
    "au": [
     "Alekh Agarwal"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SoK: Systematizing LLM Prompt Security: Taxonomies, Datasets, and Unified Evaluation of Attacks and Defenses",
@@ -41788,7 +41922,8 @@
    "k": "paper",
    "au": [
     "Robert Kirk"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "OrthAlign: Orthogonal Subspace Decomposition for Non-Interfering Multi-Objective Alignment",
@@ -42069,7 +42204,8 @@
     "Chao Zhang",
     "Ziyun Cui",
     "Ziyang Zhang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Enhancing Cross-task Transfer of Large Language Models via Activation Steering",
@@ -42124,7 +42260,8 @@
     "Yihao Wu",
     "He Zhang",
     "Junbo Tan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Reward Hacking Mitigation using Verifiable Composite Rewards",
@@ -42154,7 +42291,8 @@
    "k": "paper",
    "au": [
     "Víctor Gallego"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "GT-HarmBench: Benchmarking AI Safety Risks Through the Lens of Game Theory",
@@ -42508,7 +42646,8 @@
    "k": "paper",
    "au": [
     "Shihan Dou"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "What Drives Representation Steering? A Mechanistic Case Study on Steering Refusal",
@@ -42582,7 +42721,8 @@
     "Johannes Ackermann",
     "Masashi Sugiyama",
     "Takashi Ishida"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "How Does DPO Reduce Toxicity? A Mechanistic Neuron-Level Analysis",
@@ -42781,7 +42921,8 @@
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Watch the Watcher! Backdoor Attacks on Security-Enhancing Diffusion Models",
@@ -42945,7 +43086,8 @@
    "au": [
     "Zhuo Li",
     "Dandan Guo"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SAEMark: Steering Personalized Multilingual LLM Watermarks with Sparse Autoencoders",
@@ -43265,7 +43407,8 @@
     "Dengcan Liu",
     "Jiahao Li",
     "Zheren Fu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Why Do Some Inputs Break Low-Bit LLM Quantization?",
@@ -43446,7 +43589,8 @@
     "Myeongho Jeon",
     "Jan Sobotka",
     "Suhwan Choi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Weak-to-Strong Generalization beyond Accuracy: a Pilot Study in Safety, Toxicity, and Legal Reasoning",
@@ -43945,7 +44089,8 @@
    "k": "paper",
    "au": [
     "Kush R. Varshney"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "TCPO: Thought-Centric Preference Optimization for Effective Embodied Decision-making",
@@ -44295,7 +44440,8 @@
    "k": "paper",
    "au": [
     "Zhaoxuan Tan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "DYNASHIELD: A Black-Box Moving Target Defense for LLMs via Dynamic Decoding Customization",
@@ -45160,7 +45306,8 @@
    "k": "paper",
    "au": [
     "Wei Dai"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "MISR: Measuring Instrumental Self-Reasoning in Frontier Models",
@@ -45377,7 +45524,8 @@
    "k": "paper",
    "au": [
     "Mengdi Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "On the Role of Preference Variance in Preference Optimization",
@@ -45386,7 +45534,8 @@
    "k": "paper",
    "au": [
     "Mengdi Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Constructing Interpretable Features from Compositional Neuron Groups",
@@ -45514,7 +45663,8 @@
    "k": "paper",
    "au": [
     "Soujanya Poria"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "On Symmetric Losses for Robust Policy Optimization with Noisy Preferences",
@@ -45924,7 +46074,8 @@
    "k": "paper",
    "au": [
     "Daniel Khashabi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "What Is AI Safety? What Do We Want It to Be?",
@@ -46035,7 +46186,8 @@
    "k": "paper",
    "au": [
     "Ming Jin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Tell Me What You Don't Know: Enhancing Refusal Capabilities of Role-Playing Agents via Representation Space Analysis and",
@@ -47175,7 +47327,8 @@
    "au": [
     "Carl-Leander Henneking",
     "Claas Beger"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Single Neuron Is Sufficient to Bypass Safety Alignment in Large Language Models",
@@ -47246,7 +47399,8 @@
    "au": [
     "Gihoon Kim",
     "Euntai Kim"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Invisible Safety Threat: Malicious Finetuning for LLM via Steganography",
@@ -47324,7 +47478,8 @@
    "k": "paper",
    "au": [
     "Dacheng Tao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "MonitoringBench: Semi-Automated Red-Teaming for Agent Monitoring",
@@ -47382,7 +47537,8 @@
    "k": "paper",
    "au": [
     "Jason R. Brown"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Signal in the Noise: Polysemantic Interference Transfers and Predicts Cross-Model Influence",
@@ -47512,7 +47668,8 @@
     "Junjie Ye",
     "Rui Zheng",
     "Limao Xiong"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Evaluation Awareness in Language Models Has Limited Effect on Behaviour",
@@ -47551,7 +47708,8 @@
     "Songyang Gao",
     "Kai Chen",
     "Dahua Lin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "LIAR: Leveraging Inference Time Alignment (Best-of-N) to Jailbreak LLMs in Seconds",
@@ -47745,7 +47903,8 @@
    "au": [
     "Jiaming Zhang",
     "Chaochao Chen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Agent Hacks Agent: Autoresearch for Production-Agent Red-Teaming",
@@ -47877,7 +48036,8 @@
    "k": "paper",
    "au": [
     "Boxi Wú"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "LatentBreak: Jailbreaking Large Language Models through Latent Space Feedback",
@@ -47914,7 +48074,8 @@
    "k": "paper",
    "au": [
     "Hassan Mansoor"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Lie detection algorithms attract few users but vastly increase accusation rates",
@@ -48007,7 +48168,8 @@
    "k": "paper",
    "au": [
     "Yongbin Li"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Erasing Without Remembering: Implicit Knowledge Forgetting in Large Language Models",
@@ -48063,7 +48225,8 @@
    "k": "paper",
    "au": [
     "Pei Ke"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RePPL: Recalibrating Perplexity by Uncertainty in Semantic Propagation and Language Generation for Explainable QA Halluc",
@@ -49764,7 +49927,8 @@
     "Motoki Omura",
     "Yasuhiro Fujita",
     "Toshiki Kataoka"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "GDM AI Control Roadmap",
@@ -50311,7 +50475,8 @@
     "Stefan Heimersheim",
     "Andrzej Szablewski",
     "Gabriel Konar-Steenberg"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "ReGA: Model-Based Safeguard for LLMs via Representation-Guided Abstraction",
@@ -50371,7 +50536,8 @@
    "k": "paper",
    "au": [
     "Masashi Sugiyama"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "SafeWork-R1: Coevolving Safety and Intelligence under the AI-45$^{\\circ}$ Law",
@@ -50422,7 +50588,8 @@
    "k": "paper",
    "au": [
     "Zeyi Liao"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RUBAS: Rubric-Based Reinforcement Learning for Agent Safety",
@@ -50529,7 +50696,8 @@
    "k": "paper",
    "au": [
     "Amrit Singh Bedi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AgenticRed: Evolving Agentic Systems for Red-Teaming",
@@ -50682,7 +50850,8 @@
    "k": "paper",
    "au": [
     "Michael I. Jordan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "HonestCyberEval: An AI Cyber Risk Benchmark for Automated Software Exploitation",
@@ -50731,7 +50900,8 @@
    "k": "paper",
    "au": [
     "Zuxuan Wu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Context is the Key: Backdoor Attacks for In-Context Learning with Vision Transformers",
@@ -50993,7 +51163,8 @@
    "k": "paper",
    "au": [
     "Ivan Titov"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Towards Efficient Target-Level Machine Unlearning Based on Essential Graph",
@@ -51059,7 +51230,8 @@
    "k": "paper",
    "au": [
     "Pengfei Wan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Robust Optimization for Mitigating Reward Hacking with Correlated Proxies",
@@ -51143,7 +51315,8 @@
    "k": "paper",
    "au": [
     "Subramanyam Sahoo"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Resource Consumption Red-Teaming for Large Vision-Language Models",
@@ -51352,7 +51525,8 @@
    "k": "paper",
    "au": [
     "Xi Wang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Visual-Noise Guided In-Context Distillation for Multimodal Large Language Model Unlearning",
@@ -51869,7 +52043,8 @@
     "Wei Xue",
     "Yike Guo",
     "Chi-Min Chan"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Steering LLMs? Actually, Sparse Autoencoders can outperform simple baselines",
@@ -52480,7 +52655,8 @@
     "Guangyu Wei",
     "Ke Han",
     "Yueming Lyu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "LLMs as High-Dimensional Nonlinear Autoregressive Models with Attention: Training, Alignment and Inference",
@@ -53149,7 +53325,8 @@
     "Mahmoud Srewa",
     "Tianyu Zhao",
     "Salma Elmalaki"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Bayesian Evaluation of Large Language Model Behavior",
@@ -53670,7 +53847,8 @@
    "k": "paper",
    "au": [
     "Tongliang Liu"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Probabilistic Modeling of Jailbreak on Multimodal LLMs: From Quantification to Application",
@@ -53981,7 +54159,8 @@
    "k": "paper",
    "au": [
     "Sam Toyer"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "RAPO: Risk-Aware Preference Optimization for Generalizable Safe Reasoning",
@@ -54241,7 +54420,8 @@
    "k": "paper",
    "au": [
     "Shuming Shi"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Beyond Model Jailbreak: Systematic Dissection of the \"Ten DeadlySins\" in Embodied Intelligence",
@@ -54342,7 +54522,8 @@
    "k": "paper",
    "au": [
     "Wei Shen"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Into the Gray Zone: Domain Contexts Can Blur LLM Safety Boundaries",
@@ -54616,7 +54797,8 @@
    "k": "paper",
    "au": [
     "Yi Xin"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Sober Look at Agentic Misalignment in Automated Workflows",
@@ -54646,7 +54828,8 @@
    "k": "paper",
    "au": [
     "Mubarak Shah"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "AI Alignment From Social Choice Perspectives",
@@ -54655,7 +54838,8 @@
    "k": "paper",
    "au": [
     "Itai Shapira"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Generative AI for Managerial Decision-Making under Ambiguity and Sycophancy",
@@ -55180,7 +55364,8 @@
    "k": "paper",
    "au": [
     "Jingyuan Zhang"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "A Comprehensive Evaluation of LLM Unlearning Robustness under Multi-Turn Interaction",
@@ -56670,7 +56855,8 @@
     "Florian Hoppe",
     "David Khachaturov",
     "Robert Mullins"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "REOPD: Reliability-Adaptive Reward Extrapolation for On-Policy Distillation",
@@ -57486,7 +57672,8 @@
     "Trung Le",
     "Haocheng Luo",
     "Zehang Deng"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "PsychJail: Exploring Psychological Jailbreaks via Multi-Turn Persuasion of LLM Policies",
@@ -58740,7 +58927,8 @@
    "au": [
     "Lucio La Cava",
     "Andrea Tagarelli"
-   ]
+   ],
+   "mo": 1
   },
   {
    "t": "Refusal Lives Downstream of Persona in Chat Models",

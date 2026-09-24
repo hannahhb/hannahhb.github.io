@@ -13,6 +13,7 @@ magnifying a blurry bitmap, and the payload is a fraction of the size.
 import math
 from collections import Counter
 from common import load, save
+from methodness import method_only
 
 
 def main():
@@ -40,10 +41,13 @@ def main():
     # match works to their layout position by title, since impact.json keys on
     # the work record and the layout keys on the arXiv id
     wa = (load("work_areas.json", {}) or {}).get("works", {})
-    by_title = {}
+    ab = load("abstracts.json", {}) or {}
+    by_title, mo_by_title = {}, {}
     for k, r in wa.items():
         if k in POS and r.get("title"):
             by_title[r["title"][:90]] = POS[k]
+            mo_by_title[r["title"][:90]] = method_only(
+                r["title"], (ab.get(k) or {}).get("abstract", ""))
 
     dep, meta, missed = [], [], 0
     for i, w in enumerate(works):
@@ -62,12 +66,20 @@ def main():
         if weight <= 0:
             continue
         dep.append([round(x, 1), round(y, 1), round(weight, 3), w["q"], aidx[top]])
-        meta.append({"t": w["t"][:120], "u": w.get("u"), "c": c, "k": w.get("k"),
-                     "au": (w.get("au") or [])[:3]})
+        rec = {"t": w["t"][:120], "u": w.get("u"), "c": c, "k": w.get("k"),
+               "au": (w.get("au") or [])[:3]}
+        if mo_by_title.get((w.get("t") or "")[:90]):
+            rec["mo"] = 1                 # preference-tuning machinery, no named harm
+        meta.append(rec)
 
     xs = [d[0] for d in dep]; ys = [d[1] for d in dep]
+    nmo = sum(1 for m in meta if m.get("mo"))
+    cmo = sum(m["c"] for m in meta if m.get("mo"))
+    ctot = sum(m["c"] for m in meta) or 1
     print(f"{len(dep)} deposits, x {min(xs):.0f}..{max(xs):.0f}, y {min(ys):.0f}..{max(ys):.0f}"
           f"  ({missed} works had no layout position)")
+    print(f"  method-only: {nmo} works ({100*nmo/len(meta):.1f}%) "
+          f"carrying {cmo:,} citations ({100*cmo/ctot:.1f}% of the total)")
 
     out = {
         "quarters": QS, "trail": 4,
