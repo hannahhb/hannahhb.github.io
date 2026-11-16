@@ -5,7 +5,7 @@ title: "Welcome"
 
 # Hi, I’m Hannah. I work on AI safety.
 
-I am very interested in **robustness**. I have worked on showing the benefits of neurosymbolic models for robustness<sup><a href="#r1">1</a></sup>, how tool-augmented agents contribute to robustness in clinical triage scenarios<sup><a href="#r2">2</a></sup>, and on designing a white-box linear probe method to predict robustness from model internals<sup><a href="#r3">3</a></sup>.
+I am very interested in **robustness**. I have worked on showing the benefits of neurosymbolic models for robustness<sup><a href="#r1">1</a></sup>, how tool-augmented agents contribute to robustness in clinical triage scenarios<sup><a href="#r2">2</a></sup>, and on designing a white-box linear probe to predict robustness on AIMO-level math problems<sup><a href="#r3">3</a></sup>.
 
 Since Fall 2026 I have also been working on a SPAR research project<sup><a href="#r4">4</a></sup>, designing a **follow-up questions** paradigm for **weak-to-strong monitoring**. I recently showed that follow-up questions help weaker monitors, especially in complex agent swarms as the swarm grows, but that weak models are poor at choosing good questions<sup><a href="#r5">5</a></sup>. Next, I will train a question-asking model on strong models’ question–answer interactions, and test the paradigm adversarially on a model organism built to give deceptive responses.
 
@@ -14,7 +14,7 @@ Since Fall 2026 I have also been working on a SPAR research project<sup><a href=
 🏅 ALTA 2025 Best Paper  
 🏅 CURE-Bench @ NeurIPS 2025 Open Science Award  
 📍 Melbourne  
-[drvkbansal@gmail.com](mailto:drvkbansal@gmail.com) · [LinkedIn](https://linkedin.com/in/hannahbansal) · [GitHub](https://github.com/hannahhb) · [All projects and publications](/projects/)
+[hannahb160903@gmail.com](mailto:hannahb160903@gmail.com) · [LinkedIn](https://linkedin.com/in/hannahbansal) · [GitHub](https://github.com/hannahhb) · [All projects and publications](/projects/)
 
 </div>
 
