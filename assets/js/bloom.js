@@ -302,8 +302,8 @@
 
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hover = -1, busy = false, t0 = performance.now(), tick = 0;
-  function now() { return reduce ? null : (performance.now() - t0) / 1000; }
-  function still() { frame(REST_T, tick, REST, hover, now()); }
+  function clock() { return reduce ? null : (performance.now() - t0) / 1000; }
+  function still() { frame(REST_T, tick, REST, hover, clock()); }
   measure(); fitRest();
   still();
   // gentle idle loop: petals sway, grass blows; buds and layout stay put
@@ -335,7 +335,7 @@
       var e = p * p * (3 - 2 * p);
       var ls = Math.log(REST.scale) + (Math.log(to.scale) - Math.log(REST.scale)) * e;  // zoom evenly in log space
       var cam = { x: REST.x + (to.x - REST.x) * e, y: REST.y + (to.y - REST.y) * e, scale: Math.exp(ls), fly: true };
-      frame(REST_T, tick++, cam, i, now());
+      frame(REST_T, tick++, cam, i, clock());
       if (p < 1) requestAnimationFrame(step);
       else { busy = false; done(); }
     }
