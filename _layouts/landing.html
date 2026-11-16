@@ -61,6 +61,27 @@
     .right .facts { font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 24px; }
     .right .facts p { color: var(--muted); margin: 0 0 6px; }
     .right ul { padding-left: 18px; color: #d6d0c6; }
+    .right sup { font-size: 11px; line-height: 0; margin-left: 1px; }
+    .right sup a { color: var(--muted); }
+    .right sup a:hover { color: var(--lilac); }
+    .right .logos { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin: 18px 0 4px; }
+    .right .logos > span:not(.logo) { font: 11px var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--muted); width: 100%; }
+    .right .logos .logo { position: relative; display: inline-block; line-height: 0; }
+    .right .logos img { height: 30px; width: auto; transition: opacity .3s; }
+    .right .logos .mono { opacity: .45; }
+    .right .logos .col { position: absolute; left: 0; top: 0; opacity: 0; }
+    .right .logos .logo:hover .mono { opacity: 0; }
+    .right .logos .logo:hover .col { opacity: 1; }
+    .right .logos a { line-height: 0; }
+    .right .logos + .logos { margin-top: 14px; }
+    .right .refs { font-size: 12.5px; color: var(--muted); padding-left: 20px; margin: 18px 0 0; }
+    .right .refs li { margin: 0 0 5px; }
+    .right .refs li:target { color: var(--text); }
+    .right.long { align-self: start; }
+    .right h2 { font: 600 13px var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--coral); margin: 40px 0 6px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .right h3 { font-size: 19px; line-height: 1.35; color: #fff; margin: 24px 0 4px; scroll-margin-top: 70px; }
+    .right p.meta { font: 12.5px var(--mono); color: var(--muted); margin: 0 0 10px; }
+    .right li { margin-bottom: 6px; }
 
     @media (max-width: 820px) {
       .split { grid-template-columns: 1fr; }
@@ -79,8 +100,7 @@
   <header class="top">
     <a class="name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav>
-      <a href="{{ '/about' | relative_url }}">About</a>
-      <a href="{{ '/publications' | relative_url }}">Publications</a>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
       <a href="{{ '/blog/' | relative_url }}">Blog</a>
     </nav>
   </header>
@@ -95,7 +115,7 @@
       <p class="hint">each flower opens a project</p>
     </section>
 
-    <section class="right">
+    <section class="right{% if page.long %} long{% endif %}">
       {{ content }}
     </section>
   </main>

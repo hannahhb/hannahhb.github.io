@@ -9,8 +9,7 @@ baseurl: ""
 
 # Add navigation
 header_pages:
-  - about.md
-  - publications.md
+  - projects.md
   - blog/index.md
 
 plugins:
