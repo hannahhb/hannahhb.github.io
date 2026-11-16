@@ -122,13 +122,21 @@
     return h;
   }
 
-  // Root scene: a small bouquet with stems, only seen during the intro.
+  // Root scene: a small bouquet with stems. The root flower is index 0.
   var SIBS = [
-    { x: -1.75, y: -0.9, s: 0.75, r: 0.5, col: 1 },
-    { x: 1.65, y: -0.55, s: 0.7, r: -0.6, col: 2 },
-    { x: 0.35, y: -2.0, s: 0.62, r: 0.2, col: 4 }
+    { x: -1.5, y: -1.0, s: 0.72, r: 0.45, col: 1 },
+    { x: 1.45, y: -0.65, s: 0.68, r: -0.55, col: 2 }
   ];
-  var STEMS = [[0, 0], [-1.75, -0.9], [1.65, -0.55], [0.35, -2.0]];
+  var STEMS = [[0, 0], [-1.5, -1.0], [1.45, -0.65]];
+  // flower centres and radii in world units, for hit testing and labels
+  var FLOWERS = [{ x: 0, y: 0, s: 1, r: 0 }].concat(SIBS);
+  function flowerAt(x, y) {
+    for (var i = 0; i < FLOWERS.length; i++) {
+      var F = FLOWERS[i];
+      if (Math.hypot(x - F.x, y - F.y) < F.s * 1.02) return i;
+    }
+    return -1;
+  }
   function rootExtras(x, y, o) {
     for (var i = 0; i < SIBS.length; i++) {
       var F = SIBS[i];
@@ -155,7 +163,7 @@
     return null;
   }
 
-  var cols = 0, rows = 0, cw = 6, lh = 11;
+  var cols = 0, rows = 0, cw = 6, lh = 11, padL = 0, padT = 0;
   function measure() {
     var probe = document.createElement('span');
     probe.textContent = 'MMMMMMMMMM';
@@ -164,8 +172,9 @@
     pre.removeChild(probe);
     var cs = getComputedStyle(pre);
     lh = parseFloat(cs.lineHeight) || cw * 1.8;
-    var padX = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
-    var padY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    padL = parseFloat(cs.paddingLeft); padT = parseFloat(cs.paddingTop);
+    var padX = padL + parseFloat(cs.paddingRight);
+    var padY = padT + parseFloat(cs.paddingBottom);
     cols = Math.max(20, Math.floor((pre.clientWidth - padX - 1) / cw));
     rows = Math.max(16, Math.floor((pre.clientHeight - padY - 1) / lh));
   }
@@ -174,9 +183,21 @@
     return ch === '<' ? '&lt;' : ch === '>' ? '&gt;' : ch === '&' ? '&amp;' : ch;
   }
 
-  var T0 = -0.65;            // intro starts zoomed out on the bouquet
-  var IDLE = -0.03;          // the bouquet rests here, fully open, until clicked
-  function frame(t, tick) {
+  var HALF = 1.25;
+  var REST_T = -0.03;                       // the bouquet, fully open
+  var REST = { x: 0, y: -0.6, scale: 1 };
+  // fit the bouquet (flowers plus the top of the stems) to the panel
+  function fitRest() {
+    var U = unit();
+    var halfW = cols * cw / 2 / U, halfH = rows * lh / 2 / U;
+    REST.scale = Math.max(2.4 / halfW, 2.0 / halfH);
+    REST.y = 1.35 - halfH * REST.scale;     // top flower near the top, stems run down
+  }
+  function unit() { return Math.min(cols * cw, rows * lh) / 2 / HALF; }   // px per screen unit
+
+  // Draw one frame. t sets how open each level is; cam says where the camera looks
+  // (null means the endless petal zoom). hover dims every flower but that one.
+  function frame(t, tick, cam, hover) {
     var n = Math.floor(t);
     var off = Math.max(0, n - 2);      // renormalise so floats never underflow
     var tl = t - off;
@@ -187,25 +208,26 @@
       // a flower fades into background texture once its bud takes over the frame
       fade: function (d) { return 0.28 + 0.72 * smooth(1 - (tl - d - 0.15) / 0.75); }
     };
-    var scale = Math.pow(S, tl), ang = tl >= 0 ? PHI * tl : 0;
-    var intro = smooth(-tl / -T0);
-    var half = 1.25;
-    var R = Math.min(cols * cw, rows * lh) / 2;   // the flower fits the shorter side
+    var scale = Math.pow(S, tl), ang = PHI * Math.max(tl, 0);
+    var U = unit();
     var out = [], last = '', run = '';
     var shift = Math.floor(tick / 5);
     for (var row = 0; row < rows; row++) {
       for (var c = 0; c < cols; c++) {
-        var qx = (c - cols / 2 + 0.5) * cw / R * half;
-        var qy = (rows / 2 - row - 0.5) * lh / R * half;
+        var qx = (c - cols / 2 + 0.5) * cw / U;
+        var qy = (rows / 2 - row - 0.5) * lh / U;
         var wx, wy;
-        if (tl >= 0) {
+        if (cam) {
+          wx = cam.x + qx * cam.scale; wy = cam.y + qy * cam.scale;
+        } else {
           var d = rot(qx - FP[0], qy - FP[1], ang);
           wx = FP[0] + scale * d[0]; wy = FP[1] + scale * d[1];
-        } else {
-          wx = qx * scale; wy = qy * scale - 1.1 * intro;
         }
         var hit = level(wx, wy, 0, ctx);
         if (!hit && off === 0 && tl < 1.2) hit = rootExtras(wx, wy, ctx.open(0));
+        if (hit && hover != null && hover >= 0 && flowerAt(wx, wy) !== hover) {
+          hit = { i: hit.i * 0.45, c: hit.c, ch: hit.ch, thin: hit.thin };
+        }
         var ch, color;
         if (hit && hit.thin && hash(c * 1.37 + 3, row * 0.71) < hit.thin * 0.65 && !hit.ch) hit = null;
         if (hit) {
@@ -236,47 +258,61 @@
     pre.innerHTML = out.join('');
   }
 
+  // Screen <-> world for the resting bouquet, in px relative to the <pre>.
+  function toWorld(px, py) {
+    var U = unit();
+    var qx = (px - padL - cols * cw / 2) / U, qy = (rows * lh / 2 - (py - padT)) / U;
+    return [REST.x + qx * REST.scale, REST.y + qy * REST.scale];
+  }
+  function toScreen(wx, wy) {
+    var U = unit();
+    return [padL + cols * cw / 2 + (wx - REST.x) / REST.scale * U,
+            padT + rows * lh / 2 - (wy - REST.y) / REST.scale * U];
+  }
+
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  measure();
-  window.addEventListener('resize', function () { measure(); if (reduce) frame(t, 0); });
+  var hover = -1, busy = false;
+  function still() { frame(REST_T, 0, REST, hover); }
+  measure(); fitRest();
+  still();
+  window.addEventListener('resize', function () {
+    measure(); fitRest();
+    if (!busy) still();
+    if (api.onlayout) api.onlayout();
+  });
 
-  // State: the bouquet opens and rests at IDLE. Bloom.zoom() falls into a petal,
-  // calls back once the first bud has opened, then keeps zooming slowly forever.
-  var t = reduce ? IDLE : T0, mode = 'idle', zoomFrom = 0, onArrive = null, tick = 0;
-  var api = window.Bloom = {
-    zoom: function (cb) {
-      if (mode === 'zoom') return;
-      if (reduce) { cb && cb(); return; }
-      mode = 'zoom'; zoomFrom = Math.max(t, IDLE); onArrive = cb || null;
-    },
-    reset: function () { mode = 'idle'; t = T0; onArrive = null; if (reduce) frame(t, 0); },
-    get zooming() { return mode === 'zoom'; },
-    seek: function (x) { t = x; frame(t, tick); }   // handy for debugging a single frame
-  };
-
-  if (reduce) { frame(t, 0); return; }
-
-  var visible = true, lastDraw = null;
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(pre);
-  }
-  function loop(now) {
-    requestAnimationFrame(loop);
-    if (!visible || document.hidden) { lastDraw = null; return; }
-    if (lastDraw !== null && now - lastDraw < 33) return;
-    var dt = lastDraw === null ? 0 : Math.min(now - lastDraw, 100) / 1000;
-    lastDraw = now;
-    tick++;
-    if (mode === 'idle') {
-      t = Math.min(IDLE, t + dt * 0.16);
-    } else {
-      var p = t - zoomFrom;
-      // ease in, rush through the first bud, then settle into a slow drift
-      var v = p < 1.7 ? 0.12 + 0.5 * smooth(p / 0.6) : 0.1;
-      t += dt * v;
-      if (onArrive && p >= 1.7) { var f = onArrive; onArrive = null; f(); }
+  // Fly into flower i (into its petal, where a bud sits on the centre flower), then call done.
+  function flyInto(i, done) {
+    var F = FLOWERS[i];
+    var tip = rot(0, BUD_U * F.s, F.r);
+    var to = { x: F.x + tip[0], y: F.y + tip[1], scale: REST.scale * F.s * 0.05 };
+    if (reduce) { done(); return; }
+    busy = true;
+    var start = null, DUR = 1400, tick = 0;
+    function step(now) {
+      if (start === null) start = now;
+      var p = Math.min(1, (now - start) / DUR);
+      var e = p * p * (3 - 2 * p);
+      var ls = Math.log(REST.scale) + (Math.log(to.scale) - Math.log(REST.scale)) * e;  // zoom evenly in log space
+      var cam = { x: REST.x + (to.x - REST.x) * e, y: REST.y + (to.y - REST.y) * e, scale: Math.exp(ls) };
+      frame(REST_T, tick++, cam, i);
+      if (p < 1) requestAnimationFrame(step);
+      else { busy = false; done(); }
     }
-    frame(t, tick);
+    requestAnimationFrame(step);
   }
-  requestAnimationFrame(loop);
+
+  var api = window.Bloom = {
+    flowers: function () {
+      return FLOWERS.map(function (F) {
+        var c = toScreen(F.x, F.y), top = toScreen(F.x, F.y + F.s);
+        return { x: c[0], y: c[1], top: top[1], r: c[1] - top[1] };
+      });
+    },
+    flowerAtPoint: function (px, py) { var w = toWorld(px, py); return flowerAt(w[0], w[1]); },
+    hover: function (i) { if (busy || i === hover) return; hover = i; still(); },
+    flyInto: flyInto,
+    reset: function () { busy = false; hover = -1; still(); },
+    onlayout: null
+  };
 })();

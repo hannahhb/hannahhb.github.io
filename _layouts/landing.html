@@ -30,46 +30,29 @@
     .left { position: sticky; top: 0; height: 100vh; overflow: hidden; }
     .right { padding: 96px 56px 64px 32px; max-width: 640px; align-self: center; }
 
-    #bloom-btn {
-      all: unset; position: absolute; inset: 0; cursor: pointer;
-    }
-    #bloom-btn:focus-visible { outline: 2px solid var(--lilac); outline-offset: -6px; }
     #bloom {
       position: absolute; inset: 0; margin: 0; padding: 56px 8px 8px;
       font: 10px/1.15 var(--mono); color: #444; white-space: pre; overflow: hidden;
-      transition: opacity .8s ease;
     }
     .hint {
       position: absolute; left: 0; right: 0; bottom: 22px; text-align: center;
       font: 12px var(--mono); color: var(--muted); pointer-events: none;
-      transition: opacity .4s ease;
+      width: max-content; margin: 0 auto; padding: 4px 12px; border-radius: 999px; background: rgba(0,0,0,.8);
     }
-    .hint span { color: var(--coral); }
-    .hint { width: max-content; margin: 0 auto; padding: 4px 12px; border-radius: 999px; background: rgba(0,0,0,.8); }
-    .left.open .hint { opacity: 0; }
-    .left.open #bloom { opacity: .35; }
-
-    .projects {
-      position: absolute; inset: 0; overflow: auto;
-      padding: 84px 40px 40px;
-      background: radial-gradient(ellipse at center, rgba(0,0,0,.55), rgba(0,0,0,.88));
-      opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease;
+    .flower-link {
+      position: absolute; transform: translate(-50%, -100%);
+      font: 12px var(--mono); color: var(--text); white-space: nowrap;
+      padding: 3px 10px; border-radius: 999px; background: rgba(0,0,0,.75);
+      border: 1px solid #2a2e38; transition: border-color .2s, color .2s, opacity .3s;
     }
-    .projects.in { opacity: 1; transform: none; }
-    .projects h2 { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
-    .proj { border-left: 2px solid var(--line); padding: 2px 0 2px 16px; margin: 0 0 22px; }
-    .proj:nth-child(2) { border-color: var(--coral); }
-    .proj:nth-child(3) { border-color: var(--lilac); }
-    .proj:nth-child(4) { border-color: var(--butter); }
-    .proj h3 { font-size: 17px; line-height: 1.35; margin: 0 0 2px; color: #fff; }
-    .proj .meta { font: 12px var(--mono); color: var(--muted); margin: 0 0 6px; }
-    .proj p { margin: 0 0 6px; font-size: 14.5px; color: #cfc9bf; }
-    .proj .links a { font-size: 13px; margin-right: 14px; }
-    .back {
-      background: none; border: 1px solid #3a3e48; color: var(--text); border-radius: 8px;
-      padding: 6px 12px; font: 13px var(--mono); cursor: pointer; margin-top: 4px;
+    .flower-link:hover, .flower-link.on, .flower-link:focus-visible {
+      text-decoration: none; color: #fff; border-color: currentColor; outline: none;
     }
-    .back:hover { border-color: var(--coral); }
+    .flower-link[data-i="0"].on, .flower-link[data-i="0"]:hover, .flower-link[data-i="0"]:focus-visible { color: var(--coral); }
+    .flower-link[data-i="1"].on, .flower-link[data-i="1"]:hover, .flower-link[data-i="1"]:focus-visible { color: var(--lilac); }
+    .flower-link[data-i="2"].on, .flower-link[data-i="2"]:hover, .flower-link[data-i="2"]:focus-visible { color: var(--butter); }
+    .left.flying .flower-link, .left.flying .hint { opacity: 0; }
+    #bloom.pointer { cursor: pointer; }
 
     .right h1 { font-size: 34px; line-height: 1.2; margin: 0 0 22px; color: #fff; letter-spacing: -.01em; }
     .right p { margin: 0 0 16px; color: #d6d0c6; }
@@ -82,13 +65,12 @@
       .split { grid-template-columns: 1fr; }
       .left { position: relative; height: 72vh; }
       .right { padding: 28px 18px 56px; }
-      .projects { padding: 70px 18px 24px; }
       #bloom { font-size: 8px; }
       .top { padding: 12px 16px; }
       .top nav a { margin-left: 12px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      #bloom, .projects, .hint { transition: none; }
+      .flower-link { transition: none; }
     }
   </style>
 </head>
@@ -103,15 +85,12 @@
   </header>
 
   <main class="split">
-    <section class="left" id="left" aria-label="Projects">
-      <button id="bloom-btn" type="button" aria-controls="projects" aria-expanded="false" aria-label="Open my latest projects">
-        <pre id="bloom" aria-hidden="true"></pre>
-      </button>
-      <p class="hint">click the flower to <span>open my projects</span></p>
-      <div class="projects" id="projects" hidden>
-        {% include projects-list.html %}
-        <button class="back" type="button" id="close-projects">&larr; back to the flower</button>
-      </div>
+    <section class="left" id="left" aria-label="Projects, one per flower">
+      <pre id="bloom" aria-hidden="true"></pre>
+      <a class="flower-link" data-i="0" href="https://apartresearch.com/sprints/projects/can-followup-questions-help-weaktostrong-monitors-for-swarms-wpcsuqz0d4">swarm monitors · hackathon</a>
+      <a class="flower-link" data-i="1" href="{{ '/publications#aimo-interp' | relative_url }}">robustness probes · AIMO interp</a>
+      <a class="flower-link" data-i="2" href="https://aclanthology.org/2025.alta-main.1/">neurosymbolic robustness · ALTA</a>
+      <p class="hint">each flower opens a project</p>
     </section>
 
     <section class="right">
@@ -123,30 +102,54 @@
   <script>
   (function () {
     var left = document.getElementById('left');
-    var btn = document.getElementById('bloom-btn');
-    var panel = document.getElementById('projects');
-    var close = document.getElementById('close-projects');
-    function openProjects() {
-      if (!window.Bloom || left.classList.contains('open') || Bloom.zooming) return;
-      btn.setAttribute('aria-expanded', 'true');
-      Bloom.zoom(function () {
-        left.classList.add('open');
-        panel.hidden = false;
-        requestAnimationFrame(function () { requestAnimationFrame(function () { panel.classList.add('in'); }); });
-        panel.querySelector('a, button').focus({ preventScroll: true });
+    var pre = document.getElementById('bloom');
+    var links = Array.prototype.slice.call(left.querySelectorAll('.flower-link'));
+    if (!window.Bloom) return;
+
+    // pin each label just above its flower
+    function place() {
+      var fl = Bloom.flowers(), ox = pre.offsetLeft, oy = pre.offsetTop;
+      links.forEach(function (a) {
+        var f = fl[+a.dataset.i];
+        var w = a.offsetWidth / 2 + 8;
+        a.style.left = Math.min(Math.max(ox + f.x, w), left.clientWidth - w) + 'px';
+        a.style.top = (oy + Math.max(f.top - 4, 64)) + 'px';
       });
     }
-    function closeProjects() {
-      panel.classList.remove('in');
-      left.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      setTimeout(function () { panel.hidden = true; }, 600);
-      Bloom.reset();
-      btn.focus({ preventScroll: true });
+    Bloom.onlayout = place;
+    place();
+
+    function setHover(i) {
+      Bloom.hover(i);
+      links.forEach(function (a) { a.classList.toggle('on', +a.dataset.i === i); });
+      pre.classList.toggle('pointer', i >= 0);
     }
-    btn.addEventListener('click', openProjects);
-    close.addEventListener('click', closeProjects);
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && left.classList.contains('open')) closeProjects(); });
+    function at(e) {
+      var r = pre.getBoundingClientRect();
+      return Bloom.flowerAtPoint(e.clientX - r.left, e.clientY - r.top);
+    }
+    function go(i) {
+      if (left.classList.contains('flying')) return;
+      left.classList.add('flying');
+      setHover(i);
+      Bloom.flyInto(i, function () { window.location.href = links[i].href; });
+    }
+    pre.addEventListener('mousemove', function (e) { setHover(at(e)); });
+    pre.addEventListener('mouseleave', function () { setHover(-1); });
+    pre.addEventListener('click', function (e) { var i = at(e); if (i >= 0) go(i); });
+    links.forEach(function (a) {
+      var i = +a.dataset.i;
+      a.addEventListener('mouseenter', function () { setHover(i); });
+      a.addEventListener('mouseleave', function () { setHover(-1); });
+      a.addEventListener('focus', function () { setHover(i); });
+      a.addEventListener('blur', function () { setHover(-1); });
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;   // let new-tab clicks through
+        e.preventDefault(); go(i);
+      });
+    });
+    // coming back with the back button: show the bouquet again
+    window.addEventListener('pageshow', function () { left.classList.remove('flying'); setHover(-1); Bloom.reset(); });
   })();
   </script>
 

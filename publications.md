@@ -14,6 +14,7 @@ Can a weak, trusted monitor catch false progress claims in a multi-agent swarm a
 ---
 
 ### 🔬 Fragile or Just Hard? Robustness Prediction from Reasoning Probes
+{: #aimo-interp}
 *AIMO Interpretability Challenge · 2026*
 
 Reasoning models can solve a problem reliably and still fail once it is perturbed. We ask whether this can be predicted from hidden states, and propose **SegProbe**, a difference-of-means linear probe on a single greedy chain of thought (at most 4k tokens).
@@ -26,7 +27,7 @@ Reasoning models can solve a problem reliably and still fail once it is perturbe
 ---
 
 ### 🌱 SPAR Fall 2026: Can Follow-up Questions Catch Missing Reasoning?
-*Mentored by Pierre-Luc St-Charles (LawZero) · [Project page](https://sparai.org/projects/f26/recVHalQ4NlHvSbUC/)*
+*Mentored by Pierre-Luc St-Charles · [Project page](https://sparai.org/projects/f26/recVHalQ4NlHvSbUC/)*
 
 Using PyINE, LawZero's framework for studying reasoning models with full execution-trace supervision, we look at a shortcut-prone model organism that sometimes exits early on misleading cues, so the steps that would expose a wrong answer never appear. We are building a small investigator that asks targeted follow-up questions, and testing whether it catches these failures more reliably and cheaply than passive judges or debate, under fixed interaction and token budgets.
 
