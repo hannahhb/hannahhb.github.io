@@ -22,6 +22,8 @@
   ];
   var GREEN = [122, 168, 110];
   var WHITE = [245, 240, 230];
+  var PAPER = [250, 247, 242];     // light-mode page colour
+  var INK = [150, 135, 120];       // what white parts become on paper
 
   function rot(x, y, a) {
     var c = Math.cos(a), s = Math.sin(a);
@@ -241,6 +243,7 @@
     var scale = Math.pow(S, tl), ang = PHI * Math.max(tl, 0);
     var U = unit();
     var out = [], last = '', run = '';
+    var light = document.documentElement.getAttribute('data-theme') === 'light';
     var shift = Math.floor(tick / 5);
     for (var row = 0; row < rows; row++) {
       for (var c = 0; c < cols; c++) {
@@ -264,7 +267,15 @@
         if (hit) {
           var q = Math.round(hit.i * 5) / 5;
           var k = 0.2 + 0.8 * q;
-          color = 'rgb(' + (hit.c[0] * k | 0) + ',' + (hit.c[1] * k | 0) + ',' + (hit.c[2] * k | 0) + ')';
+          if (light) {
+            // on paper: faint parts fade toward the page, strong parts are deeper ink
+            var cc = hit.c === WHITE ? INK : hit.c, kl = 0.35 + 0.65 * q;
+            color = 'rgb(' + (PAPER[0] + (cc[0] * 0.66 - PAPER[0]) * kl | 0) + ',' +
+                    (PAPER[1] + (cc[1] * 0.66 - PAPER[1]) * kl | 0) + ',' +
+                    (PAPER[2] + (cc[2] * 0.66 - PAPER[2]) * kl | 0) + ')';
+          } else {
+            color = 'rgb(' + (hit.c[0] * k | 0) + ',' + (hit.c[1] * k | 0) + ',' + (hit.c[2] * k | 0) + ')';
+          }
           if (hit.ch) ch = hit.ch;
           else if (hit.thin > 0.35) ch = hit.i > 0.32 ? ':' : '.';   // faded petals become dotted ground
           else ch = SRC.charAt((row * cols + c + shift) % SRC.length);
@@ -272,7 +283,7 @@
           var hs = hash(c, row);
           if (hs > 0.985) {
             var tw = 0.4 + 0.6 * Math.abs(Math.sin(tick * 0.05 + hs * 50));
-            var v = (90 + 150 * tw) | 0;
+            var v = light ? (235 - 95 * tw) | 0 : (90 + 150 * tw) | 0;
             color = 'rgb(' + v + ',' + v + ',' + v + ')';
             ch = hs > 0.996 ? '*' : '.';
           } else { color = ''; ch = ' '; }

@@ -25,10 +25,10 @@ Since Fall 2026 I have also been working on a SPAR research project<sup><a href=
 
 <div class="logos" aria-label="Previously at">
   <span>Previously at</span>
-  <span class="logo"><img class="mono" src="/assets/images/logos/rmit.png" alt="RMIT University" title="RMIT University"><img class="col" src="/assets/images/logos/rmit-color.png" alt=""></span>
+  <span class="logo has-l"><img class="mono" src="/assets/images/logos/rmit.png" alt="RMIT University" title="RMIT University"><img class="col" src="/assets/images/logos/rmit-color.png" alt=""><img class="col-l" src="/assets/images/logos/rmit-color-light.png" alt=""></span>
   <span class="logo"><img class="mono" src="/assets/images/logos/csiro.png" alt="CSIRO AEHRC" title="CSIRO · Australian e-Health Research Centre"><img class="col" src="/assets/images/logos/csiro-color.png" alt=""></span>
   <span class="logo"><img class="mono" src="/assets/images/logos/unimelb.png" alt="CAIDE, University of Melbourne" title="CAIDE · University of Melbourne"><img class="col" src="/assets/images/logos/unimelb-color.png" alt=""></span>
-  <span class="logo"><img class="mono" src="/assets/images/logos/wehi.png" alt="WEHI" title="WEHI"><img class="col" src="/assets/images/logos/wehi-color.png" alt=""></span>
+  <span class="logo has-l"><img class="mono" src="/assets/images/logos/wehi.png" alt="WEHI" title="WEHI"><img class="col" src="/assets/images/logos/wehi-color.png" alt=""><img class="col-l" src="/assets/images/logos/wehi-color-light.png" alt=""></span>
 </div>
 
 <ol class="refs">
