@@ -1,0 +1,79 @@
+<!-- After 20 seconds on the site, offer the live demo or a workshop. -->
+<aside id="visit-prompt" role="dialog" aria-live="polite" aria-labelledby="vp-title" hidden>
+  <button class="vp-close" type="button" aria-label="Dismiss">&times;</button>
+  <p class="vp-kicker">// still here?</p>
+  <p id="vp-title" class="vp-title">Want to watch a weak monitor catch a swarm agent lying?</p>
+  <p class="vp-body">A small replay of my hackathon project: a weak model asks one follow-up question and checks the answer against the logs.</p>
+  <div class="vp-actions">
+    <a class="vp-btn vp-primary" href="{{ '/demo.html' | relative_url }}">Try the live demo</a>
+    <a class="vp-btn" href="{{ '/demo.html#workshop' | relative_url }}">Workshop it with me</a>
+  </div>
+</aside>
+<style>
+  #visit-prompt {
+    position: fixed; right: 18px; bottom: 18px; z-index: 1000;
+    width: min(340px, calc(100vw - 32px));
+    background: #0d0f14; color: #e6e1d8;
+    border: 1px solid #2a2f3a; border-radius: 12px;
+    padding: 16px 18px 14px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+    transform: translateY(16px); opacity: 0;
+    transition: transform .35s ease, opacity .35s ease;
+  }
+  #visit-prompt.vp-in { transform: none; opacity: 1; }
+  #visit-prompt p { margin: 0 0 8px; }
+  .vp-kicker { font: 12px Menlo, Consolas, monospace; color: #b48ad6; }
+  .vp-title { font-weight: 600; font-size: 15px; color: #fff; }
+  .vp-body { color: #a9a49b; font-size: 13px; }
+  .vp-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .vp-btn {
+    padding: 7px 12px; border-radius: 8px; font-size: 13px;
+    border: 1px solid #3a4050; color: #e6e1d8 !important; text-decoration: none !important;
+  }
+  .vp-btn:hover { border-color: #e8715a; }
+  .vp-primary { background: #e8715a; border-color: #e8715a; color: #160b08 !important; font-weight: 600; }
+  .vp-primary:hover { background: #f08a74; }
+  .vp-close {
+    position: absolute; top: 6px; right: 8px;
+    background: none; border: 0; color: #777; font-size: 20px; cursor: pointer; line-height: 1;
+  }
+  .vp-close:hover { color: #fff; }
+  @media (prefers-reduced-motion: reduce) { #visit-prompt { transition: none; } }
+</style>
+<script>
+(function () {
+  var el = document.getElementById('visit-prompt');
+  if (!el) return;
+  function get(store, k) { try { return window[store].getItem(k); } catch (e) { return null; } }
+  function set(store, k, v) { try { window[store].setItem(k, v); } catch (e) {} }
+  if (get('localStorage', 'vp-dismissed')) return;
+
+  var NEED = 20000;
+  // time counts across pages in this visit, and only while the tab is visible
+  var spent = parseInt(get('sessionStorage', 'vp-spent') || '0', 10);
+  var last = Date.now();
+  var timer = setInterval(function () {
+    var now = Date.now();
+    if (!document.hidden) spent += now - last;
+    last = now;
+    set('sessionStorage', 'vp-spent', String(spent));
+    if (spent >= NEED) { clearInterval(timer); show(); }
+  }, 500);
+
+  function show() {
+    el.hidden = false;
+    requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.add('vp-in'); }); });
+  }
+  function dismiss() {
+    set('localStorage', 'vp-dismissed', '1');
+    el.classList.remove('vp-in');
+    setTimeout(function () { el.hidden = true; }, 350);
+  }
+  el.querySelector('.vp-close').addEventListener('click', dismiss);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !el.hidden) dismiss(); });
+  Array.prototype.forEach.call(el.querySelectorAll('.vp-btn'), function (a) {
+    a.addEventListener('click', function () { set('localStorage', 'vp-dismissed', '1'); });
+  });
+})();
+</script>

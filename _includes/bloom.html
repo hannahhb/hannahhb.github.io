@@ -1,0 +1,27 @@
+<figure class="bloom-wrap" aria-label="Animated ASCII lily: the view zooms into a petal, where buds open into new flowers">
+  <pre id="bloom" aria-hidden="true"></pre>
+  <figcaption>a lily drawn in its own source code, zooming into a petal where the buds keep opening</figcaption>
+</figure>
+<style>
+  .bloom-wrap { margin: 0 0 1.6em; padding: 0; }
+  #bloom {
+    background: #07080b;
+    border: 1px solid #1d2028;
+    border-radius: 10px;
+    margin: 0;
+    padding: 14px 10px;
+    font: 10px/1.15 "SFMono-Regular", Menlo, Consolas, monospace;
+    color: #444;
+    overflow: hidden;
+    white-space: pre;
+    min-height: 320px;
+  }
+  .bloom-wrap figcaption {
+    text-align: center;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 0.5em;
+  }
+  @media (max-width: 600px) { #bloom { font-size: 8px; min-height: 240px; } }
+</style>
+<script src="{{ '/assets/js/bloom.js' | relative_url }}" defer></script>
