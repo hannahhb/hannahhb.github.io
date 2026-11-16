@@ -155,18 +155,19 @@
     return null;
   }
 
-  var cols = 0, rows = 0, aspect = 0.6;
+  var cols = 0, rows = 0, cw = 6, lh = 11;
   function measure() {
     var probe = document.createElement('span');
     probe.textContent = 'MMMMMMMMMM';
     pre.appendChild(probe);
-    var cw = probe.getBoundingClientRect().width / 10;
+    cw = probe.getBoundingClientRect().width / 10;
     pre.removeChild(probe);
-    var lh = parseFloat(getComputedStyle(pre).lineHeight) || cw * 1.8;
-    aspect = cw / lh;
-    var width = pre.clientWidth - 2;
-    cols = Math.max(30, Math.floor(width / cw));
-    rows = Math.max(24, Math.min(54, Math.round(cols * aspect * 0.78)));
+    var cs = getComputedStyle(pre);
+    lh = parseFloat(cs.lineHeight) || cw * 1.8;
+    var padX = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+    var padY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    cols = Math.max(20, Math.floor((pre.clientWidth - padX - 1) / cw));
+    rows = Math.max(16, Math.floor((pre.clientHeight - padY - 1) / lh));
   }
 
   function esc(ch) {
@@ -174,7 +175,7 @@
   }
 
   var T0 = -0.65;            // intro starts zoomed out on the bouquet
-  var SPEED = 0.085;         // levels per second
+  var IDLE = -0.03;          // the bouquet rests here, fully open, until clicked
   function frame(t, tick) {
     var n = Math.floor(t);
     var off = Math.max(0, n - 2);      // renormalise so floats never underflow
@@ -186,20 +187,16 @@
       // a flower fades into background texture once its bud takes over the frame
       fade: function (d) { return 0.28 + 0.72 * smooth(1 - (tl - d - 0.15) / 0.75); }
     };
-    var scale, ang, cx, cy;
-    if (tl >= 0) {
-      scale = Math.pow(S, tl); ang = PHI * tl;
-    } else {
-      scale = Math.pow(S, tl); ang = 0;
-    }
+    var scale = Math.pow(S, tl), ang = tl >= 0 ? PHI * tl : 0;
     var intro = smooth(-tl / -T0);
     var half = 1.25;
+    var R = Math.min(cols * cw, rows * lh) / 2;   // the flower fits the shorter side
     var out = [], last = '', run = '';
     var shift = Math.floor(tick / 5);
     for (var row = 0; row < rows; row++) {
       for (var c = 0; c < cols; c++) {
-        var qx = (c - cols / 2 + 0.5) * aspect / (rows / 2) * half;
-        var qy = (rows / 2 - row - 0.5) / (rows / 2) * half;
+        var qx = (c - cols / 2 + 0.5) * cw / R * half;
+        var qy = (rows / 2 - row - 0.5) * lh / R * half;
         var wx, wy;
         if (tl >= 0) {
           var d = rot(qx - FP[0], qy - FP[1], ang);
@@ -241,12 +238,25 @@
 
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   measure();
-  window.addEventListener('resize', function () { measure(); });
+  window.addEventListener('resize', function () { measure(); if (reduce) frame(t, 0); });
 
-  if (reduce) { frame(0.0, 0); return; }
+  // State: the bouquet opens and rests at IDLE. Bloom.zoom() falls into a petal,
+  // calls back once the first bud has opened, then keeps zooming slowly forever.
+  var t = reduce ? IDLE : T0, mode = 'idle', zoomFrom = 0, onArrive = null, tick = 0;
+  var api = window.Bloom = {
+    zoom: function (cb) {
+      if (mode === 'zoom') return;
+      if (reduce) { cb && cb(); return; }
+      mode = 'zoom'; zoomFrom = Math.max(t, IDLE); onArrive = cb || null;
+    },
+    reset: function () { mode = 'idle'; t = T0; onArrive = null; if (reduce) frame(t, 0); },
+    get zooming() { return mode === 'zoom'; },
+    seek: function (x) { t = x; frame(t, tick); }   // handy for debugging a single frame
+  };
 
-  // time only advances while the bloom is on screen, so it never jumps
-  var elapsed = 0, tick = 0, visible = true, lastDraw = null;
+  if (reduce) { frame(t, 0); return; }
+
+  var visible = true, lastDraw = null;
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(pre);
   }
@@ -254,10 +264,19 @@
     requestAnimationFrame(loop);
     if (!visible || document.hidden) { lastDraw = null; return; }
     if (lastDraw !== null && now - lastDraw < 33) return;
-    if (lastDraw !== null) elapsed += Math.min(now - lastDraw, 100);
+    var dt = lastDraw === null ? 0 : Math.min(now - lastDraw, 100) / 1000;
     lastDraw = now;
     tick++;
-    frame(T0 + elapsed / 1000 * SPEED, tick);
+    if (mode === 'idle') {
+      t = Math.min(IDLE, t + dt * 0.16);
+    } else {
+      var p = t - zoomFrom;
+      // ease in, rush through the first bud, then settle into a slow drift
+      var v = p < 1.7 ? 0.12 + 0.5 * smooth(p / 0.6) : 0.1;
+      t += dt * v;
+      if (onArrive && p >= 1.7) { var f = onArrive; onArrive = null; f(); }
+    }
+    frame(t, tick);
   }
   requestAnimationFrame(loop);
 })();

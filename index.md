@@ -1,29 +1,23 @@
 ---
-layout: home
+layout: landing
 title: "Welcome"
 ---
 
-{% include bloom.html %}
+# Hi, I’m Hannah. I work on AI safety.
 
-# 👋 Hi, I’m Hannah Bansal  
-I’m an Honours student in Computer Science at RMIT University, researching **neurosymbolic reasoning**, **multi-agent reinforcement learning**, and **tool augmented LLMs**.  
+I got drawn into **robustness** when I noticed that swapping a single noun could make an LLM fail a problem it had just solved. Jailbreaks exploit the same fragility: stack enough small prompt variations, or show a model enough harmful examples first, and it will give answers it would otherwise refuse. Models keep getting more capable, yet simple robustness tests still find failures that matter.
 
-I’m passionate about building interpretable, logically consistent AI systems that integrate symbolic reasoning with neural models. Currently supervised  by Dr Karin Verspoor and Dr Daniel Cabrera Lozoya. 
+I want to understand that fragility from the inside. My recent work reads a model’s hidden states while it reasons to predict whether its answer will survive a perturbation. Next, I want to think about **model steering**, especially conditional activation steering, as a way to make models more robust, and to stay in control of them where they are still fragile.
 
-📍 Currently: RMIT Digital Group · Melbourne, Australia  
-🌱 Also: [SPAR](https://sparai.org/projects/f26/recVHalQ4NlHvSbUC/) Fall 2026 with Pierre-Luc St-Charles (LawZero), on whether follow-up questions can catch missing reasoning  
-Prev: CAIDE CSIRO AEHRC WEHI
-📫 Reach me at [hannah.bansal@rmit.edu.au](mailto:hannah.bansal@rmit.edu.au)  
-🔗 [GitHub](https://github.com/hannahbansal) | [LinkedIn](https://linkedin.com/in/hannahbansal) | [Google Scholar](#)
+I’m also interested in **scalable oversight**. In [SPAR](https://sparai.org/projects/f26/recVHalQ4NlHvSbUC/) with Pierre-Luc St-Charles (LawZero), I’m testing whether a small investigator that asks follow-up questions can catch missing reasoning that passive monitors miss.
 
-## Latest projects
+I came to this from medical AI evaluation, building hallucination detection for clinical AI scribes, where I saw how small failures carry real downstream harm. I’d like to keep doing this work independently of frontier labs, because I think external oversight of frontier AI matters.
 
-- **[Can Follow-Up Questions Help Weak-to-Strong Monitors for Swarms?](https://apartresearch.com/sprints/projects/can-followup-questions-help-weaktostrong-monitors-for-swarms-wpcsuqz0d4)** · Apart Research Swarm Alignment Hackathon, Nov 2026  
-  A weak monitor that asks one follow-up question recovers 76–82% of the gap to a strong monitor. [Try the demo →](/demo.html)
-- **Fragile or Just Hard? Robustness Prediction from Reasoning Probes** · AIMO Interpretability Challenge, 2026  
-  A linear probe on one greedy reasoning trace predicts whether a model’s answer survives perturbation as well as eight sampled solutions do.
-- **SPAR Fall 2026: [Can Follow-up Questions Catch Missing Reasoning?](https://sparai.org/projects/f26/recVHalQ4NlHvSbUC/)** · mentored by Pierre-Luc St-Charles  
+<div class="facts" markdown="1">
 
-[All projects and publications →](/publications)
+🌱 SPAR Fall 2026 · LawZero  
+🏅 ALTA 2025 Best Paper · CURE-Bench @ NeurIPS Open Science Award  
+📍 Melbourne · Prev: RMIT, CSIRO AEHRC, CAIDE, WEHI  
+📫 [hannah.bansal@rmit.edu.au](mailto:hannah.bansal@rmit.edu.au) · [GitHub](https://github.com/hannahhb) · [LinkedIn](https://linkedin.com/in/hannahbansal)
 
-{% include visit-prompt.html %}
+</div>
