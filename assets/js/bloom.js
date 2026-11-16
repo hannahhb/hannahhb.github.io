@@ -56,14 +56,19 @@
 
   // Shade one flower at local point (x, y) with openness o.
   // Returns {i: intensity, c: rgb, ch: optional char} or null.
-  function flower(x, y, o, col) {
+  // m is the time in seconds; when given, petals sway and breathe a little.
+  function flower(x, y, o, col, m) {
     var r = Math.sqrt(x * x + y * y);
-    if (r > 1.05) return null;
-    var L = 0.32 + 0.68 * o;
+    if (r > 1.1) return null;
+    var L0 = 0.32 + 0.68 * o;
     var wmax = 0.17 + 0.15 * o;
     var best = null, bestE = 0, bestU = 0, bestV = 0;
     for (var k = 0; k < N; k++) {
-      var a = petalAngle(k, o);
+      var a = petalAngle(k, o), L = L0;
+      if (m != null) {
+        a += 0.07 * Math.sin(m * 0.9 + k * 1.3);
+        L *= 1 + 0.045 * Math.sin(m * 1.3 + k * 2.1);
+      }
       var p = rot(x, y, -a);
       var u = p[0] / L, v = p[1] / L;
       if (u <= 0 || u >= 1) continue;
@@ -75,7 +80,7 @@
     // stamens between petals, white star at the centre
     if (o > 0.4) {
       for (var j = 0; j < N; j++) {
-        var sa = petalAngle(j, o) + Math.PI / N;
+        var sa = petalAngle(j, o) + Math.PI / N + (m != null ? 0.05 * Math.sin(m * 1.1 + j) : 0);
         var sp = rot(x, y, -sa);
         var len = 0.38 * o;
         if (sp[0] > 0 && sp[0] < len && Math.abs(sp[1]) < 0.012 + 0.01 * (1 - sp[0] / len)) {
@@ -117,7 +122,7 @@
         }
       }
     }
-    var h = flower(x, y, o, ctx.col + d);
+    var h = flower(x, y, o, ctx.col + d, d === 0 ? ctx.m : null);   // buds stay still
     if (h) { var f = ctx.fade(d); h.i *= f; h.thin = 1 - f; }
     return h;
   }
@@ -137,11 +142,11 @@
     }
     return -1;
   }
-  function rootExtras(x, y, o) {
+  function rootExtras(x, y, o, m) {
     for (var i = 0; i < SIBS.length; i++) {
       var F = SIBS[i];
       var q = rot(x - F.x, y - F.y, -F.r);
-      var h = flower(q[0] / F.s, q[1] / F.s, o, F.col);
+      var h = flower(q[0] / F.s, q[1] / F.s, o, F.col, m == null ? null : m + 2.3 * (i + 1));
       if (h) return h;
     }
     // stems converge to a point below the bouquet
@@ -197,11 +202,35 @@
 
   // Draw one frame. t sets how open each level is; cam says where the camera looks
   // (null means the endless petal zoom). hover dims every flower but that one.
-  function frame(t, tick, cam, hover) {
+  // Grass along the bottom of the panel, in screen cells. Each blade bends with the wind.
+  function grass(c, rb, m) {
+    var best = null;
+    for (var j = c - 3; j <= c + 3; j++) {
+      var hj = hash(j, 7.3);
+      if (hj < 0.3) continue;
+      var H = 2 + Math.floor(hash(j, 2.9) * Math.min(9, rows * 0.12));
+      if (rb >= H) continue;
+      var wind = Math.sin(m * 1.4 - j * 0.18) + 0.35 * Math.sin(m * 3.1 + j * 0.9);
+      var lean = (0.8 + hj) * wind;
+      var y = (rb + 0.5) / H;
+      var x = j + lean * y * y;
+      if (Math.abs(x - c) > 0.5) continue;
+      var slope = 2 * lean * y / H;
+      var ch = rb === H - 1 ? (slope > 0.25 ? '/' : slope < -0.25 ? '\\' : "'") :
+               slope > 0.3 ? '/' : slope < -0.3 ? '\\' : '|';
+      var g = 0.45 + 0.4 * hash(j, 5.1) + 0.15 * y;
+      best = { i: Math.min(1, g), c: hj > 0.85 ? [150, 190, 110] : GREEN, ch: ch };
+      if (j === c) break;
+    }
+    return best;
+  }
+
+  function frame(t, tick, cam, hover, m) {
     var n = Math.floor(t);
     var off = Math.max(0, n - 2);      // renormalise so floats never underflow
     var tl = t - off;
     var ctx = {
+      m: m,
       maxD: Math.floor(tl) + 3,
       col: off,
       open: function (d) { return smooth(tl - d + 1); },
@@ -223,8 +252,9 @@
           var d = rot(qx - FP[0], qy - FP[1], ang);
           wx = FP[0] + scale * d[0]; wy = FP[1] + scale * d[1];
         }
-        var hit = level(wx, wy, 0, ctx);
-        if (!hit && off === 0 && tl < 1.2) hit = rootExtras(wx, wy, ctx.open(0));
+        var hit = m != null && !(cam && cam.fly) ? grass(c, rows - 1 - row, m) : null;
+        if (!hit) hit = level(wx, wy, 0, ctx);
+        if (!hit && off === 0 && tl < 1.2) hit = rootExtras(wx, wy, ctx.open(0), m);
         if (hit && hover != null && hover >= 0 && flowerAt(wx, wy) !== hover) {
           hit = { i: hit.i * 0.45, c: hit.c, ch: hit.ch, thin: hit.thin };
         }
@@ -271,10 +301,20 @@
   }
 
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var hover = -1, busy = false;
-  function still() { frame(REST_T, 0, REST, hover); }
+  var hover = -1, busy = false, t0 = performance.now(), tick = 0;
+  function now() { return reduce ? null : (performance.now() - t0) / 1000; }
+  function still() { frame(REST_T, tick, REST, hover, now()); }
   measure(); fitRest();
   still();
+  // gentle idle loop: petals sway, grass blows; buds and layout stay put
+  var lastDraw = 0;
+  function idle(ts) {
+    requestAnimationFrame(idle);
+    if (busy || document.hidden || ts - lastDraw < 66) return;   // ~15 fps is plenty
+    lastDraw = ts; tick++;
+    still();
+  }
+  if (!reduce) requestAnimationFrame(idle);
   window.addEventListener('resize', function () {
     measure(); fitRest();
     if (!busy) still();
@@ -288,14 +328,14 @@
     var to = { x: F.x + tip[0], y: F.y + tip[1], scale: REST.scale * F.s * 0.05 };
     if (reduce) { done(); return; }
     busy = true;
-    var start = null, DUR = 1400, tick = 0;
+    var start = null, DUR = 1400;
     function step(now) {
       if (start === null) start = now;
       var p = Math.min(1, (now - start) / DUR);
       var e = p * p * (3 - 2 * p);
       var ls = Math.log(REST.scale) + (Math.log(to.scale) - Math.log(REST.scale)) * e;  // zoom evenly in log space
-      var cam = { x: REST.x + (to.x - REST.x) * e, y: REST.y + (to.y - REST.y) * e, scale: Math.exp(ls) };
-      frame(REST_T, tick++, cam, i);
+      var cam = { x: REST.x + (to.x - REST.x) * e, y: REST.y + (to.y - REST.y) * e, scale: Math.exp(ls), fly: true };
+      frame(REST_T, tick++, cam, i, now());
       if (p < 1) requestAnimationFrame(step);
       else { busy = false; done(); }
     }
