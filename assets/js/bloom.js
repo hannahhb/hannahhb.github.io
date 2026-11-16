@@ -130,9 +130,10 @@
   // Root scene: a small bouquet with stems. The root flower is index 0.
   var SIBS = [
     { x: -1.5, y: -1.0, s: 0.72, r: 0.45, col: 1 },
-    { x: 1.45, y: -0.65, s: 0.68, r: -0.55, col: 2 }
+    { x: 1.45, y: -0.65, s: 0.68, r: -0.55, col: 2 },
+    { x: 0.55, y: -2.3, s: 0.6, r: 0.25, col: 3 }
   ];
-  var STEMS = [[0, 0], [-1.5, -1.0], [1.45, -0.65]];
+  var STEMS = [[0, 0], [-1.5, -1.0], [1.45, -0.65], [0.55, -2.3]];
   // flower centres and radii in world units, for hit testing and labels
   var FLOWERS = [{ x: 0, y: 0, s: 1, r: 0 }].concat(SIBS);
   function flowerAt(x, y) {
@@ -195,7 +196,7 @@
   function fitRest() {
     var U = unit();
     var halfW = cols * cw / 2 / U, halfH = rows * lh / 2 / U;
-    REST.scale = Math.max(2.4 / halfW, 2.0 / halfH);
+    REST.scale = Math.max(2.4 / halfW, 2.45 / halfH);   // room for the low flower above the grass
     REST.y = 1.35 - halfH * REST.scale;     // top flower near the top, stems run down
   }
   function unit() { return Math.min(cols * cw, rows * lh) / 2 / HALF; }   // px per screen unit

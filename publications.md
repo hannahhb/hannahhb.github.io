@@ -15,7 +15,7 @@ Can a weak, trusted monitor catch false progress claims in a multi-agent swarm a
 
 ### 🔬 Fragile or Just Hard? Robustness Prediction from Reasoning Probes
 {: #aimo-interp}
-*AIMO Interpretability Challenge · 2026*
+*AIMO Interpretability Challenge @ NeurIPS 2026 · [Code](https://github.com/hannahhb/aimo_interp_segprobe)*
 
 Reasoning models can solve a problem reliably and still fail once it is perturbed. We ask whether this can be predicted from hidden states, and propose **SegProbe**, a difference-of-means linear probe on a single greedy chain of thought (at most 4k tokens).
 
@@ -39,6 +39,11 @@ Using PyINE, LawZero's framework for studying reasoning models with full executi
 
 In this paper we explore whether neurosymbolic reasoners are more robust to counterfactual pertubations when compared to pure LLMs such as naive and chain of thought prompting. 
 [Read Blog →](/blog/neurosymbolic2025) TBD
+
+---
+
+### 🩺 CURE-Bench @ NeurIPS 2025
+*🌟 Open Science Award · [Posters](https://curebench.ai/posters)*
 
 <!-- ---
 

@@ -7,7 +7,7 @@
   <style>
     :root {
       --bg: #000; --text: #e8e3da; --muted: #9a958c; --line: #22252d;
-      --coral: #e8715a; --lilac: #b48ad6; --butter: #e8d36a;
+      --coral: #e8715a; --lilac: #b48ad6; --butter: #e8d36a; --pink: #e58fb4;
       --mono: "SFMono-Regular", Menlo, Consolas, monospace;
     }
     * { box-sizing: border-box; }
@@ -51,6 +51,7 @@
     .flower-link[data-i="0"].on, .flower-link[data-i="0"]:hover, .flower-link[data-i="0"]:focus-visible { color: var(--coral); }
     .flower-link[data-i="1"].on, .flower-link[data-i="1"]:hover, .flower-link[data-i="1"]:focus-visible { color: var(--lilac); }
     .flower-link[data-i="2"].on, .flower-link[data-i="2"]:hover, .flower-link[data-i="2"]:focus-visible { color: var(--butter); }
+    .flower-link[data-i="3"].on, .flower-link[data-i="3"]:hover, .flower-link[data-i="3"]:focus-visible { color: var(--pink); }
     .left.flying .flower-link, .left.flying .hint { opacity: 0; }
     #bloom.pointer { cursor: pointer; }
 
@@ -88,8 +89,9 @@
     <section class="left" id="left" aria-label="Projects, one per flower">
       <pre id="bloom" aria-hidden="true"></pre>
       <a class="flower-link" data-i="0" href="https://apartresearch.com/sprints/projects/can-followup-questions-help-weaktostrong-monitors-for-swarms-wpcsuqz0d4">swarm monitors · hackathon</a>
-      <a class="flower-link" data-i="1" href="{{ '/publications#aimo-interp' | relative_url }}">robustness probes · AIMO interp</a>
-      <a class="flower-link" data-i="2" href="https://aclanthology.org/2025.alta-main.1/">neurosymbolic robustness · ALTA</a>
+      <a class="flower-link" data-i="1" href="https://github.com/hannahhb/aimo_interp_segprobe">robustness probes · AIMO Interp @ NeurIPS 2026</a>
+      <a class="flower-link" data-i="2" href="https://aclanthology.org/2025.alta-main.1/">neurosymbolic robustness · ALTA Best Paper</a>
+      <a class="flower-link" data-i="3" href="https://curebench.ai/posters">medical reasoning · CURE-Bench @ NeurIPS 2025</a>
       <p class="hint">each flower opens a project</p>
     </section>
 
